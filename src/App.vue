@@ -16,7 +16,7 @@ import ProgramStats from './components/ProgramStats.vue'
       <div class="container mx-auto px-4 py-3">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-4">
-            <i class="fas fa-university text-3xl text-blue-900"></i>
+            <img src="/uce2.png" alt="Logo UCE" class="h-12 w-auto object-contain" />
             <div>
               <h1 class="font-bold text-blue-900 uppercase">Universidad Central</h1>
               <h2 class="text-xs font-semibold text-gray-600 uppercase">Del Ecuador</h2>
