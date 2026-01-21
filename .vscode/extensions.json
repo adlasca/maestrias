@@ -1,7 +1,15 @@
 {
   "recommendations": [
     "Vue.volar",
+    "ms-vscode.vscode-typescript-next",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
     "vitest.explorer",
-    "prettier.prettier-vscode"
+    "ms-vscode.vscode-json",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.vscode-css-peek",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.npm-intellisense"
   ]
 }
