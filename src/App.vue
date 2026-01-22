@@ -4,10 +4,11 @@ import ErrorBoundary from './components/ErrorBoundary.vue'
 import NotificationContainer from './components/NotificationContainer.vue'
 import { useScrollToTop } from './composables/useScrollToTop'
 
+
 // Environment variables
 const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '593999072657'
 const whatsappMessage = encodeURIComponent(
-  import.meta.env.VITE_WHATSAPP_MESSAGE || 'Hola, deseo información sobre la Maestría BIM',
+  import.meta.env.VITE_WHATSAPP_MESSAGE || 'Hola, deseo información sobre las Maestrías',
 )
 
 // Mobile menu state
@@ -43,8 +44,8 @@ const { showScrollTop, scrollToTop } = useScrollToTop()
                 />
                 <div class="hidden sm:block h-10 w-px bg-gray-300 mx-2" aria-hidden="true" />
                 <div class="hidden md:block">
-                  <h1 class="text-lg font-bold text-gray-900">UCE</h1>
-                  <p class="text-sm text-gray-600">Maestrías</p>
+                  <h1 class="text-lg font-bold text-gray-900">Universidad Central del Ecuqdor</h1>
+                  <p class="text-sm text-gray-600">Facultad de Ingeniería y Ciencias Aplicadas</p>
                 </div>
               </router-link>
             </div>
@@ -52,7 +53,7 @@ const { showScrollTop, scrollToTop } = useScrollToTop()
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center gap-6">
               <router-link
-                to="/"
+                to="/maestria/bim"
                 class="text-gray-700 hover:text-blue-600 font-medium transition-colors"
                 :class="{ 'text-blue-600': $route.name === 'BIM' || $route.name === 'MaestriaBIM' }"
               >
@@ -73,7 +74,7 @@ const { showScrollTop, scrollToTop } = useScrollToTop()
                 Geotécnica
               </router-link>
               <router-link
-                to="/maestrias"
+                to="/"
                 class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Ver Todas
