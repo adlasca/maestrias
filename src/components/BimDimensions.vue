@@ -13,7 +13,8 @@ const dimensions = [
     bg: 'bg-blue-50',
     gradient: 'from-blue-500 to-cyan-500',
     features: ['Modelado Arquitectónico', 'Estructuras Complejas', 'Instalaciones MEP', 'Colisiones Automáticas'],
-    impact: '85% reducción en errores de diseño'
+    impact: '85% reducción en errores de diseño',
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: '4D',
@@ -25,7 +26,8 @@ const dimensions = [
     bg: 'bg-green-50',
     gradient: 'from-green-500 to-emerald-500',
     features: ['Simulación 4D', 'Secuenciación de Tareas', 'Logística de Obra', 'Control de Avances'],
-    impact: '30% mejora en plazos de entrega'
+    impact: '30% mejora en plazos de entrega',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: '5D',
@@ -37,7 +39,8 @@ const dimensions = [
     bg: 'bg-yellow-50',
     gradient: 'from-yellow-500 to-orange-500',
     features: ['Presupuestos Dinámicos', 'Estimaciones 5D', 'Flujo de Caja', 'Control de Costos'],
-    impact: '25% reducción en sobrecostos'
+    impact: '25% reducción en sobrecostos',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: '6D',
@@ -49,7 +52,8 @@ const dimensions = [
     bg: 'bg-emerald-50',
     gradient: 'from-emerald-500 to-green-500',
     features: ['Análisis Energético', 'Huella de Carbono', 'Certificaciones LEED', 'Eficiencia Ambiental'],
-    impact: '40% mejora en eficiencia energética'
+    impact: '40% mejora en eficiencia energética',
+    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: '7D',
@@ -61,7 +65,8 @@ const dimensions = [
     bg: 'bg-purple-50',
     gradient: 'from-purple-500 to-indigo-500',
     features: ['Mantenimiento Predictivo', 'Gestión de Activos', 'Operación Inteligente', 'Ciclo de Vida'],
-    impact: '50% reducción en costos operativos'
+    impact: '50% reducción en costos operativos',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop'
   },
 ]
 
@@ -73,7 +78,7 @@ const setActiveDimension = (index) => {
 </script>
 
 <template>
-  <section class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+  <section id="dimensiones-bim" class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-gray-900 dark:to-slate-900 relative overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute top-10 left-10 w-32 h-32 border border-blue-300 rounded-full" />
@@ -87,7 +92,7 @@ const setActiveDimension = (index) => {
           <i class="fas fa-layer-group" />
           <span>Tecnología BIM Avanzada</span>
         </div>
-        <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+        <h2 class="text-4xl md:text-6xl font-black text-gray-900 dark:text-gray-100 mb-6">
           Las <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">7 Dimensiones</span> BIM
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -142,6 +147,8 @@ const setActiveDimension = (index) => {
                 <p class="text-gray-600 text-lg leading-relaxed">{{ activeDimension.desc }}</p>
               </div>
             </div>
+
+            <img :src="activeDimension.image" alt="Imagen de la dimensión BIM" class="w-full h-48 object-cover rounded-2xl mb-6" />
 
             <!-- Features Grid -->
             <div class="grid md:grid-cols-2 gap-4 mb-6">

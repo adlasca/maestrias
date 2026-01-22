@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestría en Ingeniería Hidráulica - Universidad Central del Ecuador</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0066CC;     /* Azul agua profundo */
+            --secondary: #00A859;   /* Verde agua */
+            --accent: #FF6B35;      /* Naranja energía */
+            --light: #E8F4FD;       /* Azul agua claro */
+            --dark-blue: #0055A4;   /* Azul UCE */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+        
+        /* Animaciones para agua */
+        .water-wave {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .water-wave::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transform: rotate(30deg);
+            animation: wave 3s infinite linear;
+        }
+        
+        @keyframes wave {
+            0% { transform: rotate(30deg) translateX(-100%); }
+            100% { transform: rotate(30deg) translateX(100%); }
+        }
+        
+        .drop-animation {
+            animation: drop 2s infinite ease-in-out;
+        }
+        
+        @keyframes drop {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header / Navegación -->
+    <header class="sticky top-0 z-50 bg-white shadow-md border-b border-gray-200">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logos y Texto -->
+                <div class="flex items-center gap-4">
+                    <!-- Logos -->
+                    <div class="flex items-center gap-3">
+                        <!-- Logo UCE -->
+                        <div class="bg-white p-2 rounded border border-gray-100">
+                            <img 
+                                src="images/logo-uce.png"
+                                alt="Universidad Central del Ecuador" 
+                                class="h-20 w-auto max-w-[120px] object-contain"
+                                onerror="this.src='https://via.placeholder.com/120x50/0055A4/ffffff?text=UCE'"
+                            >
+                        </div>
+                        
+                        <!-- Separador -->
+                        <div class="hidden sm:block h-8 w-px bg-gray-300"></div>
+                        
+                        <!-- Logo FICA -->
+                        <div class="hidden sm:block bg-white p-2 rounded border border-gray-100">
+                            <img
+                                src="images/logo-fica.png"
+                                alt="Facultad de Ingeniería y Ciencias Aplicadas"
+                                class="h-20 w-auto max-w-[140px] object-contain"
+                                onerror="this.src='https://via.placeholder.com/140x40/0f172a/ffffff?text=FICA'"
+                            />
+                        </div>
+                    </div>
+                    
+                    <!-- Título -->
+                    <div class="hidden md:block pl-3 border-l border-gray-200">
+                        <h1 class="text-2xl font-bold text-blue-800 uppercase tracking-tight leading-tight">
+                            UNIVERSIDAD CENTRAL DEL ECUADOR
+                        </h1>
+                        <p class="text-lg text-gray-600 font-medium mt-1">
+                            Facultad de Ingeniería y Ciencias Aplicadas
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Botón CTA -->
+                <div>
+                    <a href="#contacto" 
+                       class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold shadow-sm hover:shadow transition-all duration-200">
+                        <i class="fas fa-file-signature text-sm"></i>
+                        <span class="hidden sm:inline">POSTULA AHORA</span>
+                        <span class="sm:hidden">POSTULAR</span>
+                    </a>
+                    <p class="hidden lg:block text-xs text-gray-500 text-right mt-1">
+                        Inicio: Marzo 2026
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Versión móvil -->
+            <div class="md:hidden mt-3 pt-3 border-t border-gray-100 text-center">
+                <h1 class="text-xl font-bold text-blue-800 uppercase tracking-tight">
+                    UNIVERSIDAD CENTRAL
+                </h1>
+                <h2 class="text-lg font-semibold text-gray-700 uppercase">
+                    DEL ECUADOR
+                </h2>
+                <p class="text-sm text-gray-600 mt-1">Ingeniería Hidráulica</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section Hidráulica -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <!-- Imagen de fondo -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="images\Hidroelect.jpeg" 
+                alt="Sistemas hidráulicos y gestión del agua" 
+                class="w-full h-full object-cover object-center brightness-90 contrast-105"
+                loading="eager"
+            >
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/50 via-blue-800/40 to-cyan-900/40"></div>
+            
+            <!-- Efecto agua -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-400 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+        
+        <!-- Contenido Principal -->
+        <div class="relative z-10 container mx-auto px-4 py-12">
+            <div class="max-w-5xl mx-auto text-center">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 bg-black/30 backdrop-blur-sm px-5 py-2.5 rounded-full mb-8 border border-white/20 shadow-lg">
+                    <i class="fas fa-water text-white"></i>
+                    <span class="text-sm font-semibold tracking-wider uppercase text-white">
+                        Cuarto Nivel · Gestión Sostenible del Agua
+                    </span>
+                    <i class="fas fa-leaf text-white ml-1"></i>
+                </div>
+                
+                <!-- Título Principal -->
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight drop-shadow-2xl">
+                    <span class="block text-white">MAESTRÍA EN</span>
+                    <span class="block mt-3 text-cyan-300 drop-shadow-2xl">
+                        INGENIERÍA HIDRÁULICA
+                    </span>
+                </h1>
+                
+                <!-- Subtítulo -->
+                <div class="inline-block bg-black/40 backdrop-blur-sm px-6 py-4 rounded-2xl mb-8 border border-white/25 shadow-2xl">
+                    <p class="text-lg sm:text-xl md:text-2xl font-bold text-white">
+                        Sistemas Hidrosanitarios y 
+                        <span class="text-emerald-300">Gestión Sostenible del Agua</span>
+                    </p>
+                </div>
+                
+                <!-- Lema -->
+                <div class="max-w-3xl mx-auto mb-10">
+                    <div class="relative px-4 py-3 bg-black/40 backdrop-blur-sm rounded-xl">
+                        <i class="fas fa-quote-left absolute left-0 top-0 text-2xl text-white/30 ml-2 mt-1"></i>
+                        <i class="fas fa-quote-right absolute right-0 bottom-0 text-2xl text-white/30 mr-2 mb-1"></i>
+                        
+                        <p class="text-lg sm:text-xl italic font-light leading-relaxed text-white drop-shadow">
+                            "Formamos especialistas que <strong class="font-semibold text-cyan-300">diseñan, gestionan y optimizan</strong> 
+                            sistemas hídricos con enfoque sostenible y resiliente para el desarrollo nacional."
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Estadísticas -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-3xl mx-auto">
+                    <div class="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/20">
+                        <div class="text-2xl font-bold text-cyan-300 mb-1 drop-shadow">30</div>
+                        <div class="text-xs font-semibold uppercase tracking-wide text-white">Créditos</div>
+                    </div>
+                    <div class="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/20">
+                        <div class="text-2xl font-bold text-emerald-300 mb-1 drop-shadow">2</div>
+                        <div class="text-xs font-semibold uppercase tracking-wide text-white">Períodos</div>
+                    </div>
+                    <div class="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/20">
+                        <div class="text-2xl font-bold text-amber-300 mb-1 drop-shadow">Híbrida</div>
+                        <div class="text-xs font-semibold uppercase tracking-wide text-white">Modalidad</div>
+                    </div>
+                    <div class="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/20">
+                        <div class="text-lg font-bold text-blue-300 mb-1 drop-shadow">1440</div>
+                        <div class="text-xs font-semibold uppercase tracking-wide text-white">Horas</div>
+                    </div>
+                </div>
+                
+                <!-- Áreas de Especialización -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-10 max-w-3xl mx-auto">
+                    <div class="bg-black/30 backdrop-blur-sm p-3 rounded-lg text-center">
+                        <div class="text-lg font-bold text-white mb-1"><i class="fas fa-tint mr-2"></i>Hidráulica</div>
+                        <div class="text-xs text-gray-300">Avanzada</div>
+                    </div>
+                    <div class="bg-black/30 backdrop-blur-sm p-3 rounded-lg text-center">
+                        <div class="text-lg font-bold text-white mb-1"><i class="fas fa-cloud-rain mr-2"></i>Hidrología</div>
+                        <div class="text-xs text-gray-300">Modelación</div>
+                    </div>
+                    <div class="bg-black/30 backdrop-blur-sm p-3 rounded-lg text-center">
+                        <div class="text-lg font-bold text-white mb-1"><i class="fas fa-recycle mr-2"></i>Sistemas</div>
+                        <div class="text-xs text-gray-300">Hidrosanitarios</div>
+                    </div>
+                </div>
+                
+                <!-- Botones -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#plan-estudios" 
+                       class="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3.5 rounded-xl text-base sm:text-lg font-bold uppercase tracking-wide shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto min-w-[240px]">
+                        <i class="fas fa-book-open"></i>
+                        <span>Ver Plan de Estudios</span>
+                        <i class="fas fa-arrow-down group-hover:animate-bounce"></i>
+                    </a>
+                    
+                    <a href="#contacto" 
+                       class="group inline-flex items-center justify-center gap-3 bg-black/50 backdrop-blur-sm text-white border border-white/40 hover:border-white/60 hover:bg-black/70 px-8 py-3.5 rounded-xl text-base sm:text-lg font-semibold uppercase tracking-wide hover:shadow-lg transition-all duration-300 w-full sm:w-auto min-w-[240px]">
+                        <i class="fas fa-headset"></i>
+                        <span>Contactar Coordinación</span>
+                        <i class="fas fa-phone-alt group-hover:animate-pulse"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Elementos decorativos agua -->
+        <div class="absolute top-20 right-10 w-3 h-3 bg-cyan-400 rounded-full animate-pulse drop-animation"></div>
+        <div class="absolute bottom-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+    </section>
+
+    <!-- Introducción Hidráulica -->
+    <section id="introduccion" class="section-padding bg-gradient-to-br from-white via-blue-50/20 to-white">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Columna de Imagen -->
+                <div class="order-1">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl group mb-6">
+                        <img 
+                            src="images\RioRefin.jpeg"
+                            alt="Laboratorio de hidráulica y sistemas hídricos" 
+                            class="w-full h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                            onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80'"
+                            loading="lazy"
+                        >
+                        <div class="absolute top-6 left-6 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
+                            <span class="text-sm font-bold uppercase tracking-wide">
+                                <i class="fas fa-flask mr-1"></i>Laboratorios Especializados
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Software Especializado -->
+                    <div class="mt-8 bg-white rounded-xl shadow-lg p-5 border-l-4 border-cyan-500">
+                        <h4 class="font-bold text-gray-900 text-xl mb-4">Software Especializado</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center bg-blue-50 text-blue-700 px-3 py-2 rounded-lg font-medium">
+                                <i class="fas fa-water mr-2"></i>HEC-HMS/HEC-RAS
+                            </span>
+                            <span class="inline-flex items-center bg-green-50 text-green-700 px-3 py-2 rounded-lg font-medium">
+                                <i class="fas fa-map mr-2"></i>Sistemas SIG
+                            </span>
+                            <span class="inline-flex items-center bg-purple-50 text-purple-700 px-3 py-2 rounded-lg font-medium">
+                                <i class="fas fa-project-diagram mr-2"></i>EPANET
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Columna de Contenido -->
+                <div class="order-2">
+                    <div class="mb-8">
+                        <div class="inline-flex items-center gap-2 text-blue-700 font-semibold text-sm uppercase tracking-wider mb-4">
+                            <span class="w-6 h-px bg-blue-700"></span>
+                            <span>Gestión Sostenible del Agua</span>
+                            <span class="w-6 h-px bg-blue-700"></span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5 leading-tight">
+                            Formación de excelencia para la 
+                            <span class="text-blue-700">gestión hídrica del futuro</span>
+                        </h2>
+                        <p class="text-gray-600 text-sm">
+                            Programa académico de vanguardia en ingeniería hidráulica
+                        </p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <p class="text-gray-700 text-base leading-relaxed mb-5">
+                            En un contexto de cambio climático y creciente demanda hídrica, esta maestría forma 
+                            <strong class="font-semibold text-blue-700">especialistas en ingeniería hidráulica</strong> 
+                            capaces de diseñar, modelar, rehabilitar y gestionar sistemas hídricos complejos, 
+                            integrando criterios de sostenibilidad, eficiencia y resiliencia.
+                        </p>
+                    </div>
+                    
+                    <!-- Características -->
+                    <div class="space-y-5 mb-8">
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                    <i class="fas fa-cogs text-blue-600 text-sm"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-base mb-1 group-hover:text-blue-700 transition-colors">
+                                    Enfoque Integral
+                                </h4>
+                                <p class="text-gray-600 text-sm">
+                                    Integra hidráulica, hidrología, ingeniería sanitaria y gestión de recursos hídricos.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-cyan-100 rounded-lg flex items-center justify-center group-hover:bg-cyan-200 transition-colors">
+                                    <i class="fas fa-shield-alt text-cyan-600 text-sm"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-base mb-1 group-hover:text-cyan-700 transition-colors">
+                                    Resiliencia y Seguridad
+                                </h4>
+                                <p class="text-gray-600 text-sm">
+                                    Diseño de sistemas seguros bajo condiciones de incertidumbre y cambio climático.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center group-hover:bg-emerald-200 transition-colors">
+                                    <i class="fas fa-leaf text-emerald-600 text-sm"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-base mb-1 group-hover:text-emerald-700 transition-colors">
+                                    Sostenibilidad
+                                </h4>
+                                <p class="text-gray-600 text-sm">
+                                    Énfasis en la gestión sostenible del agua y eficiencia en sistemas hidrosanitarios.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfil del Estudiante -->
+    <section id="perfil" class="section-padding bg-gradient-to-b from-white to-blue-50/50">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Columna de Contenido -->
+                <div class="order-2 lg:order-1">
+                    <div class="mb-10">
+                        <span class="inline-block px-4 py-1.5 bg-blue-100 text-blue-800 text-sm font-bold rounded-full uppercase tracking-wider mb-5">
+                            Perfil del Aspirante
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                            ¿Buscas especializarte en 
+                            <span class="text-blue-700">ingeniería hidráulica?</span>
+                        </h2>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Esta maestría está diseñada para profesionales que desean dominar el 
+                            <strong class="font-semibold text-blue-700">diseño, modelación y gestión</strong> 
+                            de sistemas hídricos con enfoque en sostenibilidad y resiliencia.
+                        </p>
+                    </div>
+
+                    <!-- Requisitos -->
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                            <div class="flex items-start mb-3">
+                                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-user-graduate text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg mb-2">Formación Académica</h4>
+                                    <p class="text-gray-600 text-base leading-relaxed">
+                                        Título en <strong>Ingeniería Civil, Ambiental, Recursos Hídricos</strong> o carreras afines.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                            <div class="flex items-start mb-3">
+                                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-700 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-briefcase text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg mb-2">Experiencia</h4>
+                                    <p class="text-gray-600 text-base leading-relaxed">
+                                        Interés en <strong>proyectos hídricos, saneamiento o gestión ambiental</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300 sm:col-span-2">
+                            <div class="flex items-start mb-3">
+                                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-brain text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg mb-2">Conocimientos Previos</h4>
+                                    <p class="text-gray-600 text-base leading-relaxed">
+                                        Bases en <strong>hidráulica, hidrología, mecánica de fluidos o medio ambiente</strong>. 
+                                        Interés en modelación computacional y gestión sostenible de recursos hídricos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Columna de Imagen -->
+                <div class="order-1 lg:order-2 relative">
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-100/50 rounded-full -z-10"></div>
+                    <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-cyan-100/50 rounded-full -z-10"></div>
+                    
+                    <!-- Imagen principal -->
+                    <div class="rounded-2xl overflow-hidden shadow-2xl">
+                        <img 
+                            src="images\PantaHi.jpeg"
+                            alt="Ingenieros trabajando en proyectos hidráulicos" 
+                            class="w-full h-[520px] object-cover object-center"
+                            loading="lazy"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Badge superpuesto -->
+                    <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-xs border-t-4 border-cyan-600">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-cyan-600 text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-base mb-1">Alta Demanda</h4>
+                                <p class="text-gray-600 text-xs">
+                                    Sector público y privado requieren especialistas en agua
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan de Estudios -->
+    <section id="plan-estudios" class="section-padding bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="inline-block px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-bold uppercase tracking-wider mb-6">
+                    <i class="fas fa-graduation-cap mr-2"></i>Planificación Curricular
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Malla Curricular Completa</h2>
+                <div class="flex flex-wrap justify-center gap-4 text-lg">
+                    <span class="inline-flex items-center bg-white/10 px-4 py-2 rounded-full">
+                        <i class="fas fa-clock mr-2"></i>2 Períodos Académicos
+                    </span>
+                    <span class="inline-flex items-center bg-white/10 px-4 py-2 rounded-full">
+                        <i class="fas fa-book mr-2"></i>30 Créditos
+                    </span>
+                    <span class="inline-flex items-center bg-white/10 px-4 py-2 rounded-full">
+                        <i class="fas fa-laptop-house mr-2"></i>Modalidad Híbrida
+                    </span>
+                    <span class="inline-flex items-center bg-white/10 px-4 py-2 rounded-full">
+                        <i class="fas fa-water mr-2"></i>Enfoque Sostenible
+                    </span>
+                </div>
+            </div>
+
+            <!-- Períodos -->
+            <div class="grid lg:grid-cols-2 gap-10 mb-16">
+                <!-- Período 1 -->
+                <div class="bg-gradient-to-br from-blue-800/40 to-cyan-900/40 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300">
+                    <div class="flex items-center mb-8">
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg">
+                                1
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
+                                <i class="fas fa-play text-xs text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-1">Fundamentos Avanzados</h3>
+                            <p class="text-blue-200 text-lg">Primer Período · 15 Créditos</p>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 group-hover:text-cyan-300 transition-colors">
+                                    Hidráulica Avanzada
+                                </h4>
+                                <p class="text-blue-200 text-sm">Principios y aplicaciones avanzadas en ingeniería hidráulica</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 group-hover:text-cyan-300 transition-colors">
+                                    Hidrología y Modelación Hidrológica
+                                </h4>
+                                <p class="text-blue-200 text-sm">Análisis de cuencas y modelación de procesos hidrológicos</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 group-hover:text-cyan-300 transition-colors">
+                                    Gestión Sostenible del Agua
+                                </h4>
+                                <p class="text-blue-200 text-sm">Políticas, planificación y gestión integral de recursos hídricos</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 group-hover:text-cyan-300 transition-colors">
+                                    Ingeniería Sanitaria y Ambiental
+                                </h4>
+                                <p class="text-blue-200 text-sm">Sistemas de agua potable, alcantarillado y tratamiento</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 group-hover:text-cyan-300 transition-colors">
+                                    Metodología de la Investigación
+                                </h4>
+                                <p class="text-blue-200 text-sm">Diseño y desarrollo de proyectos de investigación en hidráulica</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Período 2 -->
+                <div class="bg-gradient-to-br from-blue-800/40 to-cyan-900/40 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300">
+                    <div class="flex items-center mb-8">
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-cyan-600 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg">
+                                2
+                            </div>
+                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-blue-400 rounded-full flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-xs text-white"></i>
+                            </div>
+                        </div>
+                        <div class="ml-6">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-1">Diseño y Especialización</h3>
+                            <p class="text-blue-200 text-lg">Segundo Período · 15 Créditos</p>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 group-hover:text-emerald-300 transition-colors">
+                                    Diseño de Sistemas Hidrosanitarios
+                                </h4>
+                                <p class="text-blue-200 text-sm">Proyectos integrales de agua potable y saneamiento</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 group-hover:text-emerald-300 transition-colors">
+                                    Modelación de Sistemas Hidráulicos
+                                </h4>
+                                <p class="text-blue-200 text-sm">Simulación computacional avanzada con software especializado</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 group-hover:text-emerald-300 transition-colors">
+                                    Economía y Legislación Hídrica
+                                </h4>
+                                <p class="text-blue-200 text-sm">Aspectos económicos, legales e institucionales del agua</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-check text-green-400"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 group-hover:text-emerald-300 transition-colors">
+                                    Proyectos de Agua y Saneamiento
+                                </h4>
+                                <p class="text-blue-200 text-sm">Formulación, ejecución y evaluación de proyectos hídricos</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-graduation-cap text-blue-300"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 group-hover:text-blue-300 transition-colors">
+                                    Trabajo de Titulación
+                                </h4>
+                                <p class="text-blue-200 text-sm">Proyecto de investigación aplicada en ingeniería hidráulica</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Software Especializado -->
+            <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
+                <h3 class="text-2xl font-bold mb-8 text-center">Software Especializado Incluido</h3>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-14 h-14 bg-blue-600/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-water text-2xl text-blue-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Modelación Hidráulica</h4>
+                        <p class="text-blue-200">HEC-HMS, HEC-RAS, EPANET</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-14 h-14 bg-green-600/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-map text-2xl text-green-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Sistemas SIG</h4>
+                        <p class="text-blue-200">ArcGIS, QGIS, gvSIG</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-14 h-14 bg-cyan-600/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-calculator text-2xl text-cyan-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Análisis de Datos</h4>
+                        <p class="text-blue-200">MATLAB, Python, R Studio</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-14 h-14 bg-purple-600/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-project-diagram text-2xl text-purple-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Diseño Hidrosanitario</h4>
+                        <p class="text-blue-200">WaterCAD, SewerCAD, Civil 3D</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instalaciones -->
+            <div class="bg-gradient-to-r from-cyan-900/40 to-blue-900/40 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Instalaciones y Laboratorios</h3>
+                        <ul class="space-y-4 text-blue-200">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                <span>Laboratorio de Hidráulica y Mecánica de Fluidos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                <span>Laboratorio de Calidad de Agua</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                <span>Aulas Virtuales y Plataformas Digitales</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                <span>Laboratorio de Computación con Software Especializado</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div class="inline-block p-6 bg-white/10 rounded-2xl">
+                            <i class="fas fa-university text-5xl text-white mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2">Facultad de Ingeniería</h4>
+                            <p class="text-blue-200">Equipamiento tecnológico de última generación</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Futuro del Egresado -->
+    <section class="section-padding bg-gradient-to-b from-white to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-700 text-white px-6 py-3 rounded-full shadow-lg mb-6">
+                    <i class="fas fa-star text-yellow-300"></i>
+                    <span class="font-bold text-lg uppercase tracking-wider">¡Sé Parte de la Primera Cohorte!</span>
+                    <i class="fas fa-star text-yellow-300"></i>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Tu Futuro como <span class="text-blue-700">Especialista en Hidráulica</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Conviértete en un profesional altamente demandado en el sector hídrico, con competencias 
+                    certificadas en diseño, modelación y gestión sostenible de sistemas hidráulicos.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-10 items-center mb-16">
+                <!-- Competencias -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-blue-600 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-bullseye text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Competencias Clave</h3>
+                    </div>
+                    
+                    <ul class="space-y-5">
+                        <li class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors">
+                                    <i class="fas fa-check text-green-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-lg mb-1 group-hover:text-green-700 transition-colors">
+                                    Diseño de Sistemas Hidráulicos
+                                </h4>
+                                <p class="text-gray-600 text-base">
+                                    Estructuras hidráulicas, redes de distribución y drenaje.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors">
+                                    <i class="fas fa-check text-green-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-lg mb-1 group-hover:text-green-700 transition-colors">
+                                    Modelación Computacional
+                                </h4>
+                                <p class="text-gray-600 text-base">
+                                    Simulación de procesos hidrológicos e hidráulicos.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors">
+                                    <i class="fas fa-check text-green-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-lg mb-1 group-hover:text-green-700 transition-colors">
+                                    Gestión Sostenible del Agua
+                                </h4>
+                                <p class="text-gray-600 text-base">
+                                    Planificación y administración integral de recursos hídricos.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Imagen Central -->
+                <div class="relative order-first lg:order-none">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img 
+                            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+                            alt="Ingeniero hidráulico trabajando en proyecto"
+                            class="w-full h-[500px] object-cover object-center"
+                            onerror="this.onerror=null; this.src='https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=800';"
+                            loading="lazy"
+                        >
+                        <div class="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+                            <span class="text-sm font-bold text-blue-700 uppercase tracking-wide">
+                                <i class="fas fa-user-tie mr-1"></i>Especialista Hidráulico
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Badge Primera Cohorte -->
+                    <div class="absolute -bottom-4 -left-4 bg-cyan-600 text-white px-6 py-3 rounded-r-lg shadow-lg">
+                        <div class="flex items-center">
+                            <i class="fas fa-history text-xl mr-2"></i>
+                            <div>
+                                <div class="text-sm font-bold uppercase tracking-wide">Primera Cohorte</div>
+                                <div class="text-xs">2026 - Innovación en gestión hídrica</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oportunidades Laborales -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-cyan-600 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-briefcase text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Oportunidades Laborales</h3>
+                    </div>
+                    
+                    <ul class="space-y-5">
+                        <li class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                    <i class="fas fa-building text-blue-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-lg mb-1 group-hover:text-blue-700 transition-colors">
+                                    Sector Público
+                                </h4>
+                                <p class="text-gray-600 text-base">
+                                    Ministerios, GADs, empresas públicas de agua.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                    <i class="fas fa-industry text-blue-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-lg mb-1 group-hover:text-blue-700 transition-colors">
+                                    Consultorías Especializadas
+                                </h4>
+                                <p class="text-gray-600 text-base">
+                                    Firmas de ingeniería, consultoría ambiental.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                    <i class="fas fa-chalkboard-teacher text-blue-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-lg mb-1 group-hover:text-blue-700 transition-colors">
+                                    Academia e Investigación
+                                </h4>
+                                <p class="text-gray-600 text-base">
+                                    Universidades, centros de investigación.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Estadísticas -->
+            <div class="bg-gradient-to-r from-blue-900 to-cyan-800 rounded-2xl shadow-2xl p-10 text-white">
+                <div class="text-center mb-10">
+                    <h3 class="text-3xl font-bold mb-4">Impacto en el Sector Hídrico</h3>
+                    <p class="text-blue-200 text-lg">
+                        Los especialistas en hidráulica son fundamentales para el desarrollo sostenible
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+                        <div class="text-4xl font-bold text-cyan-300 mb-3">90%</div>
+                        <div class="text-lg font-semibold mb-2">Empleabilidad</div>
+                        <p class="text-blue-200 text-sm">En el sector hídrico y ambiental</p>
+                    </div>
+                    <div class="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+                        <div class="text-4xl font-bold text-cyan-300 mb-3">40%+</div>
+                        <div class="text-lg font-semibold mb-2">Crecimiento</div>
+                        <p class="text-blue-200 text-sm">Demanda de especialistas en agua</p>
+                    </div>
+                    <div class="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+                        <div class="text-4xl font-bold text-cyan-300 mb-3">85%</div>
+                        <div class="text-lg font-semibold mb-2">Proyectos</div>
+                        <p class="text-blue-200 text-sm">Requieren modelación hidráulica</p>
+                    </div>
+                    <div class="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+                        <div class="text-4xl font-bold text-cyan-300 mb-3">70%</div>
+                        <div class="text-lg font-semibold mb-2">Posiciones</div>
+                        <p class="text-blue-200 text-sm">De liderazgo en 3-5 años</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inversión y Contacto -->
+    <section id="contacto" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-blue-900 to-cyan-800 rounded-2xl shadow-2xl overflow-hidden">
+                <div class="grid md:grid-cols-2">
+                    <!-- Inversión -->
+                    <div class="p-10 text-white">
+                        <h3 class="text-2xl font-bold mb-8">Inversión del Programa</h3>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center pb-3 border-b border-blue-700">
+                                <div>
+                                    <p class="font-semibold">Matrícula</p>
+                                </div>
+                                <div>
+                                    <span class="text-2xl font-bold">$400</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center pb-3 border-b border-blue-700">
+                                <div>
+                                    <p class="font-semibold">Inscripción</p>
+                                </div>
+                                <div>
+                                    <span class="text-2xl font-bold">$80</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center pt-3">
+                                <div>
+                                    <p class="font-semibold text-lg">Arancel Total</p>
+                                </div>
+                                <div>
+                                    <span class="text-3xl font-bold text-cyan-400">$4,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 p-4 bg-blue-800/50 rounded-lg">
+                            <p class="text-sm">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Incluye acceso a software especializado y laboratorios durante el programa
+                            </p>
+                        </div>
+                        
+                        <!-- QR Code -->
+                        <div class="mt-8 p-4 bg-white/10 rounded-lg text-center">
+                            <p class="text-sm mb-3">Escanea para más información</p>
+                            <div class="inline-block bg-white p-3 rounded-lg">
+                                <!-- QR Code placeholder - reemplazar con imagen real -->
+                                <div class="w-32 h-32 bg-gray-200 rounded flex items-center justify-center">
+                                    <i class="fas fa-qrcode text-3xl text-gray-600"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="p-10 bg-white">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">¡Inscríbete Ahora!</h3>
+                        <p class="text-gray-600 mb-8">Sé parte de la transformación en gestión hídrica.</p>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-center">
+                                <i class="fas fa-user-tie text-blue-600 w-6"></i>
+                                <div class="ml-4">
+                                    <p class="font-semibold text-gray-900">Coordinación Académica:</p>
+                                    <p class="text-gray-700">Magíster en Ingeniería Hidráulica</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-blue-600 w-6"></i>
+                                <a href="mailto:maestria.hidraulica@uce.edu.ec" class="ml-4 text-blue-600 hover:underline">
+                                    maestria.hidraulica@uce.edu.ec
+                                </a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-blue-600 w-6"></i>
+                                <span class="ml-4 font-semibold text-gray-900">(02) 2551-270</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fab fa-whatsapp text-green-600 w-6"></i>
+                                <span class="ml-4 font-semibold text-gray-900">0999072657</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-globe text-blue-600 w-6"></i>
+                                <a href="https://posgradouce.edu.ec" class="ml-4 text-blue-600 hover:underline">
+                                    posgradouce.edu.ec
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <a href="mailto:maestria.hidraulica@uce.edu.ec?subject=Información%20Maestría%20Hidráulica" 
+                           class="block w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-center transition mb-4">
+                            <i class="fas fa-envelope mr-2"></i>Solicitar Información
+                        </a>
+                        
+                        <a href="https://wa.me/593999072657?text=Hola,%20quiero%20información%20sobre%20la%20Maestría%20en%20Ingeniería%20Hidráulica" 
+                           class="block w-full py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg text-center transition">
+                            <i class="fab fa-whatsapp mr-2"></i>WhatsApp Directo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="flex justify-center mb-6">
+                    <div class="bg-white p-2 rounded-lg inline-block">
+                        <img 
+                            src="images/logo-uce.png" 
+                            alt="Universidad Central del Ecuador"
+                            class="h-12 w-auto"
+                            onerror="this.src='https://via.placeholder.com/120x50/ffffff/0055A4?text=UCE'"
+                        >
+                    </div>
+                </div>
+                <p class="font-bold text-lg mb-2">
+                    Universidad Central del Ecuador - Facultad de Ingeniería y Ciencias Aplicadas
+                </p>
+                <p class="text-gray-400 mb-6">
+                    Ciudadela Universitaria, Av. América, Quito<br>
+                    Secretaría: (02) 2551-270 | WhatsApp: 0999072657
+                </p>
+                <div class="text-gray-500 text-sm">
+                    © 2025 Dirección de Posgrado UCE - Maestría en Ingeniería Hidráulica, Sistemas Hidrosanitarios y Gestión Sostenible del Agua
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/593999072657?text=Hola,%20quiero%20información%20sobre%20la%20Maestría%20en%20Ingeniería%20Hidráulica" 
+       class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition z-50 no-print"
+       target="_blank">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+</body>
+</html>

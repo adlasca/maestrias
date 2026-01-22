@@ -1,5 +1,4 @@
 /* Global styles */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -124,38 +123,6 @@
   }
 }
 
-/* Dark Mode Support */
-@layer base {
-  .dark {
-    color-scheme: dark;
-  }
-
-  .dark body {
-    background-color: #111827;
-    color: #e5e7eb;
-  }
-
-  .dark h1,
-  .dark h2,
-  .dark h3,
-  .dark h4,
-  .dark h5,
-  .dark h6 {
-    color: #f3f4f6;
-  }
-
-  .dark ::-webkit-scrollbar-track {
-    background: #1f2937;
-  }
-
-  .dark ::-webkit-scrollbar-thumb {
-    background: #4b5563;
-  }
-
-  .dark ::-webkit-scrollbar-thumb:hover {
-    background: #6b7280;
-  }
-}
 
 /* Utility Classes */
 .btn {
@@ -168,23 +135,14 @@
 
 .btn-secondary {
   @apply bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200 focus:ring-4 focus:ring-gray-300;
-  .dark & {
-    @apply bg-gray-800 text-gray-200 border-gray-700 hover:bg-gray-700;
-  }
 }
 
 .card {
   @apply bg-white rounded-xl shadow-md p-6 transition-shadow duration-200;
-  .dark & {
-    @apply bg-gray-800 shadow-lg;
-  }
 }
 
 .form-input {
   @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition-colors;
-  .dark & {
-    @apply bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-500 focus:border-blue-400;
-  }
 }
 
 /* Animations */
@@ -221,9 +179,6 @@
 /* Loading States */
 .loading-skeleton {
   @apply animate-pulse bg-gray-200 rounded;
-  .dark & {
-    @apply bg-gray-700;
-  }
 }
 
 /* Focus States */

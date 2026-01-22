@@ -2,19 +2,10 @@
 const investment = {
   inscription: 80,
   enrollment: 400,
-  tuition: 4000,
-  total: 4480,
-  discount: 10, // percentage
-  discountedTotal: 4032
+  tuition: 4000
 }
 
-const coordinator = {
-  name: 'Ing. Luis Wladimir Morales',
-  role: 'Coordinador Académico',
-  email: 'lwmorales@uce.edu.ec',
-  phone: '(593 2) 2551-270',
-  office: 'Facultad de Ingeniería - Posgrado'
-}
+
 
 const admissionSteps = [
   {
@@ -57,7 +48,7 @@ const requirements = [
 </script>
 
 <template>
-  <section class="py-24 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden">
+  <section id="admision" class="py-24 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden">
     <!-- Background Effects -->
     <div class="absolute inset-0">
       <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
@@ -102,23 +93,17 @@ const requirements = [
                   <span class="text-gray-600">Matrícula</span>
                   <span class="font-bold text-gray-900">${{ investment.enrollment.toLocaleString() }}</span>
                 </div>
-                <div class="flex justify-between items-center py-3 border-b border-gray-100">
-                  <span class="text-gray-600">Arancel (10 meses)</span>
-                  <span class="font-bold text-gray-900">${{ investment.tuition.toLocaleString() }}</span>
-                </div>
+                
 
                 <div class="bg-gray-50 rounded-2xl p-4">
-                  <div class="flex justify-between items-center mb-2">
-                    <span class="text-sm text-gray-600">Total regular</span>
-                    <span class="text-sm text-gray-500 line-through">${{ investment.total.toLocaleString() }}</span>
-                  </div>
+                  
                   <div class="flex justify-between items-center">
-                    <span class="font-bold text-gray-900">Total con descuento</span>
-                    <span class="text-2xl font-black text-green-600">${{ investment.discountedTotal.toLocaleString() }}</span>
+                    <span class="font-bold text-gray-900">Total Arancel</span>
+                    <span class="text-2xl font-black text-green-600">${{ investment.tuition.toLocaleString() }}</span>
                   </div>
                   <div class="text-center mt-2">
                     <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-bold">
-                      {{ investment.discount }}% descuento primer cohorte
+                      Incluye Matrícula e Inscripción
                     </span>
                   </div>
                 </div>
@@ -181,85 +166,7 @@ const requirements = [
           </div>
         </div>
 
-        <!-- Contact Section -->
-        <div class="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-white">
-          <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 class="text-3xl font-bold mb-4">¿Listo para comenzar?</h3>
-              <p class="text-blue-100 mb-6 text-lg">
-                Contacta al coordinador académico para iniciar tu proceso de admisión
-                y recibir toda la información necesaria.
-              </p>
-
-              <div class="space-y-4">
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-user text-2xl" />
-                  </div>
-                  <div>
-                    <div class="font-bold">{{ coordinator.name }}</div>
-                    <div class="text-blue-100 text-sm">{{ coordinator.role }}</div>
-                  </div>
-                </div>
-
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-envelope text-2xl" />
-                  </div>
-                  <div>
-                    <div class="font-bold">{{ coordinator.email }}</div>
-                    <div class="text-blue-100 text-sm">{{ coordinator.office }}</div>
-                  </div>
-                </div>
-
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-phone text-2xl" />
-                  </div>
-                  <div>
-                    <div class="font-bold">{{ coordinator.phone }}</div>
-                    <div class="text-blue-100 text-sm">Lunes a Viernes 8:00-17:00</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-center">
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-6">
-                <h4 class="text-xl font-bold mb-4">¡Postula Ahora!</h4>
-                <p class="text-blue-100 text-sm mb-6">
-                  Cupos limitados para la cohorte inaugural 2026.
-                  No pierdas esta oportunidad única.
-                </p>
-
-                <div class="space-y-3">
-                  <a
-                    href="mailto:lwmorales@uce.edu.ec?subject=Solicitud Información Maestría BIM 2026"
-                    class="block w-full bg-white text-blue-600 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors"
-                  >
-                    <i class="fas fa-envelope mr-2" />
-                    Solicitar Información
-                  </a>
-
-                  <a
-                    href="tel:+59322551270"
-                    class="block w-full border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors"
-                  >
-                    <i class="fas fa-phone mr-2" />
-                    Llamar Ahora
-                  </a>
-                </div>
-
-                <div class="mt-4 text-center">
-                  <span class="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-bold">
-                    <i class="fas fa-clock mr-1" />
-                    Plazo: Hasta 15 Dic 2025
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>

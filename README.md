@@ -198,12 +198,4 @@ git commit -m "refactor: optimize component performance"
 - [ ] **AI-powered** recommendations
 - [ ] **Advanced caching** strategies
 
-## 📞 Soporte
 
-- **Issues**: [GitHub Issues](https://github.com/usuario/maestrias/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/usuario/maestrias/discussions)
-- **Email**: desarrollo@uce.edu.ec
-
----
-
-**Desarrollado con ❤️ por la Universidad Central del Ecuador**

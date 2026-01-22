@@ -77,7 +77,7 @@ const stats = [
 </script>
 
 <template>
-  <section class="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+  <section id="facultad" class="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
     <!-- Background Effects -->
     <div class="absolute inset-0">
       <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />

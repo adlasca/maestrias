@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative">
+  <section id="perfil-aspirante" class="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative">
     <!-- Background Elements -->
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
       <div class="absolute top-20 right-20 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
