@@ -4,7 +4,7 @@
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-teal-900">
       <div class="absolute inset-0 z-0">
         <img
-          src="/MaestriaUce/images/Hidroelect.jpeg"
+          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop"
           alt="Sistemas hidráulicos y gestión del agua"
           class="w-full h-full object-cover object-center brightness-90 contrast-105"
         />

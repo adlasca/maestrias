@@ -79,7 +79,7 @@
           <!-- Imagen principal -->
           <div class="rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="/MaestriaUce/images/PantaHi.jpeg"
+              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
               alt="Ingenieros trabajando en proyectos hidráulicos"
               class="w-full h-[520px] object-cover object-center"
               loading="lazy"

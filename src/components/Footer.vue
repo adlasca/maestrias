@@ -123,5 +123,4 @@
 
 <script setup>
 // No se necesita lógica adicional por ahora
-</script></content>
-<parameter name="filePath">c:\Users\angel\OneDrive\Documentos\GitHub\maestrias\src\components\Footer.vue
+</script>

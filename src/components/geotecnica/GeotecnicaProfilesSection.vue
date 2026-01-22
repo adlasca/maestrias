@@ -79,7 +79,7 @@
           <!-- Imagen principal -->
           <div class="rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="/MaestriaUce/images/perfil.png"
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop"
               alt="Profesionales de ingeniería civil colaborando en análisis geotécnico"
               class="w-full h-[520px] object-cover object-center"
               loading="lazy"

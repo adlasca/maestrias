@@ -12,7 +12,7 @@
 
       <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <img src="/MaestriaUce/images/LaboratVirt.jpeg" alt="Laboratorio Virtual" class="w-full h-64 object-cover" />
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" alt="Laboratorio Virtual" class="w-full h-64 object-cover" />
           <div class="p-6">
             <h3 class="text-xl font-bold text-gray-900 mb-3">Laboratorio de Geotecnia</h3>
             <p class="text-gray-600">
@@ -22,7 +22,7 @@
         </div>
 
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <img src="/MaestriaUce/images/portada.png" alt="Centro de Investigación" class="w-full h-64 object-cover" />
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop" alt="Centro de Investigación" class="w-full h-64 object-cover" />
           <div class="p-6">
             <h3 class="text-xl font-bold text-gray-900 mb-3">Centro de Investigación</h3>
             <p class="text-gray-600">

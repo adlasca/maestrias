@@ -6,7 +6,7 @@
         <div class="order-1">
           <div class="rounded-2xl overflow-hidden shadow-2xl group mb-6">
             <img
-              src="/MaestriaUce/images/portada.png"
+              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
               alt="Maestría en Ingeniería Civil - Formación especializada"
               class="w-full h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
             />
