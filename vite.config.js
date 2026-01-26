@@ -1,23 +1,13 @@
-import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import vueDevTools from 'vite-plugin-vue-devtools';
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [
-        vue({
-            template: {
-                compilerOptions: {
-                    // Enable custom elements
-                    isCustomElement: function (tag) { return tag.startsWith('iconify-'); },
-                },
-            },
-        }),
-        vueDevTools(),
+        vue(),
     ],
     resolve: {
         alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url)),
+            '@': new URL('./src', import.meta.url).pathname,
         },
     },
     build: {
@@ -28,7 +18,6 @@ export default defineConfig({
             output: {
                 manualChunks: {
                     vendor: ['vue'],
-                    ui: ['@headlessui/vue'],
                 },
             },
         },
@@ -47,7 +36,7 @@ export default defineConfig({
     },
     optimizeDeps: {
         // Pre-bundle dependencies for faster dev server
-        include: ['vue', 'pinia'],
+        include: ['vue'],
     },
     // Environment variables
     envPrefix: 'VITE_',

@@ -6,7 +6,8 @@
         <div class="order-2 lg:order-1">
           <!-- Encabezado con acento -->
           <div class="mb-10">
-            <span class="inline-block px-4 py-1.5 bg-green-100 text-green-800 text-sm font-bold rounded-full uppercase tracking-wider mb-5">
+            <span
+              class="inline-block px-4 py-1.5 bg-green-100 text-green-800 text-sm font-bold rounded-full uppercase tracking-wider mb-5">
               Perfil del Aspirante
             </span>
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
@@ -23,39 +24,47 @@
           <!-- Requisitos en grid mejorado -->
           <div class="grid sm:grid-cols-2 gap-6">
             <!-- Requisito 1 -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+            <div
+              class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
               <div class="flex items-start mb-3">
-                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center mr-4">
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center mr-4">
                   <i class="fas fa-user-graduate text-white text-lg"></i>
                 </div>
                 <div>
                   <h4 class="font-bold text-gray-900 text-lg mb-2">Formación Académica</h4>
                   <p class="text-gray-600 text-base leading-relaxed">
-                    Título de tercer nivel en <strong>Ingeniería Civil, Geológica, Minas, Ambiental</strong> o carreras afines.
+                    Título de tercer nivel en <strong>Ingeniería Civil, Geológica, Minas, Ambiental</strong> o carreras
+                    afines.
                   </p>
                 </div>
               </div>
             </div>
 
             <!-- Requisito 2 -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+            <div
+              class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
               <div class="flex items-start mb-3">
-                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center mr-4">
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center mr-4">
                   <i class="fas fa-briefcase text-white text-lg"></i>
                 </div>
                 <div>
                   <h4 class="font-bold text-gray-900 text-lg mb-2">Experiencia Profesional</h4>
                   <p class="text-gray-600 text-base leading-relaxed">
-                    Mínimo <strong>1 año de experiencia</strong> en proyectos de infraestructura o interacción con el terreno.
+                    Mínimo <strong>1 año de experiencia</strong> en proyectos de infraestructura o interacción con el
+                    terreno.
                   </p>
                 </div>
               </div>
             </div>
 
             <!-- Requisito 3 -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300 sm:col-span-2">
+            <div
+              class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300 sm:col-span-2">
               <div class="flex items-start mb-3">
-                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center mr-4">
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center mr-4">
                   <i class="fas fa-brain text-white text-lg"></i>
                 </div>
                 <div>
@@ -78,18 +87,15 @@
 
           <!-- Imagen principal -->
           <div class="rounded-2xl overflow-hidden shadow-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop"
-              alt="Profesionales de ingeniería civil colaborando en análisis geotécnico"
-              class="w-full h-[520px] object-cover object-center"
-              loading="lazy"
-            >
+            <img src="/images/perfil.png" alt="Profesionales de ingeniería civil colaborando en análisis geotécnico"
+              class="w-full h-[520px] object-cover object-center" loading="lazy">
             <!-- Overlay sutil -->
             <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
           </div>
 
           <!-- Badge superpuesto -->
-          <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-xs border-t-4 border-green-600">
+          <div
+            class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-xs border-t-4 border-green-600">
             <div class="flex items-center">
               <div class="flex-shrink-0 mr-4">
                 <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">

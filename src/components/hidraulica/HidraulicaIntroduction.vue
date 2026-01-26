@@ -5,11 +5,8 @@
         <!-- Columna de Imagen -->
         <div class="order-1">
           <div class="rounded-2xl overflow-hidden shadow-2xl group mb-6">
-            <img
-              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
-              alt="Laboratorio de hidráulica y sistemas hídricos"
-              class="w-full h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
-            />
+            <img src="/images/RioRefin.jpeg" alt="Laboratorio de hidráulica y sistemas hídricos"
+              class="w-full h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute top-6 left-6 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
               <i class="fas fa-flask mr-2"></i>Laboratorio Especializado
             </div>
@@ -18,7 +15,8 @@
 
         <!-- Columna de Contenido -->
         <div class="order-2">
-          <div class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-6">
+          <div
+            class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-6">
             <i class="fas fa-info-circle" />
             <span>Sobre el Programa</span>
           </div>

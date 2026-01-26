@@ -5,11 +5,8 @@
         <!-- Columna de Imagen -->
         <div class="order-1">
           <div class="rounded-2xl overflow-hidden shadow-2xl group mb-6">
-            <img
-              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
-              alt="Maestría en Ingeniería Civil - Formación especializada"
-              class="w-full h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
-            />
+            <img src="/images/portada.png" alt="Maestría en Ingeniería Civil - Formación especializada"
+              class="w-full h-[380px] object-cover object-center group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute top-6 left-6 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg">
               <i class="fas fa-gem mr-2"></i>Programa Exclusivo
             </div>
@@ -18,7 +15,8 @@
 
         <!-- Columna de Contenido -->
         <div class="order-2">
-          <div class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-green-100 text-green-800 text-sm font-semibold mb-6">
+          <div
+            class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-green-100 text-green-800 text-sm font-semibold mb-6">
             <i class="fas fa-info-circle" />
             <span>Sobre el Programa</span>
           </div>
@@ -30,12 +28,14 @@
 
           <div class="space-y-4 text-gray-600 leading-relaxed">
             <p>
-              La Maestría en Ingeniería Civil con mención en Ingeniería Geotécnica y Gestión de Riesgos forma especialistas
+              La Maestría en Ingeniería Civil con mención en Ingeniería Geotécnica y Gestión de Riesgos forma
+              especialistas
               capaces de diseñar, gestionar y optimizar sistemas geotécnicos con un enfoque sostenible y resiliente.
             </p>
 
             <p>
-              Nuestro programa integra conocimientos avanzados en mecánica de suelos, modelación numérica y gestión de riesgos,
+              Nuestro programa integra conocimientos avanzados en mecánica de suelos, modelación numérica y gestión de
+              riesgos,
               preparándote para enfrentar los desafíos actuales y futuros del sector geotécnico ecuatoriano.
             </p>
           </div>

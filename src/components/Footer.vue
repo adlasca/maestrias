@@ -12,12 +12,14 @@
           <!-- Logo y descripción -->
           <div class="md:col-span-1">
             <div class="flex items-center gap-4 mb-6">
-              <img src="/logo-uce.png" alt="UCE Logo" class="w-16 h-16 object-contain" />
+              <img src="/logo-uce.png" alt="UCE Logo" class="w-18 h-18 object-contain" />
+              <img src="/images/logo-fica.png" alt="FICA Logo" class="w-12 h-12 object-contain" />
               <div>
-                <h3 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h3
+                  class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Universidad Central del Ecuador
                 </h3>
-                <p class="text-sm text-gray-400">Facultad de Ingeniería</p>
+                <p class="text-sm text-gray-400">Facultad de Ingeniería y Ciencias Aplicadas</p>
               </div>
             </div>
             <p class="text-gray-300 leading-relaxed mb-6">
@@ -25,18 +27,19 @@
               y compromiso social para el desarrollo sostenible del Ecuador.
             </p>
             <div class="flex gap-4">
-              <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
+              <a href="https://www.facebook.com/FingUce"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
                 <i class="fab fa-facebook-f text-blue-400"></i>
               </a>
-              <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
+              <a href="https://twitter.com/UCentralEcuador"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
                 <i class="fab fa-twitter text-blue-400"></i>
               </a>
-              <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
+              <a href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
                 <i class="fab fa-instagram text-pink-400"></i>
               </a>
-              <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
-                <i class="fab fa-linkedin-in text-blue-500"></i>
-              </a>
+
             </div>
           </div>
 
@@ -47,19 +50,22 @@
             </h4>
             <ul class="space-y-3">
               <li>
-                <router-link to="/maestria-bim" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
+                <router-link to="/maestria-bim"
+                  class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
                   <i class="fas fa-building text-blue-400"></i>
                   Maestría en BIM
                 </router-link>
               </li>
               <li>
-                <router-link to="/maestria-geotecnica" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
+                <router-link to="/maestria-geotecnica"
+                  class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
                   <i class="fas fa-mountain text-green-400"></i>
                   Maestría en Geotecnia
                 </router-link>
               </li>
               <li>
-                <router-link to="/maestria-hidraulica" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
+                <router-link to="/maestria-hidraulica"
+                  class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
                   <i class="fas fa-water text-cyan-400"></i>
                   Maestría en Hidráulica
                 </router-link>
@@ -69,7 +75,8 @@
 
           <!-- Información de contacto -->
           <div class="md:col-span-1">
-            <h4 class="text-xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h4
+              class="text-xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Contacto
             </h4>
             <div class="space-y-4">
@@ -95,7 +102,7 @@
               <div class="flex items-start gap-3">
                 <i class="fas fa-map-marker-alt text-red-400 mt-1"></i>
                 <div>
-                  <p class="text-gray-300">Facultad de Ingeniería</p>
+                  <p class="text-gray-300">Facultad de Ingeniería y Ciencias Aplicadas</p>
                   <p class="text-sm text-gray-400">Universidad Central del Ecuador</p>
                 </div>
               </div>
@@ -107,7 +114,7 @@
         <div class="border-t border-gray-700 mt-12 pt-8">
           <div class="flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-gray-400 text-sm">
-              © 2024 Universidad Central del Ecuador. Todos los derechos reservados.
+              © 2025 Universidad Central del Ecuador. Todos los derechos reservados.
             </p>
             <div class="flex gap-6 text-sm">
               <a href="#" class="text-gray-400 hover:text-white transition-colors">Política de Privacidad</a>

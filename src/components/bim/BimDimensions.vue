@@ -78,22 +78,23 @@ const setActiveDimension = (index) => {
 </script>
 
 <template>
-  <section id="dimensiones-bim" class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-gray-900 dark:to-slate-900 relative overflow-hidden">
+  <section id="dimensiones-bim"
+    class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-gray-900 dark:to-slate-900 relative overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-5">
-      <div class="absolute top-10 left-10 w-32 h-32 border border-blue-300 rounded-full" />
-      <div class="absolute top-40 right-20 w-24 h-24 border border-purple-300 rounded-full" />
-      <div class="absolute bottom-20 left-1/4 w-40 h-40 border border-cyan-300 rounded-full" />
+      <img src="/images/geometric-pattern.svg" alt="" class="w-full h-full object-cover" />
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
       <div class="text-center mb-16">
-        <div class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-6">
+        <div
+          class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-6">
           <i class="fas fa-layer-group" />
           <span>Tecnología BIM Avanzada</span>
         </div>
         <h2 class="text-4xl md:text-6xl font-black text-gray-900 dark:text-gray-100 mb-6">
-          Las <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">7 Dimensiones</span> BIM
+          Las <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">7
+            Dimensiones</span> BIM
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
           Domina cada dimensión del Building Information Modeling para convertirte en un líder
@@ -105,17 +106,12 @@ const setActiveDimension = (index) => {
       <div class="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
         <!-- Dimension List -->
         <div class="lg:col-span-1 space-y-4">
-          <div
-            v-for="(dimension, index) in dimensions"
-            :key="dimension.id"
-            @click="setActiveDimension(index)"
-            :class="[
-              'p-6 rounded-2xl cursor-pointer transition-all duration-300 border-2',
-              activeIndex === index
-                ? 'border-blue-500 bg-white shadow-xl scale-105'
-                : 'border-gray-200 bg-white/50 hover:border-gray-300 hover:shadow-md'
-            ]"
-          >
+          <div v-for="(dimension, index) in dimensions" :key="dimension.id" @click="setActiveDimension(index)" :class="[
+            'p-6 rounded-2xl cursor-pointer transition-all duration-300 border-2',
+            activeIndex === index
+              ? 'border-blue-500 bg-white shadow-xl scale-105'
+              : 'border-gray-200 bg-white/50 hover:border-gray-300 hover:shadow-md'
+          ]">
             <div class="flex items-center gap-4">
               <div :class="[
                 'w-12 h-12 rounded-xl flex items-center justify-center text-white text-xl font-bold',
@@ -148,7 +144,8 @@ const setActiveDimension = (index) => {
               </div>
             </div>
 
-            <img :src="activeDimension.image" alt="Imagen de la dimensión BIM" class="w-full h-48 object-cover rounded-2xl mb-6" />
+            <img :src="activeDimension.image" alt="Imagen de la dimensión BIM"
+              class="w-full h-48 object-cover rounded-2xl mb-6" />
 
             <!-- Features Grid -->
             <div class="grid md:grid-cols-2 gap-4 mb-6">

@@ -51,8 +51,6 @@ src/
 
 - **Vite** para desarrollo rápido
 - **ESLint + Prettier** para code quality
-- **Husky + lint-staged** para pre-commit hooks
-- **Commitlint** para conventional commits
 
 #### Styling & UI
 
@@ -197,5 +195,3 @@ git commit -m "refactor: optimize component performance"
 - [ ] **Real-time features** con WebSockets
 - [ ] **AI-powered** recommendations
 - [ ] **Advanced caching** strategies
-
-

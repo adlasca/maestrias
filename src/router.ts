@@ -8,28 +8,23 @@ const routes = [
   {
     path: '/',
     name: 'BIM',
-    component: MaestriaBIM
-  },
-  {
-    path: '/maestrias',
-    name: 'Maestrias',
-    component: MaestriasSelection
+    component: MaestriasSelection,
   },
   {
     path: '/maestria/bim',
     name: 'MaestriaBIM',
-    component: MaestriaBIM
+    component: MaestriaBIM,
   },
   {
     path: '/maestria/hidraulica',
     name: 'MaestriaHidraulica',
-    component: MaestriaHidraulica
+    component: MaestriaHidraulica,
   },
   {
     path: '/maestria/geotecnica',
     name: 'MaestriaGeotecnica',
-    component: MaestriaGeotecnica
-  }
+    component: MaestriaGeotecnica,
+  },
 ]
 
 const router = createRouter({
@@ -41,7 +36,7 @@ const router = createRouter({
     } else {
       return { top: 0 }
     }
-  }
+  },
 })
 
 export default router

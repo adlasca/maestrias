@@ -1,0 +1,36 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bimGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#bimGradient)" opacity="0.1"/>
+  <circle cx="100" cy="100" r="85" fill="none" stroke="url(#bimGradient)" stroke-width="2" opacity="0.3"/>
+
+  <!-- BIM Cube -->
+  <g transform="translate(60, 60)">
+    <!-- Front face -->
+    <polygon points="0,0 50,0 50,50 0,50" fill="url(#bimGradient)" opacity="0.8"/>
+    <!-- Top face -->
+    <polygon points="0,0 50,0 40,10 10,10" fill="url(#bimGradient)" opacity="0.6"/>
+    <!-- Side face -->
+    <polygon points="50,0 50,50 40,40 40,10" fill="url(#bimGradient)" opacity="0.4"/>
+
+    <!-- BIM Text -->
+    <text x="25" y="30" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">BIM</text>
+  </g>
+
+  <!-- Orbiting elements -->
+  <circle cx="160" cy="80" r="8" fill="#10B981" opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate" values="0 100 100;360 100 100" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="40" cy="120" r="6" fill="#F59E0B" opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate" values="0 100 100;360 100 100" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="140" cy="140" r="5" fill="#EF4444" opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate" values="0 100 100;360 100 100" dur="5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

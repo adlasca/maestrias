@@ -1,13 +1,11 @@
 <template>
   <div class="min-h-screen bg-gray-50">
     <!-- Hero Section Hidráulica -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-teal-900">
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-teal-900">
       <div class="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop"
-          alt="Sistemas hidráulicos y gestión del agua"
-          class="w-full h-full object-cover object-center brightness-90 contrast-105"
-        />
+        <img src="/images/Hidroelect.jpeg" alt="Sistemas hidráulicos y gestión del agua"
+          class="w-full h-full object-cover object-center brightness-90 contrast-105" />
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900/50 via-blue-800/40 to-cyan-900/40" />
         <div class="absolute inset-0 opacity-10">
           <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-400 rounded-full blur-3xl" />
@@ -18,7 +16,8 @@
       <div class="relative z-10 container mx-auto px-4 text-center">
         <div class="max-w-6xl mx-auto">
           <!-- Badge -->
-          <div class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-8 hover:bg-white/20 transition-all">
+          <div
+            class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-8 hover:bg-white/20 transition-all">
             <i class="fas fa-water text-cyan-400" />
             <span>Cuarto Nivel · Gestión Sostenible del Agua</span>
             <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
@@ -34,7 +33,8 @@
           </h1>
 
           <!-- Subtítulo -->
-          <div class="inline-block bg-black/40 backdrop-blur-sm px-6 py-4 rounded-2xl mb-8 border border-white/25 shadow-2xl">
+          <div
+            class="inline-block bg-black/40 backdrop-blur-sm px-6 py-4 rounded-2xl mb-8 border border-white/25 shadow-2xl">
             <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
               Sistemas Hidrosanitarios y <span class="text-emerald-300 font-semibold">Gestión Sostenible del Agua</span>
             </p>
@@ -47,7 +47,8 @@
               <i class="fas fa-quote-right absolute right-0 bottom-0 text-2xl text-white/30 mr-2 mb-1" />
 
               <p class="text-lg sm:text-xl italic font-light leading-relaxed text-white drop-shadow">
-                "Formamos especialistas que <strong class="font-semibold text-cyan-300">diseñan, gestionan y optimizan</strong>
+                "Formamos especialistas que <strong class="font-semibold text-cyan-300">diseñan, gestionan y
+                  optimizan</strong>
                 sistemas hídricos con enfoque sostenible y resiliente para el desarrollo nacional."
               </p>
             </div>
@@ -89,46 +90,30 @@
             </div>
           </div>
 
-          <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <a href="#plan-estudios" class="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-bold text-lg shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105">
-              <span class="relative z-10 flex items-center gap-2">
-                <i class="fas fa-book-open" />
-                Ver Plan de Estudios
-                <i class="fas fa-arrow-down group-hover:animate-bounce" />
-              </span>
-            </a>
-            <a href="#contacto" class="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-bold text-lg shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105">
-              <span class="relative z-10 flex items-center gap-2">
-                <i class="fas fa-headset" />
-                Contactar Coordinación
-                <i class="fas fa-phone-alt group-hover:animate-pulse" />
-              </span>
-            </a>
-            <router-link to="/maestrias" class="px-8 py-4 border-2 border-white/30 rounded-full text-white font-semibold text-lg backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all">
-              <i class="fas fa-arrow-left mr-2" />
-              Ver Otras Maestrías
-            </router-link>
-          </div>
-
           <!-- Navigation Buttons -->
           <div class="flex flex-wrap justify-center gap-3 mb-8">
-            <a href="#introduccion" class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all">
-              <i class="fas fa-info-circle mr-1"></i>Introducción
+            <a href="#introduccion"
+              class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600   rounded-full text-white text-lg font-medium shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105">
+              <i class="fas fa-cubes mr-1"></i>Programa
             </a>
-            <a href="#perfil-aspirante" class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all">
+            <a href="#perfil-aspirante"
+              class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600   rounded-full text-white text-lg font-medium shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105">
               <i class="fas fa-user-graduate mr-1"></i>Perfil
             </a>
-            <a href="#plan-estudios" class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all">
+            <a href="#plan-estudios"
+              class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600  rounded-full text-white text-lg font-medium shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105">
               <i class="fas fa-book mr-1"></i>Currículo
             </a>
-            <a href="#facultad" class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all">
+            <a href="#facultad"
+              class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600   rounded-full text-white text-lg font-medium shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105">
               <i class="fas fa-chalkboard-teacher mr-1"></i>Docentes
             </a>
-            <a href="#admision" class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all">
+            <a href="#admision"
+              class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600   rounded-full text-white text-lg font-medium shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105">
               <i class="fas fa-clipboard-check mr-1"></i>Admisión
             </a>
-            <a href="#contacto" class="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all">
+            <a href="#contacto"
+              class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600  rounded-full text-white text-lg font-medium shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105">
               <i class="fas fa-dollar-sign mr-1"></i>Financiamiento
             </a>
           </div>
@@ -137,7 +122,8 @@
 
       <!-- Elementos decorativos agua -->
       <div class="absolute top-20 right-10 w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
-      <div class="absolute bottom-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+      <div class="absolute bottom-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse"
+        style="animation-delay: 0.5s;"></div>
     </section>
 
     <!-- Introducción Hidráulica -->
@@ -189,7 +175,8 @@
             </div>
           </div>
 
-          <a href="mailto:posgrado@fica.uce.edu.ec" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold text-lg rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105">
+          <a href="mailto:posgrado@fica.uce.edu.ec"
+            class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold text-lg rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105">
             <i class="fas fa-paper-plane" />
             Solicitar Información
           </a>
@@ -198,17 +185,12 @@
     </section>
 
     <!-- WhatsApp Button -->
-    <a
-      href="https://wa.me/593999072657?text=Hola,%20deseo%20información%20sobre%20la%20Maestría%20en%20Ingeniería%20Hidráulica"
+    <a href="https://wa.me/593999072657?text=Hola,%20deseo%20información%20sobre%20la%20Maestría%20en%20Ingeniería%20Hidráulica"
       target="_blank"
       class="fixed bottom-20 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 z-50 group"
-      aria-label="Contactar por WhatsApp"
-    >
+      aria-label="Contactar por WhatsApp">
       <i class="fab fa-whatsapp text-2xl group-hover:animate-pulse" />
     </a>
-
-    <!-- Footer -->
-    <Footer />
   </div>
 </template>
 
@@ -219,5 +201,4 @@ import HidraulicaCurriculum from './HidraulicaCurriculum.vue'
 import HidraulicaFacultySection from './HidraulicaFacultySection.vue'
 import HidraulicaAdmissionContact from './HidraulicaAdmissionContact.vue'
 import HidraulicaFinancingSection from './HidraulicaFinancingSection.vue'
-import Footer from '../Footer.vue'
 </script>
