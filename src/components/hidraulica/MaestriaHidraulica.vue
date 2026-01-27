@@ -35,8 +35,8 @@
           <!-- Subtítulo -->
           <div
             class="inline-block bg-black/40 backdrop-blur-sm px-6 py-4 rounded-2xl mb-8 border border-white/25 shadow-2xl">
-            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Sistemas Hidrosanitarios y <span class="text-emerald-300 font-semibold">Gestión Sostenible del Agua</span>
+            <p class="text-5xl md:text-5xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Mención en Sistemas Hidrosanitarios y <span class="text-emerald-300 font-semibold">Gestión Sostenible del Agua</span>
             </p>
           </div>
 
