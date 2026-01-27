@@ -27,9 +27,9 @@ const { showScrollTop, scrollToTop } = useScrollToTop()
             <div class="flex items-center gap-4">
               <router-link to="/" class="flex items-center gap-4">
                 <img src="/logo-uce.png" alt="Universidad Central del Ecuador"
-                  class="h-22 sm:h-24 w-auto object-contain" />
+                  class="h-20 sm:h-22 w-auto object-contain" />
                 <img src="/images/logo-fica.png" alt="Universidad Central del Ecuador"
-                  class="h-22 sm:h-24 w-auto object-contain" />
+                  class="h-20 sm:h-22 w-auto object-contain" />
                 <div class="hidden sm:block h-10 w-px bg-gray-300 mx-2" aria-hidden="true" />
                 <div class="hidden md:block">
                   <h1 class="text-2xl font-bold text-gray-900">Universidad Central del Ecuador</h1>

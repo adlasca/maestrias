@@ -20,7 +20,7 @@
           <div
             class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-8 hover:bg-white/20 transition-all">
             <i class="fas fa-mountain text-green-400" />
-            <span>Cuarto Nivel · Gestión de Riesgos</span>
+            <span>Posgrado de Cuarto Nivel</span>
             <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
             <span class="text-xs opacity-80">Cohorte 2026</span>
           </div>
@@ -49,9 +49,9 @@
               <i class="fas fa-quote-right absolute right-0 bottom-0 text-2xl text-white/30 mr-2 mb-1" />
 
               <p class="text-xl md:text-2xl italic font-light leading-relaxed text-white drop-shadow">
-                "Formamos a los <strong class="font-semibold text-green-300">especialistas que diseñan la
+                Formamos a los <strong class="font-semibold text-green-300">especialistas que diseñan la
                   resiliencia</strong>
-                del territorio, integrando tecnología avanzada con gestión estratégica de riesgos."
+                del territorio, integrando tecnología avanzada con gestión estratégica de riesgos.
               </p>
             </div>
           </div>

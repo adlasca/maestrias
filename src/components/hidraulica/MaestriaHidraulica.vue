@@ -19,7 +19,7 @@
           <div
             class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-8 hover:bg-white/20 transition-all">
             <i class="fas fa-water text-cyan-400" />
-            <span>Cuarto Nivel · Gestión Sostenible del Agua</span>
+            <span>Posgrado de Cuarto Nivel</span>
             <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
             <span class="text-xs opacity-80">Cohorte 2026</span>
           </div>
@@ -46,10 +46,10 @@
               <i class="fas fa-quote-left absolute left-0 top-0 text-2xl text-white/30 ml-2 mt-1" />
               <i class="fas fa-quote-right absolute right-0 bottom-0 text-2xl text-white/30 mr-2 mb-1" />
 
-              <p class="text-lg sm:text-xl italic font-light leading-relaxed text-white drop-shadow">
-                "Formamos especialistas que <strong class="font-semibold text-cyan-300">diseñan, gestionan y
+              <p class="text-xl sm:text-2xl italic font-light leading-relaxed text-white drop-shadow">
+                Formamos especialistas que <strong class="font-semibold text-cyan-300">diseñan, gestionan y
                   optimizan</strong>
-                sistemas hídricos con enfoque sostenible y resiliente para el desarrollo nacional."
+                sistemas hídricos con enfoque sostenible y resiliente para el desarrollo nacional.
               </p>
             </div>
           </div>
