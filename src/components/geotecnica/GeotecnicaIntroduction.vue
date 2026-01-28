@@ -60,7 +60,7 @@
                 </div>
                 <div>
                   <div class="font-semibold text-gray-900">Duración</div>
-                  <div class="text-sm text-gray-600">2 años</div>
+                  <div class="text-sm text-gray-600">2 Períodos académicos</div>
                 </div>
               </div>
             </div>

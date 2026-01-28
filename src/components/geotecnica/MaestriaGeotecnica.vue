@@ -20,7 +20,7 @@
           <div
             class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-8 hover:bg-white/20 transition-all">
             <i class="fas fa-mountain text-green-400" />
-            <span>Cuarto Nivel · Gestión de Riesgos</span>
+            <span>Posgrado de Cuarto Nivel</span>
             <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
             <span class="text-xs opacity-80">Cohorte 2026</span>
           </div>
@@ -37,8 +37,8 @@
           <!-- Subtítulo -->
           <div
             class="inline-block bg-black/40 backdrop-blur-sm px-6 py-4 rounded-2xl mb-8 border border-white/25 shadow-2xl">
-            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Mención en Ingeniería Geotécnica y <span class="text-emerald-300 font-semibold">Gestión de Riesgos</span>
+            <p class="text-5xl md:text-5xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Mención en Ingeniería Geotécnica y <span class="text-emerald-300 font-semibold">Gestión Integral de Riesgos</span>
             </p>
           </div>
 
@@ -48,10 +48,10 @@
               <i class="fas fa-quote-left absolute left-0 top-0 text-2xl text-white/30 ml-2 mt-1" />
               <i class="fas fa-quote-right absolute right-0 bottom-0 text-2xl text-white/30 mr-2 mb-1" />
 
-              <p class="text-lg sm:text-xl italic font-light leading-relaxed text-white drop-shadow">
-                "Formamos a los <strong class="font-semibold text-green-300">especialistas que diseñan la
+              <p class="text-xl md:text-2xl italic font-light leading-relaxed text-white drop-shadow">
+                Formamos a los <strong class="font-semibold text-green-300">especialistas que diseñan la
                   resiliencia</strong>
-                del territorio, integrando tecnología avanzada con gestión estratégica de riesgos."
+                del territorio, integrando tecnología avanzada con gestión estratégica de riesgos.
               </p>
             </div>
           </div>

@@ -18,7 +18,7 @@
                         <i class="fas fa-laptop-house mr-2"></i>Modalidad Híbrida
                     </span>
                     <span class="inline-flex items-center bg-white/10 px-4 py-2 rounded-full">
-                        <i class="fas fa-calendar-alt mr-2"></i>2 Semestres
+                        <i class="fas fa-calendar-alt mr-2"></i>2 Períodos Académicos
                     </span>
                 </div>
             </div>

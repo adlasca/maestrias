@@ -12,8 +12,8 @@
           <!-- Logo y descripción -->
           <div class="md:col-span-1">
             <div class="flex items-center gap-4 mb-6">
-              <img src="/logo-uce.png" alt="UCE Logo" class="w-18 h-18 object-contain" />
-              <img src="/images/logo-fica.png" alt="FICA Logo" class="w-12 h-12 object-contain" />
+              <img src="/logo-uce.png" class="w-16 h-16 md:w-24 md:h-24 object-contain" />
+              <img src="/images/logo-fica.png" class="w-12 h-12 md:w-20 md:h-20 object-contain" />
               <div>
                 <h3
                   class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
