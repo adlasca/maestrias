@@ -1,159 +1,134 @@
+<script setup>
+const inputProfile = {
+  title: 'Perfil de Ingreso',
+  subtitle: 'Requisitos de Base',
+  theme: 'cyan', // Tema visual
+  gradient: 'from-cyan-500 to-blue-600',
+  icon: 'fa-user-graduate',
+  items: [
+    { title: 'Formación Académica', desc: 'Título de 3er nivel en Ingeniería Civil, Arquitectura o ramas afines.', icon: 'fa-certificate' },
+    { title: 'Conocimientos Previos', desc: 'Fundamentos de construcción y manejo básico de software CAD/BIM.', icon: 'fa-layer-group' },
+    { title: 'Experiencia (Deseable)', desc: 'Mínimo 1 año de experiencia en proyectos de ingeniería o arquitectura.', icon: 'fa-briefcase' },
+    { title: 'Competencia Lingüística', desc: 'Lectura técnica en inglés (Nivel medio/técnico).', icon: 'fa-language' },
+  ]
+}
+
+const outputProfile = {
+  title: 'Perfil de Egreso',
+  subtitle: 'Tu Nuevo Nivel Profesional',
+  theme: 'purple', // Tema visual
+  gradient: 'from-fuchsia-500 to-purple-600',
+  icon: 'fa-user-astronaut',
+  items: [
+    { title: 'BIM Manager / Coordinator', desc: 'Lidera la implementación y gestión de flujos de trabajo BIM.', icon: 'fa-chess-king' },
+    { title: 'Gestor de Activos Digitales', desc: 'Domina el ciclo de vida completo (7D) del proyecto constructivo.', icon: 'fa-database' },
+    { title: 'Analista de Datos', desc: 'Toma decisiones basadas en Business Intelligence y Big Data.', icon: 'fa-chart-network' },
+    { title: 'Innovador Tecnológico', desc: 'Implementa automatización, realidad virtual e IoT en obra.', icon: 'fa-microchip' },
+  ]
+}
+</script>
+
 <template>
-  <section id="perfil-aspirante" class="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative">
-    <!-- Background Elements -->
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-      <div
-        class="absolute top-20 right-20 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
-      <div
-        class="absolute bottom-20 left-20 w-96 h-96 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
+  <section id="perfil-aspirante" class="py-24 bg-slate-950 relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
+         style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
     </div>
 
+    <div class="absolute top-1/4 left-0 w-[600px] h-[600px] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
     <div class="container mx-auto px-4 relative z-10">
+      
       <div class="text-center mb-20">
-        <div
-          class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm font-semibold mb-6">
-          <i class="fas fa-users" />
-          <span>Perfiles Académicos</span>
-        </div>
-        <h2 class="text-4xl md:text-6xl font-black text-gray-900 mb-6">
-          De <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Profesional</span>
-          a <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Experto BIM</span>
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
+          EVOLUCIÓN PROFESIONAL
+        </span>
+        <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+          De Profesional a <br class="hidden md:block" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">Experto BIM Global</span>
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transformamos profesionales calificados en líderes especializados en tecnología BIM,
-          preparados para revolucionar la industria de la construcción.
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+          Un programa diseñado para cerrar la brecha entre la ingeniería tradicional y la construcción 4.0.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-        <!-- Perfil de Ingreso -->
-        <div class="group">
-          <div
-            class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-            <!-- Header -->
-            <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-8 text-white relative">
-              <div class="absolute top-4 right-4 w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
-                <i class="fas fa-sign-in-alt text-2xl" />
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto items-start">
+        
+        <div class="group relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+          
+          <div class="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
+            <div class="flex items-center gap-5 mb-8 border-b border-white/5 pb-8">
+              <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-slate-800 border border-cyan-500/30 text-cyan-400 shadow-lg shadow-cyan-900/20">
+                <i :class="['fas text-3xl', inputProfile.icon]"></i>
               </div>
-              <h3 class="text-3xl font-black mb-2">Perfil de Ingreso</h3>
-              <p class="text-blue-100 text-lg">Requisitos de admisión</p>
-            </div>
-
-            <!-- Content -->
-            <div class="p-8">
-              <div class="space-y-6">
-                <div class="flex items-start gap-4 p-4 bg-blue-50 rounded-2xl border border-blue-100">
-                  <div class="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-graduation-cap text-white" />
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">Título Profesional</h4>
-                    <p class="text-gray-600 text-sm">Ingeniería Civil, Arquitectura, o carreras afines con título de
-                      tercer nivel.</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 bg-green-50 rounded-2xl border border-green-100">
-                  <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-brain text-white" />
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">Conocimientos Básicos</h4>
-                    <p class="text-gray-600 text-sm">Familiaridad con software de diseño CAD y conceptos básicos de
-                      construcción.</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 bg-purple-50 rounded-2xl border border-purple-100">
-                  <div class="w-10 h-10 bg-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-briefcase text-white" />
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">Experiencia Profesional</h4>
-                    <p class="text-gray-600 text-sm">Mínimo 1 año de experiencia laboral (deseable, no excluyente).</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 bg-orange-50 rounded-2xl border border-orange-100">
-                  <div class="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-language text-white" />
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">Idioma</h4>
-                    <p class="text-gray-600 text-sm">Dominio del inglés técnico (lectura y comprensión).</p>
-                  </div>
-                </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">{{ inputProfile.title }}</h3>
+                <p class="text-cyan-400 font-mono text-sm uppercase tracking-wide">{{ inputProfile.subtitle }}</p>
               </div>
             </div>
+
+            <ul class="space-y-4">
+              <li v-for="(item, idx) in inputProfile.items" :key="idx" 
+                  class="flex items-start gap-4 p-4 rounded-xl bg-slate-800/40 border border-transparent hover:border-cyan-500/30 hover:bg-slate-800/60 transition-all duration-300 group/item">
+                <div class="mt-1 w-8 h-8 rounded-lg bg-cyan-900/30 flex items-center justify-center text-cyan-400 group-hover/item:scale-110 transition-transform">
+                  <i :class="['fas text-sm', item.icon]"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-sm mb-1">{{ item.title }}</h4>
+                  <p class="text-slate-400 text-sm leading-relaxed">{{ item.desc }}</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <!-- Perfil de Egreso -->
-        <div class="group">
-          <div
-            class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-            <!-- Header -->
-            <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-8 text-white relative">
-              <div class="absolute top-4 right-4 w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
-                <i class="fas fa-rocket text-2xl" />
+        <div class="hidden lg:flex flex-col items-center justify-center h-full pt-32 opacity-50">
+           <i class="fas fa-chevron-right text-4xl text-slate-700 animate-pulse"></i>
+        </div>
+
+        <div class="group relative">
+           <div class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+          <div class="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
+            <div class="flex items-center gap-5 mb-8 border-b border-white/5 pb-8">
+              <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-slate-800 border border-purple-500/30 text-purple-400 shadow-lg shadow-purple-900/20">
+                <i :class="['fas text-3xl', outputProfile.icon]"></i>
               </div>
-              <h3 class="text-3xl font-black mb-2">Perfil de Egreso</h3>
-              <p class="text-purple-100 text-lg">Competencias adquiridas</p>
-            </div>
-
-            <!-- Content -->
-            <div class="p-8">
-              <div class="space-y-6">
-                <div class="flex items-start gap-4 p-4 bg-purple-50 rounded-2xl border border-purple-100">
-                  <div class="w-10 h-10 bg-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-cogs text-white" />
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">Experto BIM</h4>
-                    <p class="text-gray-600 text-sm">Dominio completo de las 7 dimensiones BIM y herramientas
-                      especializadas.</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 bg-indigo-50 rounded-2xl border border-indigo-100">
-                  <div class="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-users-cog text-white" />
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">Líder de Proyectos</h4>
-                    <p class="text-gray-600 text-sm">Capacidad para gestionar equipos multidisciplinarios en entornos
-                      BIM.</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 bg-cyan-50 rounded-2xl border border-cyan-100">
-                  <div class="w-10 h-10 bg-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-chart-line text-white" />
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">Analista Estratégico</h4>
-                    <p class="text-gray-600 text-sm">Habilidades para análisis de datos y toma de decisiones
-                      estratégicas.</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 bg-pink-50 rounded-2xl border border-pink-100">
-                  <div class="w-10 h-10 bg-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-globe text-white" />
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-1">Innovador Digital</h4>
-                    <p class="text-gray-600 text-sm">Conocimientos en tecnologías emergentes: IA, IoT, Realidad Virtual.
-                    </p>
-                  </div>
-                </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">{{ outputProfile.title }}</h3>
+                <p class="text-purple-400 font-mono text-sm uppercase tracking-wide">{{ outputProfile.subtitle }}</p>
               </div>
             </div>
+
+            <ul class="space-y-4">
+              <li v-for="(item, idx) in outputProfile.items" :key="idx" 
+                  class="flex items-start gap-4 p-4 rounded-xl bg-slate-800/40 border border-transparent hover:border-purple-500/30 hover:bg-slate-800/60 transition-all duration-300 group/item">
+                <div class="mt-1 w-8 h-8 rounded-lg bg-purple-900/30 flex items-center justify-center text-purple-400 group-hover/item:scale-110 transition-transform">
+                  <i :class="['fas text-sm', item.icon]"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-sm mb-1">{{ item.title }}</h4>
+                  <p class="text-slate-400 text-sm leading-relaxed">{{ item.desc }}</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
+
       </div>
 
 
     </div>
   </section>
 </template>
+
+<style scoped>
+/* Asegura que la rejilla del medio no rompa el layout */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr auto 1fr;
+  }
+}
+</style>

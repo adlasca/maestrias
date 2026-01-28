@@ -1,126 +1,166 @@
+<script setup>
+const faculty = [
+  {
+    name: 'Ing. Edwin Tipán',
+    role: 'Coordinador Académico',
+    specialty: 'Hydraulic Engineering',
+    description: 'Magíster en Recursos Hídricos. Especialista en gestión integrada de cuencas y optimización de sistemas de riego.',
+    certifications: ['M.Sc.', 'SIG Expert', 'Water Management'],
+    avatar: null, // Usa iniciales
+    theme: 'blue',
+    gradient: 'from-blue-500 to-cyan-500',
+    icon: 'fa-user-tie'
+  },
+  {
+    name: 'Dra. Patricia Sánchez',
+    role: 'Modelación & Cambio Climático',
+    specialty: 'Hydrological Modeling',
+    description: 'PhD en Hidrología. Investigadora en los efectos del cambio climático sobre la disponibilidad hídrica en los Andes.',
+    certifications: ['PhD', 'HEC-RAS Pro', 'Climate Analyst'],
+    avatar: null,
+    theme: 'cyan',
+    gradient: 'from-cyan-500 to-teal-400',
+    icon: 'fa-cloud-sun-rain'
+  },
+  {
+    name: 'Ing. Carlos Vásquez',
+    role: 'Diseño Hidrosanitario',
+    specialty: 'Sanitary Systems',
+    description: 'Experto en diseño de redes de agua potable y alcantarillado para grandes urbes. Certificado en software de modelación.',
+    certifications: ['WaterCAD', 'SWMM Certified', 'EPANET'],
+    avatar: null,
+    theme: 'sky',
+    gradient: 'from-sky-500 to-blue-600',
+    icon: 'fa-faucet'
+  },
+  {
+    name: 'Dra. María Rodríguez',
+    role: 'Calidad del Agua',
+    specialty: 'Water Treatment',
+    description: 'Doctora en Ingeniería Ambiental. Especialista en procesos físico-químicos para potabilización y depuración de aguas.',
+    certifications: ['PhD Env. Eng', 'Water Quality', 'Lab Lead'],
+    avatar: null,
+    theme: 'teal',
+    gradient: 'from-teal-500 to-emerald-500',
+    icon: 'fa-flask'
+  },
+  {
+    name: 'Ing. Roberto Luna',
+    role: 'Gestión de Riesgos',
+    specialty: 'Flood Risk Analysis',
+    description: 'Ingeniero Civil especialista en hidráulica fluvial y control de inundaciones. Experto en mapas de amenaza.',
+    certifications: ['Flood Modeler', 'River Analysis', 'QGIS Pro'],
+    avatar: null,
+    theme: 'amber',
+    gradient: 'from-amber-500 to-orange-500',
+    icon: 'fa-house-flood-water'
+  },
+  {
+    name: 'Dr. Francisco Díaz',
+    role: 'Innovación Hídrica',
+    specialty: 'Smart Water & IoT',
+    description: 'PhD en Ingeniería Civil. Pionero en la implementación de sensores IoT para el monitoreo telemétrico de caudales.',
+    certifications: ['IoT Specialist', 'Big Data', 'Smart Grid'],
+    avatar: null,
+    theme: 'indigo',
+    gradient: 'from-indigo-500 to-violet-500',
+    icon: 'fa-wifi'
+  }
+]
+
+// Utilidad para generar iniciales
+const getInitials = (name) => {
+  return name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+}
+</script>
+
 <template>
-  <section id="facultad" class="py-24 bg-white">
-    <div class="container mx-auto px-4">
-      <!-- Encabezado -->
-      <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1.5 bg-cyan-100 text-cyan-800 text-sm font-bold rounded-full uppercase tracking-wider mb-5">
-          Claustro Académico
+  <section id="facultad" class="py-24 bg-slate-950 relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
+         style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
+    </div>
+
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      
+      <div class="text-center mb-20">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
+          ACADEMIC SQUAD
         </span>
-        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-          Docentes de <span class="text-cyan-600">Excelencia</span>
+        <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+          Mentores <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Expertos</span>
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Aprende de especialistas con amplia trayectoria en proyectos hídricos nacionales e internacionales
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+          Aprende de investigadores y profesionales que lideran la gestión de recursos hídricos en el país.
         </p>
       </div>
 
-      <!-- Cards mejoradas -->
-      <div class="grid md:grid-cols-3 gap-10">
-        <!-- Card 1 - Tecnología -->
-        <div class="group bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-cyan-200">
-          <div class="mb-8">
-            <div class="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-microscope text-white text-3xl"></i>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+        
+        <div v-for="(member, index) in faculty" :key="index" 
+             class="group relative bg-slate-900/50 backdrop-blur-xl rounded-2xl border border-white/5 p-1 transition-all duration-300 hover:-translate-y-1">
+          
+          <div class="absolute inset-0 rounded-2xl bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm -z-10"
+               :class="member.gradient"></div>
+
+          <div class="h-full bg-slate-950/80 rounded-xl p-6 md:p-8 flex flex-col relative overflow-hidden">
+            
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r opacity-50 group-hover:opacity-100 transition-opacity" :class="member.gradient"></div>
+
+            <div class="flex items-start gap-4 mb-6">
+              <div class="relative shrink-0">
+                <div class="w-16 h-16 rounded-xl overflow-hidden border-2 shadow-lg shadow-black/50 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center bg-slate-800"
+                     :class="`border-${member.theme}-500/30 group-hover:border-${member.theme}-400`">
+                  
+                  <img v-if="member.avatar" :src="member.avatar" :alt="member.name" class="w-full h-full object-cover" />
+                  
+                  <div v-else class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br" :class="member.gradient">
+                    {{ getInitials(member.name) }}
+                  </div>
+                </div>
+                <div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-slate-900 flex items-center justify-center">
+                  <div class="w-2.5 h-2.5 rounded-full animate-pulse" :class="`bg-${member.theme}-500`"></div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-white font-bold text-lg leading-tight mb-1 group-hover:text-blue-200 transition-colors">
+                  {{ member.name }}
+                </h3>
+                <p class="text-xs font-mono uppercase tracking-wider" :class="`text-${member.theme}-400`">
+                  {{ member.role }}
+                </p>
+              </div>
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Tecnología de Vanguardia</h3>
-          </div>
-          <p class="text-gray-700 text-lg leading-relaxed mb-6">
-            Accede a <strong class="font-semibold text-cyan-700">software especializado en modelación hidráulica</strong>
-            y domina herramientas como HEC-RAS, SWMM, EPANET y modeladores CFD avanzados.
-          </p>
-          <div class="pt-6 border-t border-gray-100">
-            <h4 class="font-bold text-gray-900 text-lg mb-3">Software Incluido:</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="inline-block bg-cyan-50 text-cyan-700 px-3 py-1.5 rounded-lg text-sm font-medium">
-                HEC-RAS
-              </span>
-              <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg text-sm font-medium">
-                SWMM
-              </span>
-              <span class="inline-block bg-teal-50 text-teal-700 px-3 py-1.5 rounded-lg text-sm font-medium">
-                EPANET
-              </span>
-              <span class="inline-block bg-purple-50 text-purple-700 px-3 py-1.5 rounded-lg text-sm font-medium">
-                QGIS
-              </span>
+
+            <div class="mb-6 flex-grow">
+              <div class="flex items-center gap-2 mb-3 opacity-60">
+                <i :class="['fas text-xs', member.icon]"></i>
+                <span class="text-xs font-semibold text-slate-300">{{ member.specialty }}</span>
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed border-l-2 border-slate-800 pl-3">
+                {{ member.description }}
+              </p>
             </div>
+
+            <div class="mt-auto">
+              <div class="flex flex-wrap gap-2">
+                <span v-for="cert in member.certifications" :key="cert" 
+                      class="px-2 py-1 rounded-md bg-slate-900 border border-slate-800 text-[10px] font-mono text-slate-400 group-hover:border-slate-700 group-hover:text-slate-300 transition-colors">
+                  {{ cert }}
+                </span>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- Card 2 - Docentes -->
-        <div class="group bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-cyan-200">
-          <div class="mb-8">
-            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-chalkboard-teacher text-white text-3xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Claustro de Excelencia</h3>
-          </div>
-          <p class="text-gray-700 text-lg leading-relaxed mb-6">
-            Aprende de <strong class="font-semibold text-cyan-700">hidrólogos, ingenieros y doctores</strong> con experiencia
-            en proyectos de infraestructura hídrica, gestión de recursos y consultoría especializada.
-          </p>
-          <div class="pt-6 border-t border-gray-100">
-            <h4 class="font-bold text-gray-900 text-lg mb-3">Perfil Docente:</h4>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i>
-                <span>Especialistas en hidrología aplicada</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i>
-                <span>Experiencia en proyectos reales</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i>
-                <span>Publicaciones en revistas indexadas</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i>
-                <span>Vinculación con el sector hídrico</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Card 3 - Internacionalización -->
-        <div class="group bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-cyan-200">
-          <div class="mb-8">
-            <div class="w-20 h-20 bg-gradient-to-br from-teal-500 to-green-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-globe-americas text-white text-3xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Internacionalización</h3>
-          </div>
-          <p class="text-gray-700 text-lg leading-relaxed mb-6">
-            Benefíciate de <strong class="font-semibold text-cyan-700">convenios internacionales</strong>
-            y programas de movilidad académica, además de becas para investigación en centros especializados.
-          </p>
-          <div class="pt-6 border-t border-gray-100">
-            <h4 class="font-bold text-gray-900 text-lg mb-3">Oportunidades:</h4>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-center">
-                <i class="fas fa-plane text-blue-500 mr-2"></i>
-                <span>Intercambios con universidades europeas</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-graduation-cap text-blue-500 mr-2"></i>
-                <span>Becas para investigación</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-handshake text-blue-500 mr-2"></i>
-                <span>Convenios con organismos internacionales</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-book text-blue-500 mr-2"></i>
-                <span>Publicaciones conjuntas</span>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
+
+    
     </div>
   </section>
 </template>
-
-<script setup>
-// Component logic here
-</script>

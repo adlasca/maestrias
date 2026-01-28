@@ -1,303 +1,151 @@
-<template>
-  <section id="plan-estudios" class="section-padding bg-gradient-to-br from-blue-900 via-blue-800 to-gray-900 text-white">
-        <div class="container mx-auto px-4">
-            <!-- Encabezado mejorado -->
-            <div class="text-center mb-16">
-                <span class="inline-block px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-bold uppercase tracking-wider mb-6">
-                    <i class="fas fa-graduation-cap mr-2"></i>Estructura Académica
-                </span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Malla Curricular Completa</h2>
-                <div class="flex flex-wrap justify-center gap-4 text-lg">
-                    <span class="inline-flex items-center bg-white/10 px-4 py-2 rounded-full">
-                        <i class="fas fa-clock mr-2"></i>1440 Horas
-                    </span>
-                    <span class="inline-flex items-center bg-white/10 px-4 py-2 rounded-full">
-                        <i class="fas fa-book mr-2"></i>30 Créditos
-                    </span>
-                    <span class="inline-flex items-center bg-white/10 px-4 py-2 rounded-full">
-                        <i class="fas fa-laptop-house mr-2"></i>Modalidad Híbrida
-                    </span>
-                    <span class="inline-flex items-center bg-white/10 px-4 py-2 rounded-full">
-                        <i class="fas fa-calendar-alt mr-2"></i>2 Períodos Académicos
-                    </span>
-                </div>
-            </div>
-
-            <!-- Semestres en grid mejorado -->
-            <div class="grid lg:grid-cols-2 gap-10 mb-16">
-                <!-- Semestre 1 - Mejorado -->
-                <div class="bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300">
-                    <div class="flex items-center mb-8">
-                        <div class="relative">
-                            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg">
-                                1
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
-                                <i class="fas fa-play text-xs text-white"></i>
-                            </div>
-                        </div>
-                        <div class="ml-6">
-                            <h3 class="text-2xl md:text-3xl font-bold mb-1">Fundamentos Avanzados</h3>
-                            <p class="text-blue-200 text-lg">Semestre 1 · 15 Créditos</p>
-                        </div>
-                    </div>
-
-                    <ul class="space-y-4">
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-check text-green-400"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-cyan-300 transition-colors">
-                                    Metodología de la Investigación Aplicada
-                                </h4>
-                                <p class="text-blue-200 text-sm">Diseño de proyectos de investigación en geotecnia</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-check text-green-400"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-cyan-300 transition-colors">
-                                    Mecánica de Suelos Avanzada y Rocas
-                                </h4>
-                                <p class="text-blue-200 text-sm">Comportamiento mecánico de materiales geotécnicos</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-check text-green-400"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-cyan-300 transition-colors">
-                                    Investigaciones Geotécnicas y Geofísica
-                                </h4>
-                                <p class="text-blue-200 text-sm">Técnicas de campo y laboratorio avanzadas</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-check text-green-400"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-cyan-300 transition-colors">
-                                    Geoestadística y Confiabilidad
-                                </h4>
-                                <p class="text-blue-200 text-sm">Análisis probabilístico en geotecnia</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-check text-green-400"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-cyan-300 transition-colors">
-                                    Modelos Constitutivos y Numéricos
-                                </h4>
-                                <p class="text-blue-200 text-sm">Simulación computacional avanzada</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-check text-green-400"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-cyan-300 transition-colors">
-                                    Dinámica de Suelos y Sismos
-                                </h4>
-                                <p class="text-blue-200 text-sm">Comportamiento sísmico de suelos y estructuras</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Semestre 2 - Mejorado -->
-                <div class="bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl hover:shadow-3xl transition-shadow duration-300">
-                    <div class="flex items-center mb-8">
-                        <div class="relative">
-                            <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg">
-                                2
-                            </div>
-                            <div class="absolute -top-2 -right-2 w-6 h-6 bg-blue-400 rounded-full flex items-center justify-center">
-                                <i class="fas fa-graduation-cap text-xs text-white"></i>
-                            </div>
-                        </div>
-                        <div class="ml-6">
-                            <h3 class="text-2xl md:text-3xl font-bold mb-1">Diseño y Especialización</h3>
-                            <p class="text-blue-200 text-lg">Semestre 2 · 15 Créditos</p>
-                        </div>
-                    </div>
-
-                    <ul class="space-y-4">
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-check text-green-400"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-amber-300 transition-colors">
-                                    Estabilidad de Taludes
-                                </h4>
-                                <p class="text-blue-200 text-sm">Análisis y diseño de taludes naturales y artificiales</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-check text-green-400"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-amber-300 transition-colors">
-                                    Diseño de Cimentaciones
-                                </h4>
-                                <p class="text-blue-200 text-sm">Superficial y profunda para diferentes tipos de suelo</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-check text-green-400"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-amber-300 transition-colors">
-                                    Excavaciones y Obras Subterráneas
-                                </h4>
-                                <p class="text-blue-200 text-sm">Túneles, sótanos y estructuras enterradas</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-check text-green-400"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-amber-300 transition-colors">
-                                    Gestión Integral de Riesgos
-                                </h4>
-                                <p class="text-blue-200 text-sm">Metodologías para evaluación y mitigación</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-star text-yellow-400"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-yellow-300 transition-colors">
-                                    Optativa Especializada
-                                </h4>
-                                <p class="text-blue-200 text-sm">
-                                    <span class="font-medium">Ruta A:</span> Riesgo Sísmico · 
-                                    <span class="font-medium">Ruta B:</span> Geotecnia Minera · 
-                                    <span class="font-medium">Ruta C:</span> Infraestructura Resiliente
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors group">
-                            <div class="flex-shrink-0 mt-1 mr-4">
-                                <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-graduation-cap text-blue-300"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1 group-hover:text-blue-300 transition-colors">
-                                    Trabajo de Titulación
-                                </h4>
-                                <p class="text-blue-200 text-sm">Proyecto de investigación aplicada o desarrollo profesional</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Distribución de horas - Mejorado -->
-            <div class="mb-16">
-                <div class="text-center mb-10">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Distribución del Programa</h3>
-                    <p class="text-blue-200 text-lg max-w-2xl mx-auto">
-                        Equilibrio entre teoría y práctica para una formación integral
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="bg-gradient-to-br from-green-600/20 to-green-700/20 backdrop-blur-sm rounded-xl p-6 text-center border border-green-500/20">
-                        <div class="text-3xl md:text-4xl font-bold text-green-400 mb-3">29%</div>
-                        <div class="text-lg font-semibold mb-2">Componente Práctico</div>
-                        <p class="text-green-200 text-sm">Laboratorios, simulaciones y proyectos reales</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-blue-600/20 to-blue-700/20 backdrop-blur-sm rounded-xl p-6 text-center border border-blue-500/20">
-                        <div class="text-3xl md:text-4xl font-bold text-blue-400 mb-3">25%</div>
-                        <div class="text-lg font-semibold mb-2">Trabajo Autónomo</div>
-                        <p class="text-blue-200 text-sm">Investigación, estudio y desarrollo individual</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-purple-600/20 to-purple-700/20 backdrop-blur-sm rounded-xl p-6 text-center border border-purple-500/20">
-                        <div class="text-3xl md:text-4xl font-bold text-purple-400 mb-3">17%</div>
-                        <div class="text-lg font-semibold mb-2">Trabajo de Titulación</div>
-                        <p class="text-purple-200 text-sm">Proyecto final de especialización</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-amber-600/20 to-amber-700/20 backdrop-blur-sm rounded-xl p-6 text-center border border-amber-500/20">
-                        <div class="text-3xl md:text-4xl font-bold text-amber-400 mb-3">9%</div>
-                        <div class="text-lg font-semibold mb-2">Seguimiento Docente</div>
-                        <p class="text-amber-200 text-sm">Tutorías y acompañamiento personalizado</p>
-                    </div>
-                </div>
-                
-                <!-- Nota sobre total -->
-                <div class="mt-8 text-center">
-                    <p class="text-blue-300 text-sm">
-                        * La suma corresponde al 80% del programa. El 20% restante corresponde a actividades complementarias y evaluación.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Información adicional -->
-            <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center">
-                        <div class="w-14 h-14 bg-blue-600/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-calendar-alt text-2xl text-blue-300"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-2">Duración del Programa</h4>
-                        <p class="text-blue-200">2 semestres académicos (12 meses)</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-14 h-14 bg-green-600/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-clock text-2xl text-green-300"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-2">Horarios Flexibles</h4>
-                        <p class="text-blue-200">Lunes a viernes **:** - **:** · Modalidad híbrida</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-14 h-14 bg-purple-600/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-laptop-code text-2xl text-purple-300"></i>
-                        </div>
-                        <h4 class="text-xl font-bold mb-2">Software Especializado</h4>
-                        <p class="text-blue-200">PLAXIS, GeoStudio, SAP2000, QGIS incluidos</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</template>
-
 <script setup>
-// Component for Geotechnical Engineering Curriculum
+const semesters = [
+  {
+    id: 1,
+    label: '01',
+    title: 'Fundamentos Avanzados',
+    subtitle: 'Primer Periodo Académico',
+    theme: 'emerald',
+    // Gradiente "Tierra/Cimiento": Verdes y Turquesas
+    gradient: 'from-emerald-500 via-teal-500 to-cyan-600',
+    shadow: 'shadow-emerald-500/20',
+    border: 'border-emerald-500/30',
+    iconColor: 'text-emerald-400',
+    courses: [
+      { name: 'Metodología de la Investigación Aplicada', code: 'RES-101', icon: 'fa-microscope', credits: 2.5 },
+      { name: 'Mecánica de Suelos Avanzada y Rocas', code: 'GEO-MSA', icon: 'fa-cubes', credits: 2.5 },
+      { name: 'Investigaciones Geotécnicas y Geofísica', code: 'GEO-INV', icon: 'fa-search-location', credits: 2.5 },
+      { name: 'Geoestadística y Confiabilidad', code: 'DAT-GEO', icon: 'fa-chart-area', credits: 2.5 },
+      { name: 'Modelos Constitutivos y Numéricos', code: 'NUM-MOD', icon: 'fa-laptop-code', credits: 2.5 },
+      { name: 'Dinámica de Suelos y Sismos', code: 'DYN-SOIL', icon: 'fa-house-damage', credits: 2.5 },
+    ]
+  },
+  {
+    id: 2,
+    label: '02',
+    title: 'Diseño y Especialización',
+    subtitle: 'Segundo Periodo Académico',
+    theme: 'amber',
+    // Gradiente "Riesgo/Obra": Ámbar y Naranjas
+    gradient: 'from-amber-500 via-orange-500 to-red-500',
+    shadow: 'shadow-amber-500/20',
+    border: 'border-amber-500/30',
+    iconColor: 'text-amber-400',
+    courses: [
+      { name: 'Estabilidad de Taludes', code: 'SLP-STB', icon: 'fa-mountain', credits: 1.25 },
+      { name: 'Diseño de Cimentaciones', code: 'FDN-DSN', icon: 'fa-dungeon', credits: 2.5 },
+      { name: 'Excavaciones y Obras Subterráneas', code: 'TUN-UND', icon: 'fa-archway', credits: 1.25 },
+      { name: 'Gestión Integral de Riesgos', code: 'RSK-MNG', icon: 'fa-shield-alt', credits: 2.5 },
+      { name: 'Optativa Especializada (Ruta)', code: 'SPC-OPT', icon: 'fa-directions', credits: 2.5 },
+      { name: 'Trabajo de Titulación', code: 'THS-PRO', icon: 'fa-graduation-cap', credits: 5.0, isHighlight: true },
+    ]
+  }
+]
+
+// Utilidad para sumar créditos
+const getTotalCredits = (courses) => courses.reduce((acc, curr) => acc + curr.credits, 0)
+const totalProgramCredits = semesters.reduce((acc, sem) => acc + getTotalCredits(sem.courses), 0)
 </script>
+
+<template>
+  <section id="plan-estudios" class="py-24 bg-slate-950 relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-[0.03]" 
+         style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 40px 40px;">
+    </div>
+    
+    <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-emerald-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-amber-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      
+      <div class="text-center mb-20">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/50 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6">
+          CURRICULUM 2026
+        </span>
+        <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+          Malla <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-500">Geotécnica</span>
+        </h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+          Programa de alto nivel que fusiona la mecánica de suelos tradicional con la modelación numérica avanzada.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-12 max-w-7xl mx-auto">
+        
+        <div v-for="semester in semesters" :key="semester.id" 
+             class="relative group rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/5 overflow-hidden hover:border-white/10 transition-colors duration-500">
+          
+          <div class="h-1 w-full bg-gradient-to-r" :class="semester.gradient"></div>
+
+          <div class="p-8 md:p-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 border-b border-white/5 pb-8">
+              <div class="flex items-center gap-6">
+                <div class="w-20 h-20 rounded-2xl bg-slate-800/50 flex items-center justify-center border border-white/5 shadow-inner">
+                  <span class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br" :class="semester.gradient">
+                    {{ semester.label }}
+                  </span>
+                </div>
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-bold text-white mb-1">{{ semester.title }}</h3>
+                  <p class="text-slate-400 font-medium">{{ semester.subtitle }}</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="px-4 py-2 rounded-lg bg-slate-800/50 border border-white/5 text-right">
+                  <div class="text-xs text-slate-500 uppercase font-bold tracking-wider">Materias</div>
+                  <div class="text-xl font-bold text-white">{{ semester.courses.length }}</div>
+                </div>
+                <div class="px-4 py-2 rounded-lg bg-slate-800/50 border border-white/5 text-right">
+                  <div class="text-xs text-slate-500 uppercase font-bold tracking-wider">Créditos</div>
+                  <div class="text-xl font-bold" :class="semester.iconColor">{{ getTotalCredits(semester.courses) }}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div v-for="(course, idx) in semester.courses" :key="idx" 
+                   class="group/card relative p-5 rounded-xl bg-slate-800/20 border border-white/5 hover:bg-slate-800/40 hover:border-white/10 transition-all duration-300 hover:-translate-y-1"
+                   :class="course.isHighlight ? `ring-1 ring-inset ${semester.border} bg-slate-800/60` : ''">
+                
+                <div class="flex items-start justify-between mb-3">
+                  <div class="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center shadow-lg group-hover/card:scale-110 transition-transform duration-300">
+                    <i :class="['fas text-lg', course.icon, semester.iconColor]"></i>
+                  </div>
+                  <span class="text-[10px] font-mono text-slate-500 bg-slate-900/80 px-2 py-1 rounded border border-white/5">
+                    {{ course.code }}
+                  </span>
+                </div>
+                
+                <h4 class="text-white font-semibold leading-tight mb-3 min-h-[48px] flex items-center">
+                  {{ course.name }}
+                </h4>
+                
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-white/5">
+                  <span class="text-xs text-slate-500">Valor Curricular</span>
+                  <div class="flex items-center gap-1.5">
+                    <i class="fas fa-star text-[10px]" :class="semester.iconColor"></i>
+                    <span class="text-sm font-bold text-slate-300">{{ course.credits }} <span class="text-[10px] text-slate-500">CR</span></span>
+                  </div>
+                </div>
+
+                <div class="absolute inset-0 rounded-xl bg-gradient-to-br opacity-0 group-hover/card:opacity-5 transition-opacity duration-300 pointer-events-none" :class="semester.gradient"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="mt-16 text-center">
+        <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-900 border border-slate-800 shadow-xl">
+          <i class="fas fa-info-circle text-slate-500"></i>
+          <span class="text-slate-400 text-sm">Total del programa: <span class="text-white font-bold">{{ totalProgramCredits }} Créditos Académicos</span> · 1440 Horas</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</template>

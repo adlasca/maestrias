@@ -1,266 +1,228 @@
 <script setup>
+const investmentDetails = {
+  registration: 80,
+  tuition: 400,
+  program: 4000,
+  total: 4000
+}
+
 const financingOptions = [
   {
-    title: 'Pago al contado',
-    subtitle: 'Pago en efectivo',
-    description: 'Pago único y seguro',
-    icon: 'fa-money-bill-wav e',
-    color: 'from-green-500 to-emerald-500',
-    benefits: ['Pago único al momento de la matrícula', 'Aceptado en ventanilla de la universidad', 'Simplificado'],
-    amount: '$4000',
-    originalAmount: '$4,000',
+    title: 'Pago de Contado',
+    subtitle: 'Transferencia / Efectivo',
+    desc: 'La opción más ágil. Realiza un único pago al inicio y despreocúpate del resto del semestre.',
+    icon: 'fa-money-bill-wave',
+    theme: 'emerald',
+    gradient: 'from-emerald-500 to-green-400',
+    features: ['Proceso simplificado', 'Sin trámites adicionales', 'Validación inmediata']
   },
   {
-    title: 'Plan de Pagos UCE',
-    subtitle: 'Hasta 3 cuotas',
-    description: 'Plan de pagos fraccionados autorizado por la Universidad Central del Ecuador.',
+    title: 'Plan UCE',
+    subtitle: 'Financiamiento Directo',
+    desc: 'Facilidad otorgada por la universidad. Paga el 50% al inicio y el 50% restante a mitad del periodo.',
     icon: 'fa-university',
-    color: 'from-blue-500 to-cyan-500',
-    benefits: ['Hasta 3 cuotas', 'Sin intereses', 'Aprobación directa'],
-    amount: '$1334/mes',
-    originalAmount: '$4,000',
+    theme: 'blue',
+    gradient: 'from-blue-500 to-cyan-400',
+    features: ['Sin intereses', '2 Cuotas por periodo', 'Gestión interna']
   },
   {
-    title: 'Tarjetas de Crédito',
-    subtitle: 'Diferido según tu banco',
-    description: 'Difiere tu inversión con todas las tarjetas de crédito bancarias.',
+    title: 'Tarjeta de Crédito',
+    subtitle: 'Diferido Bancario',
+    desc: 'Difiere tu inversión a 3, 6, 9 o 12 meses según las condiciones de tu banco emisor.',
     icon: 'fa-credit-card',
-    color: 'from-purple-500 to-pink-500',
-    benefits: ['Hasta 3 meses', 'Aprobación inmediata'],
-    amount: 'Según banco',
-    originalAmount: '$4,000',
+    theme: 'purple',
+    gradient: 'from-purple-500 to-fuchsia-400',
+    features: ['Aceptamos todas las tarjetas', 'Pago online seguro', 'Aprobación inmediata']
   },
   {
     title: 'Crédito Educativo',
-    subtitle: 'Bancos aliados',
-    description: 'Préstamos estudiantiles con tasas preferenciales y plazos extendidos.',
-    icon: 'fa-handshake',
-    color: 'from-orange-500 to-red-500',
-    benefits: ['Tasas preferenciales para docentes', 'Hasta 36 meses', 'Aprobación en 48 horas'],
-    amount: 'Variable',
-    originalAmount: '$4,000',
+    subtitle: 'Instituciones Financieras',
+    desc: 'Convenios con bancos locales para préstamos estudiantiles con tasas preferenciales.',
+    icon: 'fa-hand-holding-usd',
+    theme: 'amber',
+    gradient: 'from-amber-500 to-orange-400',
+    features: ['Plazos extendidos (up to 36m)', 'Periodos de gracia', 'Tasas preferenciales']
   },
   {
-    title: 'Convenios Empresariales',
-    subtitle: 'Para empresas',
-    description: 'Programas de capacitación corporativa con financiamiento empresarial.',
+    title: 'Convenio Corporativo',
+    subtitle: 'Empresas Aliadas',
+    desc: 'Si tu empresa financia tu maestría, gestionamos la facturación directa corporativa.',
     icon: 'fa-building',
-    color: 'from-indigo-500 to-blue-500',
-    benefits: ['Financiamiento empresa', 'Grupos corporativos', 'Descuentos adicionales'],
-    amount: 'A convenir',
-    originalAmount: '$4,000',
+    theme: 'indigo',
+    gradient: 'from-indigo-500 to-blue-500',
+    features: ['Facturación a empresa', 'Descuentos por grupos', 'Gestión personalizada']
   },
   {
     title: 'Becas de Excelencia',
-    subtitle: 'Matrícula de honor',
-    description: 'Becas parciales para estudiantes destacados con promedio superior.',
-    icon: 'fa-graduation-cap',
-    color: 'from-yellow-500 to-orange-500',
-    benefits: ['Hasta 50% descuento', 'Por mérito académico', 'Renovable'],
-    amount: 'Variable',
-    originalAmount: '$4,000',
+    subtitle: 'Mérito Académico',
+    desc: 'Descuentos parciales aplicables a estudiantes con promedios sobresalientes (Cupos limitados).',
+    icon: 'fa-award',
+    theme: 'rose',
+    gradient: 'from-rose-500 to-pink-500',
+    features: ['Hasta 25% descuento', 'Evaluación de méritos', 'Renovable por desempeño']
   },
 ]
 
-</script>
-<script>
 const coordinator = {
   name: 'Msc. Luis Wladimir Morales',
-  role: 'Coordinador-Director Académico',
+  role: 'Director de Posgrados',
   email: 'lwmorales@uce.edu.ec',
   phone: '(593 2) 2551-270',
-  office: 'Facultad de Ingeniería - Posgrado'
+  schedule: 'Lun - Vie: 08:00 - 17:00'
 }
 </script>
+
 <template>
-  <section id="financiamiento" class="
-      py-24
-      bg-gradient-to-br
-      from-slate-900
-      via-gray-900
-      to-slate-900
-      text-white
-      relative
-      overflow-hidden
-    ">
-    <!-- Background Effects -->
-    <div class="absolute inset-0">
-      <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl" />
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl" />
-      <div
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-green-600/5 rounded-full blur-3xl" />
+  <section id="financiamiento" class="py-24 bg-slate-950 relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
+         style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
     </div>
 
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-900/10 blur-[120px] rounded-full pointer-events-none"></div>
+
     <div class="container mx-auto px-4 relative z-10">
-      <div class="text-center mb-20">
-        <div
-          class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-green-300 text-sm font-semibold mb-6">
-          <i class="fas fa-money-bill-wave" />
-          <span>Facilidades de Pago</span>
-        </div>
-        <h2 class="text-4xl md:text-6xl font-black mb-6">
-          Invierte en tu
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">futuro</span>
+      
+      <div class="text-center mb-16">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
+          INVESTMENT_PLAN_2026
+        </span>
+        <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+          Inversión y <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Financiamiento</span>
         </h2>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          Múltiples opciones de financiamiento para que puedas acceder a la mejor maestría BIM de
-          Ecuador sin comprometer tu estabilidad económica.
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+          Diseñamos un esquema de costos transparente y múltiples vías de financiamiento para potenciar tu carrera sin barreras.
         </p>
       </div>
 
-      <!-- Investment Highlight -->
-      <div class="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 max-w-4xl mx-auto mb-16">
-        <div class="text-center">
-          <div class="grid grid-cols-3 gap-6 text-center">
+      <div class="max-w-5xl mx-auto mb-20">
+        <div class="bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-12 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-3xl rounded-full -mr-20 -mt-20"></div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            
             <div>
-              <div
-                class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mb-4">
-                $80
+              <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <i class="fas fa-file-invoice-dollar text-blue-400"></i> Desglose de Inversión
+              </h3>
+              <div class="space-y-4">
+                <div class="flex justify-between items-center p-4 rounded-xl bg-slate-800/50 border border-white/5">
+                  <span class="text-slate-300">Inscripción</span>
+                  <span class="text-white font-mono font-bold">${{ investmentDetails.registration }}</span>
+                </div>
+                <div class="flex justify-between items-center p-4 rounded-xl bg-slate-800/50 border border-white/5">
+                  <span class="text-slate-300">Matrícula</span>
+                  <span class="text-white font-mono font-bold">${{ investmentDetails.tuition }}</span>
+                </div>
+                <div class="flex justify-between items-center p-4 rounded-xl bg-slate-800/50 border border-white/5 relative overflow-hidden group">
+                  <div class="absolute inset-0 bg-blue-600/10 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
+                  <span class="text-blue-100 font-medium relative z-10">Colegiatura del Programa</span>
+                  <span class="text-blue-300 font-mono font-bold text-lg relative z-10">${{ investmentDetails.program.toLocaleString() }}</span>
+                </div>
               </div>
-              <div class="text-xl text-gray-300 mb-6">Inscripción</div>
-            </div>
-            <div>
-              <div
-                class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mb-4">
-                $400
-              </div>
-              <div class="text-xl text-gray-300 mb-6">Matrícula</div>
-            </div>
-            <div>
-              <div
-                class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mb-4">
-                $4,000
-              </div>
-              <div class="text-xl text-gray-300 mb-6">Inversión Total del Programa</div>
+              <p class="mt-4 text-xs text-slate-500 text-center md:text-left">
+                * La inscripción y matrícula se incluyen en el total.
+              </p>
             </div>
 
-          </div>
+            <div class="text-center md:text-right">
+              <p class="text-slate-400 text-sm font-bold uppercase tracking-widest mb-2">Inversión Total </p>
+              <div class="text-6xl md:text-7xl font-black text-white tracking-tighter mb-6">
+                <span class="text-3xl align-top text-slate-500">$</span>{{ investmentDetails.total.toLocaleString() }}
+              </div>
+              
+              <div class="flex flex-col sm:flex-row gap-4 justify-end">
+                
+                <div class="px-4 py-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center gap-2">
+                  <i class="fas fa-check-circle"></i> Precio Competitivo
+                </div>
+              </div>
+            </div>
 
-          <div class="grid grid-cols-3 gap-6 text-center">
-            <div>
-              <div class="text-2xl font-bold text-green-400">3x</div>
-              <div class="text-sm text-gray-400">Retorno de Inversión</div>
-            </div>
-            <div>
-              <div class="text-2xl font-bold text-blue-400">2 Periodos</div>
-              <div class="text-sm text-gray-400">Duración del programa</div>
-            </div>
-            <div>
-              <div class="text-2xl font-bold text-purple-400">95%</div>
-              <div class="text-sm text-gray-400">Empleabilidad</div>
-            </div>
           </div>
         </div>
       </div>
 
-      <!-- Financing Options Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
-        <div v-for="option in financingOptions" :key="option.title"
-          class="bg-white/5 backdrop-blur-lg rounded-3xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300 hover:-translate-y-2 group">
-          <!-- Header -->
-          <div class="flex items-center gap-4 mb-4">
-            <div
-              :class="`w-12 h-12 bg-gradient-to-br ${option.color} rounded-xl flex items-center justify-center text-white text-xl group-hover:scale-110 transition-transform`">
-              <i :class="`fas ${option.icon}`" />
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-20">
+        <div v-for="(option, idx) in financingOptions" :key="idx" 
+             class="group relative bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-white/5 p-1 hover:-translate-y-1 transition-all duration-300">
+          
+          <div class="absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm"
+               :class="option.gradient"></div>
+
+          <div class="h-full bg-slate-950/90 rounded-xl p-6 md:p-8 relative overflow-hidden">
+            
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center text-xl shadow-lg border border-white/5 mb-6 group-hover:scale-110 transition-transform duration-300"
+                 :class="`bg-${option.theme}-500/10 text-${option.theme}-400`">
+              <i :class="['fas', option.icon]"></i>
             </div>
-            <div>
-              <h3 class="text-lg font-bold text-white">{{ option.title }}</h3>
-              <p class="text-sm text-gray-400">{{ option.subtitle }}</p>
-            </div>
-          </div>
 
-          <!-- Amount -->
-          <div class="mb-4">
-            <div class="text-2xl font-black text-green-400 mb-1">{{ option.amount }}</div>
-          </div>
-
-          <!-- Description -->
-          <p class="text-gray-300 text-sm mb-4">{{ option.description }}</p>
-
-          <!-- Benefits -->
-          <div class="space-y-2">
-            <div v-for="benefit in option.benefits" :key="benefit" class="flex items-center gap-2">
-              <div class="w-1.5 h-1.5 bg-green-400 rounded-full" />
-              <span class="text-xs text-gray-300">{{ benefit }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contact Section -->
-      <div class="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-white">
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h3 class="text-3xl font-bold mb-4">¿Listo para comenzar?</h3>
-            <p class="text-blue-100 mb-6 text-lg">
-              Contacta al coordinador académico para iniciar tu proceso de admisión y recibir toda
-              la información necesaria.
+            <h3 class="text-xl font-bold text-white mb-1">{{ option.title }}</h3>
+            <p class="text-xs font-mono uppercase tracking-wide mb-4" :class="`text-${option.theme}-500`">{{ option.subtitle }}</p>
+            
+            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-white/5 pb-6">
+              {{ option.desc }}
             </p>
 
-            <div class="space-y-4">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                  <i class="fas fa-user text-2xl" />
-                </div>
-                <div>
-                  <div class="font-bold">{{ coordinator.name }}</div>
-                  <div class="text-blue-100 text-sm">{{ coordinator.role }}</div>
-                </div>
-              </div>
+            <ul class="space-y-2">
+              <li v-for="(feat, i) in option.features" :key="i" class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 rounded-full" :class="`bg-${option.theme}-500`"></div>
+                <span class="text-xs text-slate-300">{{ feat }}</span>
+              </li>
+            </ul>
 
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                  <i class="fas fa-envelope text-2xl" />
-                </div>
-                <div>
-                  <div class="font-bold">{{ coordinator.email }}</div>
-                  <div class="text-blue-100 text-sm">{{ coordinator.office }}</div>
-                </div>
-              </div>
-
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                  <i class="fas fa-phone text-2xl" />
-                </div>
-                <div>
-                  <div class="font-bold">{{ coordinator.phone }}</div>
-                  <div class="text-blue-100 text-sm">Lunes a Viernes 8:00-17:00</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="text-center">
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-6">
-              <h4 class="text-xl font-bold mb-4">¡Postula Ahora!</h4>
-              <p class="text-blue-100 text-sm mb-6">
-                Cupos limitados para la cohorte inaugural 2026. No pierdas esta oportunidad única.
-              </p>
-
-              <div class="space-y-3">
-                <a href="mailto:lwmorales@uce.edu.ec?subject=Solicitud Información Maestría BIM 2026"
-                  class="block w-full bg-white text-blue-600 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors">
-                  <i class="fas fa-envelope mr-2" />
-                  Solicitar Información
-                </a>
-
-                <a href="tel:+59322551270"
-                  class="block w-full border-2 border-white text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">
-                  <i class="fas fa-phone mr-2" />
-                  Llamar Ahora
-                </a>
-              </div>
-
-              <div class="mt-4 text-center">
-                <span class="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-bold">
-                  <i class="fas fa-clock mr-1" />
-                  Plazo: Hasta 15 Dic 2026
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
+
+      <div class="max-w-4xl mx-auto bg-slate-900 rounded-2xl border border-white/10 overflow-hidden">
+        <div class="grid md:grid-cols-2">
+          
+          <div class="p-8 md:p-12 flex flex-col justify-center">
+            <h3 class="text-2xl font-bold text-white mb-6">¿Necesitas Asesoría Financiera?</h3>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 rounded-full bg-slate-800 flex items-center justify-center text-blue-400 border border-slate-700">
+                <i class="fas fa-user-shield text-2xl"></i>
+              </div>
+              <div>
+                <p class="text-white font-bold">{{ coordinator.name }}</p>
+                <p class="text-slate-400 text-sm">{{ coordinator.role }}</p>
+              </div>
+            </div>
+            <div class="space-y-3 text-slate-400 text-sm">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-envelope text-slate-600"></i> {{ coordinator.email }}
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-phone text-slate-600"></i> {{ coordinator.phone }}
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-clock text-slate-600"></i> {{ coordinator.schedule }}
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-blue-900/50 to-purple-900/50 p-8 md:p-12 flex flex-col justify-center items-center text-center relative">
+            <div class="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10"></div>
+            
+            <h4 class="text-white font-bold text-xl mb-2 relative z-10">Gestiona tu pago hoy</h4>
+            <p class="text-blue-200 text-sm mb-8 relative z-10">Contacta directamente a tesorería o a la coordinación.</p>
+            
+            <div class="flex flex-col w-full gap-3 relative z-10">
+              <a href="https://wa.me/593999072657" target="_blank" 
+                 class="w-full py-3 px-6 rounded-xl bg-white text-blue-900 font-bold hover:bg-blue-50 transition-colors flex items-center justify-center gap-2">
+                <i class="fab fa-whatsapp"></i> Chat Directo
+              </a>
+              <a :href="`mailto:${coordinator.email}`" 
+                 class="w-full py-3 px-6 rounded-xl border border-white/20 text-white font-bold hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+                <i class="fas fa-envelope"></i> Enviar Correo
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 </template>

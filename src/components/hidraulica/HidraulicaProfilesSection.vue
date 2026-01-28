@@ -1,119 +1,133 @@
+<script setup>
+const inputProfile = {
+  title: 'Perfil de Ingreso',
+  subtitle: 'Fundamentos Hídricos',
+  theme: 'blue', 
+  gradient: 'from-blue-600 to-cyan-500',
+  icon: 'fa-water', // Representa el recurso base
+  items: [
+    { title: 'Formación de Base', desc: 'Título de 3er nivel en Ingeniería Civil, Ambiental o Recursos Hídricos.', icon: 'fa-graduation-cap' },
+    { title: 'Conocimientos Previos', desc: 'Bases sólidas en mecánica de fluidos, hidrología y saneamiento.', icon: 'fa-brain' },
+    { title: 'Experiencia (Deseable)', desc: 'Mínimo 1 año en proyectos sanitarios o gestión de cuencas.', icon: 'fa-briefcase' },
+    { title: 'Competencia Técnica', desc: 'Lectura y comprensión de manuales técnicos en inglés.', icon: 'fa-language' },
+  ]
+}
+
+const outputProfile = {
+  title: 'Perfil de Egreso',
+  subtitle: 'Liderazgo Hidráulico',
+  theme: 'cyan', 
+  gradient: 'from-cyan-500 to-teal-400',
+  icon: 'fa-hand-holding-water', // Representa gestión y cuidado
+  items: [
+    { title: 'Especialista en Modelación', desc: 'Diseña y simula sistemas complejos usando software CFD y SIG.', icon: 'fa-laptop-code' },
+    { title: 'Gerente de Proyectos', desc: 'Lidera la ejecución de infraestructura sanitaria y obras hidráulicas.', icon: 'fa-users-cog' },
+    { title: 'Gestor de Recursos', desc: 'Planifica el uso sostenible del agua frente al cambio climático.', icon: 'fa-leaf' },
+    { title: 'Investigador Aplicado', desc: 'Desarrolla soluciones innovadoras para problemas de abastecimiento.', icon: 'fa-flask' },
+  ]
+}
+</script>
+
 <template>
-  <section id="perfil-aspirante" class="py-24 bg-gradient-to-b from-white to-blue-50/50">
-    <div class="container mx-auto px-4">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <!-- Columna de Contenido -->
-        <div class="order-2 lg:order-1">
-          <!-- Encabezado con acento -->
-          <div class="mb-10">
-            <span
-              class="inline-block px-4 py-1.5 bg-cyan-100 text-cyan-800 text-sm font-bold rounded-full uppercase tracking-wider mb-5">
-              Perfil del Aspirante
-            </span>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              ¿Buscas especializarte en
-              <span class="text-cyan-700">ingeniería hidráulica?</span>
-            </h2>
-            <p class="text-gray-700 text-lg leading-relaxed">
-              Esta maestría está diseñada para profesionales que desean dominar el
-              <strong class="font-semibold text-cyan-700">diseño, modelación y gestión</strong>
-              de sistemas hídricos con enfoque en sostenibilidad y resiliencia.
-            </p>
-          </div>
+  <section id="perfil-aspirante" class="py-24 bg-slate-950 relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
+         style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
+    </div>
 
-          <!-- Requisitos en grid mejorado -->
-          <div class="grid sm:grid-cols-2 gap-6">
-            <!-- Requisito 1 -->
-            <div
-              class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-              <div class="flex items-start mb-3">
-                <div
-                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-700 rounded-lg flex items-center justify-center mr-4">
-                  <i class="fas fa-user-graduate text-white text-lg"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-gray-900 text-lg mb-2">Formación Académica</h4>
-                  <p class="text-gray-600 text-base leading-relaxed">
-                    Título en <strong>Ingeniería Civil, Ambiental, Recursos Hídricos</strong> o carreras afines.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <div class="absolute top-1/4 left-0 w-[600px] h-[600px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-teal-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-            <!-- Requisito 2 -->
-            <div
-              class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-              <div class="flex items-start mb-3">
-                <div
-                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center mr-4">
-                  <i class="fas fa-briefcase text-white text-lg"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-gray-900 text-lg mb-2">Experiencia</h4>
-                  <p class="text-gray-600 text-base leading-relaxed">
-                    Interés en <strong>proyectos hídricos, saneamiento o gestión ambiental</strong>.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <div class="container mx-auto px-4 relative z-10">
+      
+      <div class="text-center mb-20">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
+          EVOLUCIÓN PROFESIONAL
+        </span>
+        <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+          De Profesional a <br class="hidden md:block" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400">Especialista Hidráulico</span>
+        </h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+          Eleva tu carrera dominando la gestión integral del agua, desde la captación hasta el tratamiento avanzado.
+        </p>
+      </div>
 
-            <!-- Requisito 3 -->
-            <div
-              class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300 sm:col-span-2">
-              <div class="flex items-start mb-3">
-                <div
-                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-700 rounded-lg flex items-center justify-center mr-4">
-                  <i class="fas fa-brain text-white text-lg"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-gray-900 text-lg mb-2">Conocimientos Previos</h4>
-                  <p class="text-gray-600 text-base leading-relaxed">
-                    Bases en <strong>hidráulica, hidrología, mecánica de fluidos o medio ambiente</strong>.
-                    Interés en modelación computacional y gestión sostenible de recursos hídricos.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna de Imagen -->
-        <div class="order-1 lg:order-2 relative">
-          <!-- Marco decorativo -->
-          <div class="absolute -top-4 -right-4 w-24 h-24 bg-cyan-100/50 rounded-full -z-10"></div>
-          <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-blue-100/50 rounded-full -z-10"></div>
-
-          <!-- Imagen principal -->
-          <div class="rounded-2xl overflow-hidden shadow-2xl">
-            <img src="/images/PantaHi.jpeg" alt="Ingenieros trabajando en proyectos hidráulicos"
-              class="w-full h-[520px] object-cover object-center" loading="lazy">
-            <!-- Overlay sutil -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
-          </div>
-
-          <!-- Badge superpuesto -->
-          <div
-            class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-xs border-t-4 border-cyan-600">
-            <div class="flex items-center">
-              <div class="flex-shrink-0 mr-4">
-                <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center">
-                  <i class="fas fa-chart-line text-cyan-600 text-xl"></i>
-                </div>
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto items-start">
+        
+        <div class="group relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+          
+          <div class="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
+            <div class="flex items-center gap-5 mb-8 border-b border-white/5 pb-8">
+              <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-slate-800 border border-blue-500/30 text-blue-400 shadow-lg shadow-blue-900/20">
+                <i :class="['fas text-3xl', inputProfile.icon]"></i>
               </div>
               <div>
-                <h4 class="font-bold text-gray-900 text-base mb-1">Alta Demanda</h4>
-                <p class="text-gray-600 text-xs">
-                  Especialistas en agua requeridos en todo el sector
-                </p>
+                <h3 class="text-2xl font-bold text-white">{{ inputProfile.title }}</h3>
+                <p class="text-blue-500 font-mono text-sm uppercase tracking-wide">{{ inputProfile.subtitle }}</p>
               </div>
             </div>
+
+            <ul class="space-y-4">
+              <li v-for="(item, idx) in inputProfile.items" :key="idx" 
+                  class="flex items-start gap-4 p-4 rounded-xl bg-slate-800/40 border border-transparent hover:border-blue-500/30 hover:bg-slate-800/60 transition-all duration-300 group/item">
+                <div class="mt-1 w-8 h-8 rounded-lg bg-blue-900/30 flex items-center justify-center text-blue-400 group-hover/item:scale-110 transition-transform">
+                  <i :class="['fas text-sm', item.icon]"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-sm mb-1">{{ item.title }}</h4>
+                  <p class="text-slate-400 text-sm leading-relaxed">{{ item.desc }}</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
+
+        <div class="hidden lg:flex flex-col items-center justify-center h-full pt-32 opacity-50">
+           <i class="fas fa-chevron-right text-4xl text-slate-700 animate-pulse"></i>
+        </div>
+
+        <div class="group relative">
+           <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+          <div class="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
+            <div class="flex items-center gap-5 mb-8 border-b border-white/5 pb-8">
+              <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-slate-800 border border-cyan-500/30 text-cyan-400 shadow-lg shadow-cyan-900/20">
+                <i :class="['fas text-3xl', outputProfile.icon]"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">{{ outputProfile.title }}</h3>
+                <p class="text-cyan-400 font-mono text-sm uppercase tracking-wide">{{ outputProfile.subtitle }}</p>
+              </div>
+            </div>
+
+            <ul class="space-y-4">
+              <li v-for="(item, idx) in outputProfile.items" :key="idx" 
+                  class="flex items-start gap-4 p-4 rounded-xl bg-slate-800/40 border border-transparent hover:border-cyan-500/30 hover:bg-slate-800/60 transition-all duration-300 group/item">
+                <div class="mt-1 w-8 h-8 rounded-lg bg-cyan-900/30 flex items-center justify-center text-cyan-400 group-hover/item:scale-110 transition-transform">
+                  <i :class="['fas text-sm', item.icon]"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-sm mb-1">{{ item.title }}</h4>
+                  <p class="text-slate-400 text-sm leading-relaxed">{{ item.desc }}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </section>
 </template>
 
-<script setup>
-// Component logic here
-</script>
+<style scoped>
+/* Asegura que la rejilla del medio no rompa el layout */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr auto 1fr;
+  }
+}
+</style>

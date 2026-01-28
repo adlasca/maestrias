@@ -61,7 +61,7 @@
               <div class="text-xs font-semibold uppercase tracking-wide text-white">Créditos</div>
             </div>
             <div class="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/20">
-              <div class="text-2xl font-bold text-emerald-300 mb-1 drop-shadow">2</div>
+              <div class="text-2xl font-bold text-purple-300 mb-1 drop-shadow">2</div>
               <div class="text-xs font-semibold uppercase tracking-wide text-white">Períodos</div>
             </div>
             <div class="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/20">
@@ -71,10 +71,6 @@
             <div class="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/20">
               <div class="text-lg font-bold text-blue-300 mb-1 drop-shadow">1440</div>
               <div class="text-xs font-semibold uppercase tracking-wide text-white">Horas</div>
-            </div>
-            <div class="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/20">
-              <div class="text-lg font-bold text-blue-300 mb-1 drop-shadow">1005</div>
-              <div class="text-xs font-semibold uppercase tracking-wide text-white">Código IES</div>
             </div>
           </div>
 
@@ -127,13 +123,7 @@
     <!-- Financing Section -->
     <FinancingSection />
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/593999072657?text=Hola,%20deseo%20información%20sobre%20la%20Maestría%20en%20Ingeniería%20BIM"
-      target="_blank"
-      class="fixed bottom-20 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 z-50 group"
-      aria-label="Contactar por WhatsApp">
-      <i class="fab fa-whatsapp text-2xl group-hover:animate-pulse" />
-    </a>
+    
   </div>
 </template>
 

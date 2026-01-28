@@ -1,191 +1,157 @@
+<script setup>
+// 1. Datos de Requisitos (Checklist)
+const requirements = [
+  {
+    category: 'Documentación Legal',
+    icon: 'fa-folder-open',
+    color: 'emerald',
+    items: [
+      'Título de 3er Nivel (Civil/Geología/Minas) registrado en SENESCYT.',
+      'Copia de cédula y papeleta de votación.',
+      'Hoja de vida actualizada (Formato UCE).'
+    ]
+  },
+  {
+    category: 'Perfil Académico',
+    icon: 'fa-graduation-cap',
+    color: 'teal',
+    items: [
+      'Certificado de notas de grado.',
+      'Suficiencia de idioma extranjero (A2).',
+      'Carta de motivación técnica.'
+    ]
+  },
+  {
+    category: 'Infraestructura',
+    icon: 'fa-laptop',
+    color: 'cyan',
+    items: [
+      'Computador (i5/Ryzen 5 mínimo).',
+      'Conexión estable a internet.',
+      'Disponibilidad para giras de campo.'
+    ]
+  }
+]
+
+// 2. Pasos del Proceso (Timeline)
+const steps = [
+  {
+    id: '01',
+    title: 'Postulación',
+    desc: 'Registro en plataforma y carga de documentos PDF habilitantes.',
+    icon: 'fa-cloud-upload-alt',
+    gradient: 'from-emerald-500 to-teal-500'
+  },
+  {
+    id: '02',
+    title: 'Validación',
+    desc: 'Revisión de perfil por la coordinación académica.',
+    icon: 'fa-clipboard-check',
+    gradient: 'from-teal-500 to-cyan-500'
+  },
+  {
+    id: '03',
+    title: 'Entrevista',
+    desc: 'Evaluación de competencias con el comité de admisión.',
+    icon: 'fa-user-tie',
+    gradient: 'from-cyan-500 to-sky-500'
+  },
+  {
+    id: '04',
+    title: 'Adjudicación',
+    desc: 'Notificación oficial de aceptación al programa.',
+    icon: 'fa-envelope-open-text',
+    gradient: 'from-sky-500 to-blue-500'
+  },
+  {
+    id: '05',
+    title: 'Matrícula',
+    desc: 'Pago de aranceles y legalización para inicio de clases.',
+    icon: 'fa-file-signature',
+    gradient: 'from-blue-500 to-indigo-500'
+  }
+]
+</script>
+
 <template>
-  <section id="admision" class="py-24 bg-gradient-to-b from-gray-50 to-white">
-    <div class="container mx-auto px-4">
-      <!-- Encabezado mejorado -->
+  <section id="admision" class="py-24 bg-slate-950 relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
+         style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
+    </div>
+
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-teal-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      
       <div class="text-center mb-20">
-        <span class="inline-block px-5 py-2 bg-green-100 text-green-700 text-sm font-bold uppercase tracking-wider rounded-full mb-6">
-          <i class="fas fa-road mr-2"></i>Camino a tu Especialización
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
+          ADMISSION_PROTOCOL_2026
         </span>
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Proceso de Admisión <span class="text-green-700">2026</span>
+        <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+          Proceso de <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Admisión</span>
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Sigue estos pasos sencillos para formar parte de la primera cohorte de especialistas
-          en geotecnia y gestión de riesgos del Ecuador.
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+          Sigue nuestra ruta de ingreso diseñada para seleccionar a los mejores perfiles técnicos del país.
         </p>
       </div>
 
-      <!-- Timeline horizontal mejorado -->
-      <div class="relative">
-        <!-- Línea conectadora -->
-        <div class="hidden md:block absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 rounded-full z-0"></div>
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto mb-24">
+        <div v-for="(req, index) in requirements" :key="index" 
+             class="group relative bg-slate-900/50 backdrop-blur-xl rounded-2xl border border-white/5 p-1 hover:-translate-y-1 transition-all duration-300">
+          
+          <div class="absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm -z-10"
+               :class="`from-${req.color}-500/50 to-slate-900`"></div>
 
-        <!-- Pasos -->
-        <div class="grid md:grid-cols-5 gap-8 relative z-10">
-          <!-- Paso 1 -->
-          <div class="group">
-            <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 text-center mb-4">
-              <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                1
+          <div class="h-full bg-slate-950/80 rounded-xl p-8 relative overflow-hidden">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center text-xl shadow-lg border border-white/5 bg-slate-900"
+                   :class="`text-${req.color}-400 group-hover:bg-${req.color}-500/10 transition-colors`">
+                <i :class="['fas', req.icon]"></i>
               </div>
-              <h4 class="text-xl font-bold text-gray-900 mb-4">Perfil de Ingreso</h4>
-              <p class="text-gray-700 text-base leading-relaxed">
-                Verifica que cumples con el perfil académico y la experiencia profesional requerida.
-              </p>
+              <h3 class="text-lg font-bold text-white">{{ req.category }}</h3>
             </div>
-            <div class="text-center">
-              <span class="inline-block bg-green-50 text-green-700 px-3 py-1 rounded-lg text-sm font-medium">
-                <i class="fas fa-clock mr-1"></i>Revisión inicial
-              </span>
-            </div>
-          </div>
-
-          <!-- Paso 2 -->
-          <div class="group">
-            <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 text-center mb-4">
-              <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                2
-              </div>
-              <h4 class="text-xl font-bold text-gray-900 mb-4">Información y Consultas</h4>
-              <p class="text-gray-700 text-base leading-relaxed">
-                Solicita información detallada y resuelve tus dudas con nuestra coordinación académica.
-              </p>
-            </div>
-            <div class="text-center">
-              <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-sm font-medium">
-                <i class="fas fa-question-circle mr-1"></i>Asesoría
-              </span>
-            </div>
-          </div>
-
-          <!-- Paso 3 -->
-          <div class="group">
-            <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-yellow-100 hover:border-yellow-300 text-center mb-4">
-              <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                3
-              </div>
-              <h4 class="text-xl font-bold text-gray-900 mb-4">Documentación</h4>
-              <p class="text-gray-700 text-base leading-relaxed">
-                Entrega tu título, hoja de vida, portafolio y documentación académica completa.
-              </p>
-            </div>
-            <div class="text-center">
-              <span class="inline-block bg-yellow-50 text-yellow-700 px-3 py-1 rounded-lg text-sm font-medium">
-                <i class="fas fa-folder-open mr-1"></i>Requisitos
-              </span>
-            </div>
-          </div>
-
-          <!-- Paso 4 -->
-          <div class="group">
-            <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300 text-center mb-4">
-              <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                4
-              </div>
-              <h4 class="text-xl font-bold text-gray-900 mb-4">Entrevista Académica</h4>
-              <p class="text-gray-700 text-base leading-relaxed">
-                Participa en una entrevista personalizada con el comité académico del programa.
-              </p>
-            </div>
-            <div class="text-center">
-              <span class="inline-block bg-purple-50 text-purple-700 px-3 py-1 rounded-lg text-sm font-medium">
-                <i class="fas fa-user-check mr-1"></i>Evaluación
-              </span>
-            </div>
-          </div>
-
-          <!-- Paso 5 -->
-          <div class="group">
-            <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-red-100 hover:border-red-300 text-center mb-4">
-              <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                5
-              </div>
-              <h4 class="text-xl font-bold text-gray-900 mb-4">Inscripción Formal</h4>
-              <p class="text-gray-700 text-base leading-relaxed">
-                Formaliza tu inscripción y comienza tu formación de cuarto nivel en la UCE.
-              </p>
-            </div>
-            <div class="text-center">
-              <span class="inline-block bg-red-50 text-red-700 px-3 py-1 rounded-lg text-sm font-medium">
-                <i class="fas fa-graduation-cap mr-1"></i>¡Bienvenido!
-              </span>
-            </div>
+            <ul class="space-y-3">
+              <li v-for="(item, i) in req.items" :key="i" class="flex items-start gap-3">
+                <i class="fas fa-check-circle mt-1 text-xs" :class="`text-${req.color}-500`"></i>
+                <span class="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">{{ item }}</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- Información adicional y contacto -->
-      <div class="mt-20 grid md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-          <div class="flex items-center mb-6">
-            <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mr-4">
-              <i class="fas fa-file-check text-green-600 text-xl"></i>
-            </div>
-            <div>
-              <h4 class="text-xl font-bold text-gray-900">Requisitos de Admisión</h4>
-            </div>
-          </div>
-          <ul class="space-y-3 text-gray-700">
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 text-sm mr-2"></i>
-              <span>Título de tercer nivel registrado</span>
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 text-sm mr-2"></i>
-              <span>Hoja de vida actualizada</span>
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 text-sm mr-2"></i>
-              <span>Certificado de notas</span>
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-check-circle text-green-500 text-sm mr-2"></i>
-              <span>Certificados de experiencia</span>
-            </li>
-          </ul>
+      <div class="relative max-w-7xl mx-auto mb-16">
+        
+        <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-slate-800 -z-10">
+          <div class="h-full bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 w-full opacity-30"></div>
         </div>
 
-        <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-          <div class="flex items-center mb-6">
-            <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
-              <i class="fas fa-headset text-purple-600 text-xl"></i>
+        <div class="grid md:grid-cols-5 gap-6">
+          <div v-for="(step, index) in steps" :key="index" class="group text-center relative">
+            
+            <div class="w-24 h-24 mx-auto rounded-2xl bg-slate-900 border border-slate-700 flex items-center justify-center mb-6 relative overflow-hidden group-hover:scale-110 transition-transform duration-300 shadow-2xl z-10">
+              <div class="absolute inset-0 opacity-20 bg-gradient-to-br transition-opacity group-hover:opacity-40" :class="step.gradient"></div>
+              <div class="relative z-10 flex flex-col items-center">
+                <i :class="['fas text-2xl mb-1 text-white', step.icon]"></i>
+                <span class="text-[10px] font-mono font-bold text-slate-400">PASO {{ step.id }}</span>
+              </div>
             </div>
-            <div>
-              <h4 class="text-xl font-bold text-gray-900">Soporte y Ayuda</h4>
+
+            <div class="relative px-2">
+              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                {{ step.title }}
+              </h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                {{ step.desc }}
+              </p>
             </div>
+
           </div>
-          <p class="text-gray-700 mb-4">
-            ¿Necesitas asistencia con tu proceso de admisión?
-          </p>
-          <a href="#contacto" class="inline-flex items-center text-green-600 font-semibold hover:text-green-800 text-lg">
-            <i class="fas fa-phone-alt mr-2"></i>
-            <span>Contáctanos ahora</span>
-            <i class="fas fa-arrow-right ml-2"></i>
-          </a>
         </div>
       </div>
 
-      <!-- CTA final -->
-      <div class="mt-16 text-center">
-        <div class="inline-flex flex-col md:flex-row items-center gap-6 bg-gradient-to-r from-green-600 to-green-800 rounded-2xl p-10 shadow-2xl">
-          <div class="text-white text-left">
-            <h3 class="text-2xl font-bold mb-3">¡No pierdas esta oportunidad!</h3>
-            <p class="text-green-200 text-lg">
-              Cupos limitados para la primera cohorte 2026. Postula hoy y asegura tu lugar.
-            </p>
-          </div>
-          <a href="#contacto"
-             class="inline-flex items-center gap-3 bg-white text-green-700 hover:bg-gray-100 px-8 py-4 rounded-xl text-lg font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap">
-            <i class="fas fa-file-signature"></i>
-            <span>Iniciar Postulación</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
     </div>
   </section>
 </template>
-
-<script setup>
-// Component logic here
-</script>

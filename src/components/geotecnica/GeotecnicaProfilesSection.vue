@@ -1,121 +1,134 @@
+<script setup>
+const inputProfile = {
+  title: 'Perfil de Ingreso',
+  subtitle: 'Cimientos Profesionales',
+  theme: 'emerald', 
+  gradient: 'from-emerald-500 to-teal-600',
+  icon: 'fa-layer-group', // Representa estratos/suelo base
+  items: [
+    { title: 'Formación de Base', desc: 'Título de 3er nivel en Ingeniería Civil, Geológica, Minas o afines.', icon: 'fa-graduation-cap' },
+    { title: 'Conocimientos Previos', desc: 'Fundamentos sólidos en mecánica de suelos y geología aplicada.', icon: 'fa-brain' },
+    { title: 'Experiencia (Deseable)', desc: 'Mínimo 1 año en proyectos de infraestructura o análisis de campo.', icon: 'fa-briefcase' },
+    { title: 'Competencia Técnica', desc: 'Lectura y comprensión de normativa técnica en inglés.', icon: 'fa-language' },
+  ]
+}
+
+const outputProfile = {
+  title: 'Perfil de Egreso',
+  subtitle: 'Liderazgo Geotécnico',
+  theme: 'teal', 
+  gradient: 'from-teal-400 to-cyan-500',
+  icon: 'fa-mountain', // Representa dominio del terreno/obra
+  items: [
+    { title: 'Especialista Geotécnico', desc: 'Diseña cimentaciones complejas y estabilización de taludes con software avanzado.', icon: 'fa-laptop-code' },
+    { title: 'Gerente de Proyectos', desc: 'Lidera equipos multidisciplinarios en obras de gran envergadura.', icon: 'fa-users-cog' },
+    { title: 'Analista de Riesgos', desc: 'Gestiona amenazas naturales y vulnerabilidad sísmica del territorio.', icon: 'fa-chart-pie' },
+    { title: 'Innovador Resiliente', desc: 'Implementa IoT y monitoreo remoto para infraestructura inteligente.', icon: 'fa-microchip' },
+  ]
+}
+</script>
+
 <template>
-  <section id="perfil-aspirante" class="py-24 bg-gradient-to-b from-white to-gray-50/50">
-    <div class="container mx-auto px-4">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <!-- Columna de Contenido -->
-        <div class="order-2 lg:order-1">
-          <!-- Encabezado con acento -->
-          <div class="mb-10">
-            <span
-              class="inline-block px-4 py-1.5 bg-green-100 text-green-800 text-sm font-bold rounded-full uppercase tracking-wider mb-5">
-              Perfil del Aspirante
-            </span>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              ¿Eres el candidato ideal
-              <span class="text-green-700">para esta maestría?</span>
-            </h2>
-            <p class="text-gray-700 text-lg leading-relaxed">
-              Esta maestría está dirigida a profesionales que buscan especializarse en el
-              <strong class="font-semibold text-green-700">análisis, diseño y gestión de riesgos geotécnicos</strong>,
-              con una visión técnica, aplicada y orientada a la resiliencia territorial.
-            </p>
-          </div>
+  <section id="perfil-aspirante" class="py-24 bg-slate-950 relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
+         style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
+    </div>
 
-          <!-- Requisitos en grid mejorado -->
-          <div class="grid sm:grid-cols-2 gap-6">
-            <!-- Requisito 1 -->
-            <div
-              class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-              <div class="flex items-start mb-3">
-                <div
-                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center mr-4">
-                  <i class="fas fa-user-graduate text-white text-lg"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-gray-900 text-lg mb-2">Formación Académica</h4>
-                  <p class="text-gray-600 text-base leading-relaxed">
-                    Título de tercer nivel en <strong>Ingeniería Civil, Geológica, Minas, Ambiental</strong> o carreras
-                    afines.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <div class="absolute top-1/4 left-0 w-[600px] h-[600px] bg-emerald-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-            <!-- Requisito 2 -->
-            <div
-              class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-              <div class="flex items-start mb-3">
-                <div
-                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center mr-4">
-                  <i class="fas fa-briefcase text-white text-lg"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-gray-900 text-lg mb-2">Experiencia Profesional</h4>
-                  <p class="text-gray-600 text-base leading-relaxed">
-                    Mínimo <strong>1 año de experiencia</strong> en proyectos de infraestructura o interacción con el
-                    terreno.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <div class="container mx-auto px-4 relative z-10">
+      
+      <div class="text-center mb-20">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
+          EVOLUCIÓN PROFESIONAL
+        </span>
+        <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+          De Profesional a <br class="hidden md:block" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-500">Especialista Geotécnico</span>
+        </h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+          Transforma tu carrera dominando desde la mecánica de suelos tradicional hasta la modelación numérica de vanguardia.
+        </p>
+      </div>
 
-            <!-- Requisito 3 -->
-            <div
-              class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300 sm:col-span-2">
-              <div class="flex items-start mb-3">
-                <div
-                  class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center mr-4">
-                  <i class="fas fa-brain text-white text-lg"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-gray-900 text-lg mb-2">Conocimientos Previos</h4>
-                  <p class="text-gray-600 text-base leading-relaxed">
-                    Bases en <strong>mecánica de suelos, geología aplicada y análisis estructural</strong>.
-                    Interés en geotecnia sísmica, modelación numérica y gestión integral de riesgos.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna de Imagen -->
-        <div class="order-1 lg:order-2 relative">
-          <!-- Marco decorativo -->
-          <div class="absolute -top-4 -right-4 w-24 h-24 bg-green-100/50 rounded-full -z-10"></div>
-          <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-blue-100/50 rounded-full -z-10"></div>
-
-          <!-- Imagen principal -->
-          <div class="rounded-2xl overflow-hidden shadow-2xl">
-            <img src="/images/perfil.png" alt="Profesionales de ingeniería civil colaborando en análisis geotécnico"
-              class="w-full h-[520px] object-cover object-center" loading="lazy">
-            <!-- Overlay sutil -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
-          </div>
-
-          <!-- Badge superpuesto -->
-          <div
-            class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-xs border-t-4 border-green-600">
-            <div class="flex items-center">
-              <div class="flex-shrink-0 mr-4">
-                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                  <i class="fas fa-chart-line text-green-600 text-xl"></i>
-                </div>
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto items-start">
+        
+        <div class="group relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+          
+          <div class="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
+            <div class="flex items-center gap-5 mb-8 border-b border-white/5 pb-8">
+              <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-slate-800 border border-emerald-500/30 text-emerald-400 shadow-lg shadow-emerald-900/20">
+                <i :class="['fas text-3xl', inputProfile.icon]"></i>
               </div>
               <div>
-                <h4 class="font-bold text-gray-900 text-base mb-1">Alta Demanda Laboral</h4>
-                <p class="text-gray-600 text-xs">
-                  +90% de empleabilidad en el primer año tras graduación
-                </p>
+                <h3 class="text-2xl font-bold text-white">{{ inputProfile.title }}</h3>
+                <p class="text-emerald-500 font-mono text-sm uppercase tracking-wide">{{ inputProfile.subtitle }}</p>
               </div>
             </div>
+
+            <ul class="space-y-4">
+              <li v-for="(item, idx) in inputProfile.items" :key="idx" 
+                  class="flex items-start gap-4 p-4 rounded-xl bg-slate-800/40 border border-transparent hover:border-emerald-500/30 hover:bg-slate-800/60 transition-all duration-300 group/item">
+                <div class="mt-1 w-8 h-8 rounded-lg bg-emerald-900/30 flex items-center justify-center text-emerald-400 group-hover/item:scale-110 transition-transform">
+                  <i :class="['fas text-sm', item.icon]"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-sm mb-1">{{ item.title }}</h4>
+                  <p class="text-slate-400 text-sm leading-relaxed">{{ item.desc }}</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
+
+        <div class="hidden lg:flex flex-col items-center justify-center h-full pt-32 opacity-50">
+           <i class="fas fa-chevron-right text-4xl text-slate-700 animate-pulse"></i>
+        </div>
+
+        <div class="group relative">
+           <div class="absolute -inset-1 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+          <div class="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
+            <div class="flex items-center gap-5 mb-8 border-b border-white/5 pb-8">
+              <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-slate-800 border border-cyan-500/30 text-cyan-400 shadow-lg shadow-cyan-900/20">
+                <i :class="['fas text-3xl', outputProfile.icon]"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">{{ outputProfile.title }}</h3>
+                <p class="text-cyan-400 font-mono text-sm uppercase tracking-wide">{{ outputProfile.subtitle }}</p>
+              </div>
+            </div>
+
+            <ul class="space-y-4">
+              <li v-for="(item, idx) in outputProfile.items" :key="idx" 
+                  class="flex items-start gap-4 p-4 rounded-xl bg-slate-800/40 border border-transparent hover:border-cyan-500/30 hover:bg-slate-800/60 transition-all duration-300 group/item">
+                <div class="mt-1 w-8 h-8 rounded-lg bg-cyan-900/30 flex items-center justify-center text-cyan-400 group-hover/item:scale-110 transition-transform">
+                  <i :class="['fas text-sm', item.icon]"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-sm mb-1">{{ item.title }}</h4>
+                  <p class="text-slate-400 text-sm leading-relaxed">{{ item.desc }}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
+
+  
     </div>
   </section>
 </template>
 
-<script setup>
-// Component logic here
-</script>
+<style scoped>
+/* Asegura que la rejilla del medio no rompa el layout */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr auto 1fr;
+  }
+}
+</style>

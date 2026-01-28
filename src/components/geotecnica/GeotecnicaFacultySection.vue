@@ -1,126 +1,166 @@
+<script setup>
+const faculty = [
+  {
+    name: 'Ing. Luis Wladimir Morales',
+    role: 'Coordinador Académico',
+    specialty: 'Civil Engineering & BIM Management',
+    description: 'Magíster en Estructuras. Especialista en gestión de proyectos de alto impacto y coordinación de equipos multidisciplinarios.',
+    certifications: ['PMP®', 'Autodesk MCI', 'Lean Construction'],
+    avatar: null, // Si es null, usa iniciales
+    theme: 'blue',
+    gradient: 'from-blue-500 to-cyan-500',
+    icon: 'fa-user-tie'
+  },
+  {
+    name: 'Dr. María Elena Sánchez',
+    role: 'Investigación & Desarrollo',
+    specialty: 'Computational Design',
+    description: 'PhD en Arquitectura Digital. Experta en algoritmos generativos y optimización topológica para estructuras complejas.',
+    certifications: ['PhD', 'Rhino Developer', 'Python for BIM'],
+    avatar: null,
+    theme: 'purple',
+    gradient: 'from-purple-500 to-pink-500',
+    icon: 'fa-microchip'
+  },
+  {
+    name: 'Ing. Carlos Rodríguez',
+    role: 'Especialista MEP',
+    specialty: 'Systems Engineering',
+    description: 'Ingeniero Mecánico. Certificado en coordinación de instalaciones complejas (Clash Detection) y eficiencia energética.',
+    certifications: ['MEPCP', 'Revit MEP', 'Green Building'],
+    avatar: null,
+    theme: 'emerald',
+    gradient: 'from-emerald-500 to-green-500',
+    icon: 'fa-fan'
+  },
+  {
+    name: 'Dra. Ana Gabriela López',
+    role: 'Sostenibilidad (6D)',
+    specialty: 'Environmental Engineering',
+    description: 'Doctora en Ingeniería Ambiental. Auditora líder en certificaciones internacionales de construcción sostenible.',
+    certifications: ['LEED AP BD+C', 'BREEAM Assessor', 'EDGE Expert'],
+    avatar: null,
+    theme: 'teal',
+    gradient: 'from-teal-400 to-cyan-500',
+    icon: 'fa-leaf'
+  },
+  {
+    name: 'Ing. Roberto Martínez',
+    role: 'Planificación & Costos (4D/5D)',
+    specialty: 'Construction Management',
+    description: 'Experto en simulación constructiva temporal y control financiero de proyectos de gran escala mediante VDC.',
+    certifications: ['Synchro PRO', 'Presto Expert', 'Navisworks'],
+    avatar: null,
+    theme: 'amber',
+    gradient: 'from-amber-500 to-orange-500',
+    icon: 'fa-chart-line'
+  },
+  {
+    name: 'Dr. Fernando García',
+    role: 'Innovación Tecnológica',
+    specialty: 'AI & Digital Twins',
+    description: 'PhD en Ciencias de la Computación. Investigador en Inteligencia Artificial aplicada a la predicción de riesgos en obra.',
+    certifications: ['AI Specialist', 'Data Scientist', 'Unity Dev'],
+    avatar: null,
+    theme: 'indigo',
+    gradient: 'from-indigo-500 to-violet-500',
+    icon: 'fa-vr-cardboard'
+  }
+]
+
+// Utilidad para generar iniciales si no hay foto
+const getInitials = (name) => {
+  return name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+}
+</script>
+
 <template>
-  <section id="facultad" class="py-24 bg-white">
-    <div class="container mx-auto px-4">
-      <!-- Encabezado -->
-      <div class="text-center mb-16">
-        <span class="inline-block px-4 py-1.5 bg-green-100 text-green-800 text-sm font-bold rounded-full uppercase tracking-wider mb-5">
-          Claustro Académico
+  <section id="facultad" class="py-24 bg-slate-950 relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
+         style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
+    </div>
+
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-green-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-green-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      
+      <div class="text-center mb-20">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
+          ACADEMIC SQUAD
         </span>
-        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-          Docentes de <span class="text-green-600">Excelencia</span>
+        <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+          Mentores <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-500">Certificados</span>
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Aprende de Magísteres y Doctores con amplia trayectoria en proyectos nacionales e internacionales
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+          Aprende directamente de profesionales que lideran la transformación digital en la industria AECO.
         </p>
       </div>
 
-      <!-- Cards mejoradas -->
-      <div class="grid md:grid-cols-3 gap-10">
-        <!-- Card 1 - Tecnología -->
-        <div class="group bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-green-200">
-          <div class="mb-8">
-            <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-microscope text-white text-3xl"></i>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+        
+        <div v-for="(member, index) in faculty" :key="index" 
+             class="group relative bg-slate-900/50 backdrop-blur-xl rounded-2xl border border-white/5 p-1 transition-all duration-300 hover:-translate-y-1">
+          
+          <div class="absolute inset-0 rounded-2xl bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm -z-10"
+               :class="member.gradient"></div>
+
+          <div class="h-full bg-slate-950/80 rounded-xl p-6 md:p-8 flex flex-col relative overflow-hidden">
+            
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r opacity-50 group-hover:opacity-100 transition-opacity" :class="member.gradient"></div>
+
+            <div class="flex items-start gap-4 mb-6">
+              <div class="relative shrink-0">
+                <div class="w-16 h-16 rounded-xl overflow-hidden border-2 shadow-lg shadow-black/50 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center bg-slate-800"
+                     :class="`border-${member.theme}-500/30 group-hover:border-${member.theme}-400`">
+                  
+                  <img v-if="member.avatar" :src="member.avatar" :alt="member.name" class="w-full h-full object-cover" />
+                  
+                  <div v-else class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br" :class="member.gradient">
+                    {{ getInitials(member.name) }}
+                  </div>
+                </div>
+                <div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-slate-900 flex items-center justify-center">
+                  <div class="w-2.5 h-2.5 rounded-full animate-pulse" :class="`bg-${member.theme}-500`"></div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-white font-bold text-lg leading-tight mb-1 group-hover:text-blue-200 transition-colors">
+                  {{ member.name }}
+                </h3>
+                <p class="text-xs font-mono uppercase tracking-wider" :class="`text-${member.theme}-400`">
+                  {{ member.role }}
+                </p>
+              </div>
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Tecnología de Vanguardia</h3>
-          </div>
-          <p class="text-gray-700 text-lg leading-relaxed mb-6">
-            Accede al <strong class="font-semibold text-green-700">Laboratorio de Mecánica de Suelos más avanzado del país</strong>
-            y domina software especializado para modelación numérica y diseño geotécnico.
-          </p>
-          <div class="pt-6 border-t border-gray-100">
-            <h4 class="font-bold text-gray-900 text-lg mb-3">Software Incluido:</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="inline-block bg-orange-50 text-orange-700 px-3 py-1.5 rounded-lg text-sm font-medium">
-                PLAXIS 3D
-              </span>
-              <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg text-sm font-medium">
-                GeoStudio
-              </span>
-              <span class="inline-block bg-green-50 text-green-700 px-3 py-1.5 rounded-lg text-sm font-medium">
-                SAP2000
-              </span>
-              <span class="inline-block bg-purple-50 text-purple-700 px-3 py-1.5 rounded-lg text-sm font-medium">
-                QGIS
-              </span>
+
+            <div class="mb-6 flex-grow">
+              <div class="flex items-center gap-2 mb-3 opacity-60">
+                <i :class="['fas text-xs', member.icon]"></i>
+                <span class="text-xs font-semibold text-slate-300">{{ member.specialty }}</span>
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed border-l-2 border-slate-800 pl-3">
+                {{ member.description }}
+              </p>
             </div>
+
+            <div class="mt-auto">
+              <div class="flex flex-wrap gap-2">
+                <span v-for="cert in member.certifications" :key="cert" 
+                      class="px-2 py-1 rounded-md bg-slate-900 border border-slate-800 text-[10px] font-mono text-slate-400 group-hover:border-slate-700 group-hover:text-slate-300 transition-colors">
+                  {{ cert }}
+                </span>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- Card 2 - Docentes -->
-        <div class="group bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-green-200">
-          <div class="mb-8">
-            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-chalkboard-teacher text-white text-3xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Claustro de Excelencia</h3>
-          </div>
-          <p class="text-gray-700 text-lg leading-relaxed mb-6">
-            Aprende de <strong class="font-semibold text-green-700">Magísteres y Doctores</strong> con amplia trayectoria
-            en proyectos nacionales e internacionales, investigación aplicada y consultoría especializada.
-          </p>
-          <div class="pt-6 border-t border-gray-100">
-            <h4 class="font-bold text-gray-900 text-lg mb-3">Perfil Docente:</h4>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i>
-                <span>100% con posgrado (70% PhD)</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i>
-                <span>Experiencia en proyectos reales</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i>
-                <span>Publicaciones indexadas</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check text-green-500 mr-2"></i>
-                <span>Vinculación con la industria</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Card 3 - Internacionalización -->
-        <div class="group bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-green-200">
-          <div class="mb-8">
-            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <i class="fas fa-globe-americas text-white text-3xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Internacionalización</h3>
-          </div>
-          <p class="text-gray-700 text-lg leading-relaxed mb-6">
-            Benefíciate de <strong class="font-semibold text-green-700">convenios internacionales</strong>
-            y programas de movilidad académica, además de becas y ayudas financieras para impulsar tu excelencia.
-          </p>
-          <div class="pt-6 border-t border-gray-100">
-            <h4 class="font-bold text-gray-900 text-lg mb-3">Oportunidades:</h4>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-center">
-                <i class="fas fa-plane text-blue-500 mr-2"></i>
-                <span>Intercambios académicos</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-graduation-cap text-blue-500 mr-2"></i>
-                <span>Becas de excelencia</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-handshake text-blue-500 mr-2"></i>
-                <span>Convenios con universidades extranjeras</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-book text-blue-500 mr-2"></i>
-                <span>Publicaciones conjuntas</span>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
+
+
     </div>
   </section>
 </template>
-
-<script setup>
-// Component logic here
-</script>
