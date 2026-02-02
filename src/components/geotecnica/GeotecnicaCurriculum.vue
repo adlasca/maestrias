@@ -48,7 +48,7 @@ const totalProgramCredits = semesters.reduce((acc, sem) => acc + getTotalCredits
 </script>
 
 <template>
-  <section id="plan-estudios" class="py-24 bg-slate-950 relative overflow-hidden">
+  <section id="plan-estudios" class="py-24 bg-gradient-to-r from-green-400  to-purple-700 relative overflow-hidden">
     
     <div class="absolute inset-0 opacity-[0.03]" 
          style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 40px 40px;">
@@ -60,13 +60,13 @@ const totalProgramCredits = semesters.reduce((acc, sem) => acc + getTotalCredits
     <div class="container mx-auto px-4 relative z-10">
       
       <div class="text-center mb-20">
-        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/50 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6">
           CURRICULUM 2026
         </span>
         <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
-          Malla <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-500">Geotécnica</span>
+          Malla <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-400">Geotécnica</span>
         </h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        <p class="text-slate-200 text-lg max-w-2xl mx-auto">
           Programa de alto nivel que fusiona la mecánica de suelos tradicional con la modelación numérica avanzada.
         </p>
       </div>
@@ -74,7 +74,7 @@ const totalProgramCredits = semesters.reduce((acc, sem) => acc + getTotalCredits
       <div class="flex flex-col gap-12 max-w-7xl mx-auto">
         
         <div v-for="semester in semesters" :key="semester.id" 
-             class="relative group rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/5 overflow-hidden hover:border-white/10 transition-colors duration-500">
+             class="relative group rounded-3xl bg-slate-900 backdrop-blur-xl border border-white/5 overflow-hidden hover:border-white/10 transition-colors duration-500">
           
           <div class="h-1 w-full bg-gradient-to-r" :class="semester.gradient"></div>
 

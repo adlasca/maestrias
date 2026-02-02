@@ -76,30 +76,30 @@ const coordinator = {
 </script>
 
 <template>
-  <section id="financiamiento" class="py-24 bg-slate-950 relative overflow-hidden">
+  <section id="financiamiento" class="py-24 bg-gradient-to-r from-blue-400 to bg-green-400 relative overflow-hidden">
     
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
          style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
     </div>
 
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-900/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-900 blur-[120px] rounded-full pointer-events-none"></div>
 
     <div class="container mx-auto px-4 relative z-10">
       
       <div class="text-center mb-16">
-        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/90 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
           INVESTMENT_PLAN_2026
         </span>
         <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
-          Inversión y <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Financiamiento</span>
+          Inversión y <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-400">Financiamiento</span>
         </h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        <p class="text-slate-100 text-lg max-w-2xl mx-auto">
           Un esquema de costos transparente diseñado para facilitar tu especialización en ingeniería hidráulica.
         </p>
       </div>
 
       <div class="max-w-5xl mx-auto mb-20">
-        <div class="bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-12 relative overflow-hidden">
+        <div class="bg-slate-900 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-12 relative overflow-hidden">
           <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-3xl rounded-full -mr-20 -mt-20"></div>
 
           <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -123,15 +123,15 @@ const coordinator = {
                   <span class="text-cyan-300 font-mono font-bold text-lg relative z-10">${{ investmentDetails.program.toLocaleString() }}</span>
                 </div>
               </div>
-              <p class="mt-4 text-xs text-slate-500 text-center md:text-left">
+              <p class="mt-4 text-xs text-slate-300 text-center md:text-left">
                 * La inscripción y matrícula se incluyen en el total.
               </p>
             </div>
 
             <div class="text-center md:text-right">
-              <p class="text-slate-400 text-sm font-bold uppercase tracking-widest mb-2">Inversión Total </p>
+              <p class="text-slate-300 text-sm font-bold uppercase tracking-widest mb-2">Inversión Total </p>
               <div class="text-6xl md:text-7xl font-black text-white tracking-tighter mb-6">
-                <span class="text-3xl align-top text-slate-500">$</span>{{ investmentDetails.total.toLocaleString() }}
+                <span class="text-3xl align-top text-slate-200">$</span>{{ investmentDetails.total.toLocaleString() }}
               </div>
               
               <div class="flex flex-col sm:flex-row gap-4 justify-end">
@@ -148,7 +148,7 @@ const coordinator = {
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-20">
         <div v-for="(option, idx) in financingOptions" :key="idx" 
-             class="group relative bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-white/5 p-1 hover:-translate-y-1 transition-all duration-300">
+             class="group relative bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-white/5 p-1 hover:-translate-y-1 transition-all duration-300">
           
           <div class="absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm"
                :class="option.gradient"></div>
@@ -163,14 +163,14 @@ const coordinator = {
             <h3 class="text-xl font-bold text-white mb-1">{{ option.title }}</h3>
             <p class="text-xs font-mono uppercase tracking-wide mb-4" :class="`text-${option.theme}-500`">{{ option.subtitle }}</p>
             
-            <p class="text-slate-400 text-sm leading-relaxed mb-6 border-b border-white/5 pb-6">
+            <p class="text-slate-200 text-base leading-relaxed mb-6 border-b border-white/5 pb-6">
               {{ option.desc }}
             </p>
 
             <ul class="space-y-2">
               <li v-for="(feat, i) in option.features" :key="i" class="flex items-center gap-2">
                 <div class="w-1.5 h-1.5 rounded-full" :class="`bg-${option.theme}-500`"></div>
-                <span class="text-xs text-slate-300">{{ feat }}</span>
+                <span class="text-sm text-slate-200">{{ feat }}</span>
               </li>
             </ul>
 
@@ -189,10 +189,10 @@ const coordinator = {
               </div>
               <div>
                 <p class="text-white font-bold">{{ coordinator.name }}</p>
-                <p class="text-slate-400 text-sm">{{ coordinator.role }}</p>
+                <p class="text-slate-200 text-sm">{{ coordinator.role }}</p>
               </div>
             </div>
-            <div class="space-y-3 text-slate-400 text-sm">
+            <div class="space-y-3 text-slate-200 text-sm">
               <div class="flex items-center gap-3">
                 <i class="fas fa-envelope text-slate-600"></i> {{ coordinator.email }}
               </div>

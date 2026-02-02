@@ -70,7 +70,7 @@ const steps = [
 </script>
 
 <template>
-  <section id="admision" class="py-24 bg-slate-900 relative overflow-hidden">
+  <section id="admision" class="py-24 bg-gradient-to-r from-purple-500 to-blue-700 relative overflow-hidden">
     
     <div class="absolute inset-0 opacity-[0.02]" 
          style="background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px); background-size: 32px 32px;">
@@ -86,9 +86,9 @@ const steps = [
           ADMISSION_PROTOCOL_2026
         </span>
         <h2 class="text-3xl md:text-5xl font-black text-white mb-6">
-          Requisitos y <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Proceso</span>
+          Requisitos y <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-emerald-400 to-red-400">Proceso</span>
         </h2>
-        <p class="text-slate-400 max-w-2xl mx-auto">
+        <p class="text-slate-100  text-base mx-auto">
           Asegúrate de contar con toda la documentación y sigue el algoritmo de ingreso paso a paso.
         </p>
       </div>
@@ -112,7 +112,7 @@ const steps = [
             <ul class="space-y-4">
               <li v-for="(item, i) in req.items" :key="i" class="flex items-start gap-3">
                 <i class="fas fa-check-circle mt-1 text-sm" :class="`text-${req.color}-500`"></i>
-                <span class="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">{{ item }}</span>
+                <span class="text-base text-slate-300 group-hover:text-slate-100 transition-colors">{{ item }}</span>
               </li>
             </ul>
 
@@ -140,10 +140,10 @@ const steps = [
             </div>
 
             <div class="text-center md:text-left md:pl-2 md:border-l-2 md:border-transparent md:group-hover:border-slate-700 transition-colors pl-4">
-              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
                 {{ step.title }}
               </h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-sm text-slate-100 leading-relaxed">
                 {{ step.desc }}
               </p>
             </div>

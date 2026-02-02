@@ -65,7 +65,7 @@ const isActive = (item) => item.activeRoutes.includes(route.name)
               </div>
               <div class="hidden sm:block h-12 w-px bg-slate-200 mx-2"></div>
               <div class="hidden lg:block leading-tight">
-                <h1 class="text-xl font-bold text-slate-900 tracking-tight">Universidad Central</h1>
+                <h1 class="text-xl font-bold text-slate-900 tracking-tight">Universidad Central del Ecuador</h1>
                 <p class="text-sm text-slate-500 font-medium">Facultad de Ingeniería y Ciencias Aplicadas</p>
               </div>
             </router-link>
@@ -142,6 +142,7 @@ const isActive = (item) => item.activeRoutes.includes(route.name)
            class="bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-green-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center group"
            aria-label="Contactar por WhatsApp">
            <i class="fab fa-whatsapp text-2xl group-hover:scale-110 transition-transform"></i>
+            
            <span class="absolute right-full mr-3 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
              Contáctanos
            </span>

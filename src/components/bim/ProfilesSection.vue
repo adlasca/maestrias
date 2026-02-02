@@ -29,7 +29,7 @@ const outputProfile = {
 </script>
 
 <template>
-  <section id="perfil-aspirante" class="py-24 bg-slate-950 relative overflow-hidden">
+  <section id="perfil-aspirante" class="py-24 bg-gradient-to-r from-purple-500 to-blue-700 relative overflow-hidden">
     
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
          style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
@@ -46,9 +46,9 @@ const outputProfile = {
         </span>
         <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
           De Profesional a <br class="hidden md:block" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">Experto BIM Global</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-green-500 to-red-400">Experto BIM Global</span>
         </h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        <p class="text-slate-200 text-lg max-w-2xl mx-auto">
           Un programa diseñado para cerrar la brecha entre la ingeniería tradicional y la construcción 4.0.
         </p>
       </div>
@@ -58,7 +58,7 @@ const outputProfile = {
         <div class="group relative">
           <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
           
-          <div class="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
+          <div class="relative bg-slate-900 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
             <div class="flex items-center gap-5 mb-8 border-b border-white/5 pb-8">
               <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-slate-800 border border-cyan-500/30 text-cyan-400 shadow-lg shadow-cyan-900/20">
                 <i :class="['fas text-3xl', inputProfile.icon]"></i>
@@ -91,7 +91,7 @@ const outputProfile = {
         <div class="group relative">
            <div class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
 
-          <div class="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
+          <div class="relative bg-slate-900 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
             <div class="flex items-center gap-5 mb-8 border-b border-white/5 pb-8">
               <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-slate-800 border border-purple-500/30 text-purple-400 shadow-lg shadow-purple-900/20">
                 <i :class="['fas text-3xl', outputProfile.icon]"></i>
@@ -104,8 +104,8 @@ const outputProfile = {
 
             <ul class="space-y-4">
               <li v-for="(item, idx) in outputProfile.items" :key="idx" 
-                  class="flex items-start gap-4 p-4 rounded-xl bg-slate-800/40 border border-transparent hover:border-purple-500/30 hover:bg-slate-800/60 transition-all duration-300 group/item">
-                <div class="mt-1 w-8 h-8 rounded-lg bg-purple-900/30 flex items-center justify-center text-purple-400 group-hover/item:scale-110 transition-transform">
+                  class="flex items-start gap-4 p-4 rounded-xl bg-slate-800 border border-transparent hover:border-purple-500/30 hover:bg-slate-800/60 transition-all duration-300 group/item">
+                <div class="mt-1 w-8 h-8 rounded-lg bg-purple-900 flex items-center justify-center text-purple-400 group-hover/item:scale-110 transition-transform">
                   <i :class="['fas text-sm', item.icon]"></i>
                 </div>
                 <div>

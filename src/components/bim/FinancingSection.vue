@@ -73,7 +73,7 @@ const coordinator = {
 </script>
 
 <template>
-  <section id="financiamiento" class="py-24 bg-slate-950 relative overflow-hidden">
+  <section id="financiamiento" class="py-24 bg-gradient-to-r from-purple-500 to-blue-700 relative overflow-hidden">
     
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
          style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
@@ -88,16 +88,16 @@ const coordinator = {
           INVESTMENT_PLAN_2026
         </span>
         <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
-          Inversión y <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Financiamiento</span>
+          Inversión y <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-green-500 to-red-400">Financiamiento</span>
         </h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        <p class="text-slate-100 text-lg max-w-2xl mx-auto">
           Diseñamos un esquema de costos transparente y múltiples vías de financiamiento para potenciar tu carrera sin barreras.
         </p>
       </div>
 
       <div class="max-w-5xl mx-auto mb-20">
-        <div class="bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-12 relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-3xl rounded-full -mr-20 -mt-20"></div>
+        <div class="bg-slate-900 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-12 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-4xl rounded-full -mr-20 -mt-20"></div>
 
           <div class="grid md:grid-cols-2 gap-12 items-center">
             

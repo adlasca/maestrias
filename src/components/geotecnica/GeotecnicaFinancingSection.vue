@@ -76,7 +76,7 @@ const coordinator = {
 </script>
 
 <template>
-  <section id="financiamiento" class="py-24 bg-slate-950 relative overflow-hidden">
+  <section id="financiamiento" class="py-24 bg-gradient-to-r from-green-400  to-purple-700 relative overflow-hidden">
     
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
          style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
@@ -87,19 +87,19 @@ const coordinator = {
     <div class="container mx-auto px-4 relative z-10">
       
       <div class="text-center mb-16">
-        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
           INVESTMENT_PLAN_2026
         </span>
         <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
-          Inversión y <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-500">Financiamiento</span>
+          Inversión y <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-400">Financiamiento</span>
         </h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        <p class="text-slate-100 text-lg max-w-2xl mx-auto">
           Un esquema de costos transparente diseñado para facilitar tu especialización en ingeniería hidráulica.
         </p>
       </div>
 
       <div class="max-w-5xl mx-auto mb-20">
-        <div class="bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-12 relative overflow-hidden">
+        <div class="bg-slate-900 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-12 relative overflow-hidden">
           <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-3xl rounded-full -mr-20 -mt-20"></div>
 
           <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -123,7 +123,7 @@ const coordinator = {
                   <span class="text-cyan-300 font-mono font-bold text-lg relative z-10">${{ investmentDetails.program.toLocaleString() }}</span>
                 </div>
               </div>
-              <p class="mt-4 text-xs text-slate-500 text-center md:text-left">
+              <p class="mt-4 text-xs text-slate-200 text-center md:text-left">
                 * La inscripción y matrícula se incluyen en el total.
               </p>
             </div>
@@ -131,7 +131,7 @@ const coordinator = {
             <div class="text-center md:text-right">
               <p class="text-slate-400 text-sm font-bold uppercase tracking-widest mb-2">Inversión Total Aproximada</p>
               <div class="text-6xl md:text-7xl font-black text-white tracking-tighter mb-6">
-                <span class="text-3xl align-top text-slate-500">$</span>{{ investmentDetails.total.toLocaleString() }}
+                <span class="text-3xl align-top text-slate-300">$</span>{{ investmentDetails.total.toLocaleString() }}
               </div>
               
               <div class="flex flex-col sm:flex-row gap-4 justify-end">

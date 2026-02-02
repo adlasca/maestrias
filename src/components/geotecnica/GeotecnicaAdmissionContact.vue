@@ -74,7 +74,7 @@ const steps = [
 </script>
 
 <template>
-  <section id="admision" class="py-24 bg-slate-950 relative overflow-hidden">
+  <section id="admision" class="py-24 bg-gradient-to-r from-green-400  to-purple-700 relative overflow-hidden">
     
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
          style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
@@ -86,13 +86,13 @@ const steps = [
     <div class="container mx-auto px-4 relative z-10">
       
       <div class="text-center mb-20">
-        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
           ADMISSION_PROTOCOL_2026
         </span>
         <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
-          Proceso de <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Admisión</span>
+          Proceso de <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-400">Admisión</span>
         </h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        <p class="text-slate-100 text-lg max-w-2xl mx-auto">
           Sigue nuestra ruta de ingreso diseñada para seleccionar a los mejores perfiles técnicos del país.
         </p>
       </div>
@@ -115,7 +115,7 @@ const steps = [
             <ul class="space-y-3">
               <li v-for="(item, i) in req.items" :key="i" class="flex items-start gap-3">
                 <i class="fas fa-check-circle mt-1 text-xs" :class="`text-${req.color}-500`"></i>
-                <span class="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">{{ item }}</span>
+                <span class="text-sm text-slate-200 group-hover:text-slate-300 transition-colors">{{ item }}</span>
               </li>
             </ul>
           </div>
@@ -140,10 +140,10 @@ const steps = [
             </div>
 
             <div class="relative px-2">
-              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">
                 {{ step.title }}
               </h3>
-              <p class="text-xs text-slate-400 leading-relaxed">
+              <p class="text-xs text-slate-100 leading-relaxed">
                 {{ step.desc }}
               </p>
             </div>

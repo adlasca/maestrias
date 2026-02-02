@@ -105,7 +105,7 @@ onUnmounted(() => clearInterval(timer))
 </script>
 
 <template>
-  <section id="dimensiones-bim" class="py-20 bg-slate-50 dark:bg-slate-900 relative overflow-hidden" @mouseenter="isPaused = true" @mouseleave="isPaused = false">
+  <section id="dimensiones-bim" class="py-20 bg-gradient-to-r from-purple-500 to-blue-700 relative overflow-hidden" @mouseenter="isPaused = true" @mouseleave="isPaused = false">
     
     <div class="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.05]" 
          style="background-image: radial-gradient(#64748b 1px, transparent 1px); background-size: 32px 32px;">
@@ -118,9 +118,9 @@ onUnmounted(() => clearInterval(timer))
         </span>
         <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
           Las 5 Dimensiones de la <br class="hidden md:block"/>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Transformación Digital</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-green-500 to-red-500">Transformación Digital</span>
         </h2>
-        <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+        <p class="text-lg text-slate-100  max-w-2xl mx-auto">
           Desde el modelado geométrico hasta la gestión de operaciones, domina el ciclo de vida completo del activo.
         </p>
       </div>
@@ -136,11 +136,11 @@ onUnmounted(() => clearInterval(timer))
             :class="[
               activeIndex === index 
                 ? `bg-white dark:bg-slate-800 ${dim.border} shadow-lg scale-105` 
-                : 'bg-white/40 dark:bg-slate-800/40 border-transparent hover:border-slate-300 hover:bg-white'
+                : 'bg-white dark:bg-slate-700/90 border-transparent hover:border-slate-100 hover:bg-white'
             ]"
           >
             <div class="flex items-center gap-3">
-              <span class="font-black text-xl" :class="activeIndex === index ? dim.color : 'text-slate-400'">
+              <span class="font-black text-xl" :class="activeIndex === index ? dim.color : 'text-slate-300'">
                 {{ dim.id }}
               </span>
               <span class="font-semibold text-sm whitespace-nowrap" :class="activeIndex === index ? 'text-slate-800 dark:text-white' : 'text-slate-500'">
@@ -183,10 +183,7 @@ onUnmounted(() => clearInterval(timer))
                   </div>
                 </div>
 
-                <button class="w-fit px-8 py-3 rounded-xl text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group" :class="`bg-gradient-to-r ${activeDimension.gradient} ${activeDimension.shadow}`">
-                  Explorar Dimensión {{ activeDimension.id }}
-                  <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                </button>
+              
               </div>
             </div>
 

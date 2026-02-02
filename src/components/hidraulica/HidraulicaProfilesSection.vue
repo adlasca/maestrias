@@ -29,7 +29,7 @@ const outputProfile = {
 </script>
 
 <template>
-  <section id="perfil-aspirante" class="py-24 bg-slate-950 relative overflow-hidden">
+  <section id="perfil-aspirante" class="py-24 bg-gradient-to-r from-blue-400 to bg-green-400 relative overflow-hidden">
     
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
          style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
@@ -41,14 +41,14 @@ const outputProfile = {
     <div class="container mx-auto px-4 relative z-10">
       
       <div class="text-center mb-20">
-        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6 backdrop-blur-md">
           EVOLUCIÓN PROFESIONAL
         </span>
         <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
           De Profesional a <br class="hidden md:block" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400">Especialista Hidráulico</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500  to-red-400">Especialista Hidráulico</span>
         </h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        <p class="text-slate-100 text-lg max-w-2xl mx-auto">
           Eleva tu carrera dominando la gestión integral del agua, desde la captación hasta el tratamiento avanzado.
         </p>
       </div>
@@ -58,7 +58,7 @@ const outputProfile = {
         <div class="group relative">
           <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
           
-          <div class="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
+          <div class="relative bg-slate-900 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
             <div class="flex items-center gap-5 mb-8 border-b border-white/5 pb-8">
               <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-slate-800 border border-blue-500/30 text-blue-400 shadow-lg shadow-blue-900/20">
                 <i :class="['fas text-3xl', inputProfile.icon]"></i>
@@ -91,7 +91,7 @@ const outputProfile = {
         <div class="group relative">
            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
 
-          <div class="relative bg-slate-900/60 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
+          <div class="relative bg-slate-900 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-10 h-full">
             <div class="flex items-center gap-5 mb-8 border-b border-white/5 pb-8">
               <div class="w-16 h-16 rounded-2xl flex items-center justify-center bg-slate-800 border border-cyan-500/30 text-cyan-400 shadow-lg shadow-cyan-900/20">
                 <i :class="['fas text-3xl', outputProfile.icon]"></i>

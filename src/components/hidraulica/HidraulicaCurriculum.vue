@@ -48,7 +48,7 @@ const totalProgramCredits = semesters.reduce((acc, sem) => acc + getTotalCredits
 </script>
 
 <template>
-  <section id="plan-estudios" class="py-24 bg-slate-950 relative overflow-hidden">
+  <section id="plan-estudios" class="py-24 bg-gradient-to-r from-blue-400 to bg-green-400 relative overflow-hidden">
     
     <div class="absolute inset-0 opacity-[0.03]" 
          style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 40px 40px;">
@@ -60,13 +60,13 @@ const totalProgramCredits = semesters.reduce((acc, sem) => acc + getTotalCredits
     <div class="container mx-auto px-4 relative z-10">
       
       <div class="text-center mb-20">
-        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/50 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6">
           ACADEMIC ROADMAP 2026
         </span>
         <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
-          Malla <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Curricular</span>
+          Malla <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-400">Curricular</span>
         </h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        <p class="text-slate-100 text-lg max-w-2xl mx-auto">
           Formación integral experta en el ciclo del agua, desde la mecánica de fluidos hasta la gestión de recursos hídricos.
         </p>
       </div>
@@ -74,7 +74,7 @@ const totalProgramCredits = semesters.reduce((acc, sem) => acc + getTotalCredits
       <div class="flex flex-col gap-12 max-w-7xl mx-auto">
         
         <div v-for="semester in semesters" :key="semester.id" 
-             class="relative group rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/5 overflow-hidden hover:border-white/10 transition-colors duration-500">
+             class="relative group rounded-3xl bg-slate-900 backdrop-blur-xl border border-white/5 overflow-hidden hover:border-white/10 transition-colors duration-500">
           
           <div class="h-1 w-full bg-gradient-to-r" :class="semester.gradient"></div>
 
@@ -94,11 +94,11 @@ const totalProgramCredits = semesters.reduce((acc, sem) => acc + getTotalCredits
               
               <div class="flex gap-4">
                 <div class="px-4 py-2 rounded-lg bg-slate-800/50 border border-white/5 text-right">
-                  <div class="text-xs text-slate-500 uppercase font-bold tracking-wider">Materias</div>
+                  <div class="text-xs text-slate-300 uppercase font-bold tracking-wider">Materias</div>
                   <div class="text-xl font-bold text-white">{{ semester.courses.length }}</div>
                 </div>
                 <div class="px-4 py-2 rounded-lg bg-slate-800/50 border border-white/5 text-right">
-                  <div class="text-xs text-slate-500 uppercase font-bold tracking-wider">Créditos</div>
+                  <div class="text-xs text-slate-300 uppercase font-bold tracking-wider">Créditos</div>
                   <div class="text-xl font-bold" :class="semester.iconColor">{{ getTotalCredits(semester.courses) }}</div>
                 </div>
               </div>
@@ -113,7 +113,7 @@ const totalProgramCredits = semesters.reduce((acc, sem) => acc + getTotalCredits
                   <div class="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center shadow-lg group-hover/card:scale-110 transition-transform duration-300">
                     <i :class="['fas text-lg', course.icon, semester.iconColor]"></i>
                   </div>
-                  <span class="text-[10px] font-mono text-slate-500 bg-slate-900/80 px-2 py-1 rounded border border-white/5">
+                  <span class="text-[10px] font-mono text-slate-300 bg-slate-900/80 px-2 py-1 rounded border border-white/5">
                     {{ course.code }}
                   </span>
                 </div>
@@ -123,7 +123,7 @@ const totalProgramCredits = semesters.reduce((acc, sem) => acc + getTotalCredits
                 </h4>
                 
                 <div class="flex items-center justify-between mt-auto pt-3 border-t border-white/5">
-                  <span class="text-xs text-slate-500">Valor Curricular</span>
+                  <span class="text-xs text-slate-200">Valor Curricular</span>
                   <div class="flex items-center gap-1.5">
                     <i class="fas fa-star text-[10px]" :class="semester.iconColor"></i>
                     <span class="text-sm font-bold text-slate-300">{{ course.credits }} <span class="text-[10px] text-slate-500">CR</span></span>
@@ -142,7 +142,7 @@ const totalProgramCredits = semesters.reduce((acc, sem) => acc + getTotalCredits
       <div class="mt-16 text-center">
         <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-900 border border-slate-800 shadow-xl">
           <i class="fas fa-info-circle text-slate-500"></i>
-          <span class="text-slate-400 text-sm">Total del programa: <span class="text-white font-bold">{{ totalProgramCredits }} Créditos Académicos</span> · Modalidad Híbrida</span>
+          <span class="text-slate-200 text-sm">Total del programa: <span class="text-white font-bold">{{ totalProgramCredits }} Créditos Académicos</span> · Modalidad Híbrida</span>
         </div>
       </div>
 

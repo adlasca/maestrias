@@ -25,20 +25,14 @@
           </div>
 
           <!-- Título principal -->
-          <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-none">
+          <h1 class="text-xl md:text-2xl lg:text-8xl font-black mb-8 leading-none">
             <span class="block text-white mb-2">Maestría en</span>
             <span class="block bg-gradient-to-r from-cyan-400 via-blue-400 to-teal-400 bg-clip-text text-transparent">
-              Ingeniería Hidráulica
+              Ingeniería Hidráulica Sistemas Hidrosanitarios y Gestión Sostenible del Agua
             </span>
           </h1>
 
-          <!-- Subtítulo -->
-          <div
-            class="inline-block bg-black/40 backdrop-blur-sm px-6 py-4 rounded-2xl mb-8 border border-white/25 shadow-2xl">
-            <p class="text-5xl md:text-5xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Mención en Sistemas Hidrosanitarios y <span class="text-emerald-300 font-semibold">Gestión Sostenible del Agua</span>
-            </p>
-          </div>
+
 
           <!-- Lema -->
           <div class="max-w-3xl mx-auto mb-10">

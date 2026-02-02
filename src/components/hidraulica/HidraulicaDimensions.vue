@@ -110,7 +110,7 @@ onUnmounted(() => clearInterval(timer))
 </script>
 
 <template>
-  <section id="dimensiones-hidraulica" class="py-24 bg-slate-50 dark:bg-slate-900 relative overflow-hidden" @mouseenter="isPaused = true" @mouseleave="isPaused = false">
+  <section id="dimensiones-hidraulica" class="py-24 bg-gradient-to-r from-blue-400 to bg-green-400 relative overflow-hidden" @mouseenter="isPaused = true" @mouseleave="isPaused = false">
     
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
       <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-400/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
@@ -121,13 +121,13 @@ onUnmounted(() => clearInterval(timer))
     <div class="container mx-auto px-4 relative z-10">
       
       <div class="text-center mb-16">
-        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-widest mb-4">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900 text-white dark:text-blue-300 text-xs font-bold uppercase tracking-widest mb-4">
           <i class="fas fa-layer-group"></i> Ingeniería Especializada
         </span>
         <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
-          Maestría en <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Recursos Hídricos</span>
+          Maestría en <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-red-500">Recursos Hídricos</span>
         </h2>
-        <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-lg text-slate-200  max-w-2xl mx-auto leading-relaxed">
           Desde la mecánica de fluidos fundamental hasta la gestión estratégica de cuencas: un enfoque integral para el futuro del agua.
         </p>
       </div>
@@ -143,7 +143,7 @@ onUnmounted(() => clearInterval(timer))
             :class="[
               activeIndex === index 
                 ? `bg-white dark:bg-slate-800 ${dim.border} shadow-lg scale-105` 
-                : 'bg-white/50 dark:bg-slate-800/40 border-transparent hover:bg-white hover:border-slate-200'
+                : 'bg-white/50 dark:bg-slate-800/80 border-transparent hover:bg-white hover:border-slate-200'
             ]"
           >
             <div class="flex flex-col items-center gap-2">
@@ -181,7 +181,7 @@ onUnmounted(() => clearInterval(timer))
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                   <div v-for="feature in activeDimension.features" :key="feature" 
-                       class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 hover:bg-slate-100 transition-colors">
+                       class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 hover:bg-slate-900 transition-colors">
                     <div class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" :class="`bg-${activeDimension.id === 'Hidráulica' ? 'blue' : 'emerald'}-100`">
                        <i class="fas fa-check text-xs" :class="activeDimension.color"></i>
                     </div>
@@ -189,11 +189,7 @@ onUnmounted(() => clearInterval(timer))
                   </div>
                 </div>
 
-                <button class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-white font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300" 
-                        :class="`bg-gradient-to-r ${activeDimension.gradient} ${activeDimension.shadow}`">
-                  Ver Detalles Técnicos
-                  <i class="fas fa-arrow-right ml-2"></i>
-                </button>
+                
               </div>
             </div>
 

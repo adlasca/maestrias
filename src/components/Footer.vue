@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="bg-slate-950 text-slate-300 relative overflow-hidden border-t border-slate-800">
+  <footer class="bg-slate-800 text-slate-300 relative overflow-hidden border-t border-slate-800">
     
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
          style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 32px 32px;">

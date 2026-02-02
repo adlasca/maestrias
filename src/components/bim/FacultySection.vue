@@ -75,7 +75,7 @@ const getInitials = (name) => {
 </script>
 
 <template>
-  <section id="facultad" class="py-24 bg-slate-950 relative overflow-hidden">
+  <section id="facultad" class="py-24 bg-gradient-to-r from-purple-500 to-blue-700 relative overflow-hidden">
     
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
          style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 60px 60px;">
@@ -91,9 +91,9 @@ const getInitials = (name) => {
           ACADEMIC SQUAD
         </span>
         <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
-          Mentores <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Certificados</span>
+          Mentores <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-green-500 to-red-400">Certificados</span>
         </h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        <p class="text-slate-100 text-lg max-w-2xl mx-auto">
           Aprende directamente de profesionales que lideran la transformación digital en la industria AECO.
         </p>
       </div>
@@ -141,7 +141,7 @@ const getInitials = (name) => {
                 <i :class="['fas text-xs', member.icon]"></i>
                 <span class="text-xs font-semibold text-slate-300">{{ member.specialty }}</span>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed border-l-2 border-slate-800 pl-3">
+              <p class="text-slate-200 text-sm leading-relaxed border-l-2 border-slate-800 pl-3">
                 {{ member.description }}
               </p>
             </div>

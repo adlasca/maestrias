@@ -47,7 +47,7 @@ const getTotalCredits = (courses) => courses.reduce((acc, curr) => acc + curr.cr
 </script>
 
 <template>
-  <section id="plan-estudios" class="py-24 bg-slate-950 relative overflow-hidden">
+  <section id="plan-estudios" class="py-24 bg-gradient-to-r from-purple-500 to-blue-700 relative overflow-hidden">
     
     <div class="absolute inset-0 opacity-[0.03]" 
          style="background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px); background-size: 40px 40px;">
@@ -59,13 +59,13 @@ const getTotalCredits = (courses) => courses.reduce((acc, curr) => acc + curr.cr
     <div class="container mx-auto px-4 relative z-10">
       
       <div class="text-center mb-20">
-        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/50 border border-slate-700 text-slate-300 text-xs font-mono tracking-widest mb-6">
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-800/50 border border-slate-700 text-slate-100 text-xs font-mono tracking-widest mb-6">
           ACADEMIC ROADMAP 2026
         </span>
         <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
-          Malla <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Curricular</span>
+          Malla <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-green-500 to-red-500">Curricular</span>
         </h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        <p class="text-slate-100 text-lg max-w-2xl mx-auto">
           Un programa intensivo diseñado para dominar el ciclo de vida completo de la edificación digital.
         </p>
       </div>
@@ -73,31 +73,31 @@ const getTotalCredits = (courses) => courses.reduce((acc, curr) => acc + curr.cr
       <div class="flex flex-col gap-12 max-w-7xl mx-auto">
         
         <div v-for="semester in semesters" :key="semester.id" 
-             class="relative group rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/5 overflow-hidden hover:border-white/10 transition-colors duration-500">
+             class="relative group rounded-3xl bg-slate-900 backdrop-blur-xl border border-white/5 overflow-hidden hover:border-white/10 transition-colors duration-500">
           
           <div class="h-1 w-full bg-gradient-to-r" :class="semester.gradient"></div>
 
           <div class="p-8 md:p-10">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 border-b border-white/5 pb-8">
               <div class="flex items-center gap-6">
-                <div class="w-20 h-20 rounded-2xl bg-slate-800/50 flex items-center justify-center border border-white/5 shadow-inner">
+                <div class="w-20 h-20 rounded-2xl bg-slate-800 flex items-center justify-center border border-white/5 shadow-inner">
                   <span class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br" :class="semester.gradient">
                     {{ semester.label }}
                   </span>
                 </div>
                 <div>
                   <h3 class="text-2xl md:text-3xl font-bold text-white mb-1">{{ semester.title }}</h3>
-                  <p class="text-slate-400 font-medium">{{ semester.subtitle }}</p>
+                  <p class="text-slate-200 font-medium">{{ semester.subtitle }}</p>
                 </div>
               </div>
               
               <div class="flex gap-4">
                 <div class="px-4 py-2 rounded-lg bg-slate-800/50 border border-white/5 text-right">
-                  <div class="text-xs text-slate-500 uppercase font-bold tracking-wider">Materias</div>
+                  <div class="text-xs text-slate-300 uppercase font-bold tracking-wider">Materias</div>
                   <div class="text-xl font-bold text-white">{{ semester.courses.length }}</div>
                 </div>
                 <div class="px-4 py-2 rounded-lg bg-slate-800/50 border border-white/5 text-right">
-                  <div class="text-xs text-slate-500 uppercase font-bold tracking-wider">Créditos</div>
+                  <div class="text-xs text-slate-300 uppercase font-bold tracking-wider">Créditos</div>
                   <div class="text-xl font-bold" :class="semester.iconColor">{{ getTotalCredits(semester.courses) }}</div>
                 </div>
               </div>
@@ -112,7 +112,7 @@ const getTotalCredits = (courses) => courses.reduce((acc, curr) => acc + curr.cr
                   <div class="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center shadow-lg group-hover/card:scale-110 transition-transform duration-300">
                     <i :class="['fas text-lg', course.icon, semester.iconColor]"></i>
                   </div>
-                  <span class="text-xs font-mono text-slate-500 bg-slate-900/50 px-2 py-1 rounded">
+                  <span class="text-xs font-mono text-slate-300 bg-slate-900/50 px-2 py-1 rounded">
                     {{ course.code }}
                   </span>
                 </div>
@@ -122,7 +122,7 @@ const getTotalCredits = (courses) => courses.reduce((acc, curr) => acc + curr.cr
                 </h4>
                 
                 <div class="flex items-center justify-between mt-auto pt-3 border-t border-white/5">
-                  <span class="text-xs text-slate-500">Valor Curricular</span>
+                  <span class="text-xs text-slate-300">Valor Curricular</span>
                   <div class="flex items-center gap-1.5">
                     <i class="fas fa-star text-[10px]" :class="semester.iconColor"></i>
                     <span class="text-sm font-bold text-slate-300">{{ course.credits }} <span class="text-[10px] text-slate-500">CR</span></span>
